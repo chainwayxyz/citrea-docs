@@ -1,0 +1,5 @@
+# Trustless Settlement
+
+In order to achive trustless settlement for Citrea, there needs to be opcode change(s).
+
+Mainly, an opcode that can verify ZK Proof and a covenant opcode would be required to implement completely trustless Bitcoin settlement. In current architecture, BitVM provides trust-minimized settlement - which is a great improvement over the existing unsecure implementations of sidechains.
