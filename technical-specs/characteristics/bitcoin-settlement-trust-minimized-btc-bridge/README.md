@@ -10,7 +10,7 @@ Citrea light client proofs are natively verified in Bitcoin, thanks to BitVM. We
 
 There are no delays on withdrawals once the proof is finalized on Bitcoin in the optimistic case. The operator does the withdrawals from its own pocket. Later, it claims the pegged-out BTC from the BitVM program with a proof showing that all the withdrawals from the canonical Citrea chain have been done on Bitcoin. If there is any fraud in the process, any verifier among set of N reacts with a fraud proof on Bitcoin, slashing prover's stake and keeping the peg secure.
 
-**What the BitVM Contract Verifies:**
+## What the BitVM Contract Verifies
 
 * Recursively-merged Light Client proofs with deposit and withdrawal roots.
 * Bitcoin Header Chain proof showing the latest Bitcoin block header as well as a merkle tree of all the previous headers (similar to [ZeroSync](https://zerosync.org/) header chain proofs).
@@ -20,7 +20,7 @@ In order to reduce the program size committed on Bitcoin (and thus the fraud pro
 
 The operator provides the proof off-chain first. If everyone agrees its correct, the on-chain footprint is minimal - N/N signatures. If a verifier thinks there is a fraud, a challenge-response game starts between the verifier and operator. Eventually the loser's deposit gets slashed. If an operator is malicious, it will be removed from the committee and replaced by other pre-determined operator.
 
-**Technical Limitations:**
+### Technical Limitations
 
 * Peg-in and peg-out amount is fixed and a relatively large number.
   * In order to keep the pre-signed tx amount manageable, Citrea will start with a fixed and large amount as peg-in/out amount.
