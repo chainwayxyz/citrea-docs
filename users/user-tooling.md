@@ -1,6 +1,6 @@
 # User Tooling
 
-Citrea is a fully EVM-compliant equivalent. All the existing and battle-tested tooling developed for EVM ecosystem will be ready to use for Citrea.
+Citrea is a fully EVM-compliant (equivalent). All the existing and battle-tested tooling developed for EVM ecosystem will be ready to use for Citrea.
 
 Some example toolings for you to discover before the testnet goes live:
 

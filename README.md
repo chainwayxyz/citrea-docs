@@ -23,7 +23,7 @@ layout:
 Citrea uses BTC as its native token. **There is no Citrea token**. Please beware of scams!
 {% endhint %}
 
-Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace with zero-knowledge technology, making it possible to **build almost anything on Bitcoin**. This requires **no changes to the network's consensus rules**.&#x20;
+Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace with zero-knowledge technology, making it possible to **build everything on Bitcoin**. This requires **no changes to the network's consensus rules**.&#x20;
 
 ## Citrea is a [Type 2 zkEVM](technical-specs/characteristics/execution-environment.md)
 
