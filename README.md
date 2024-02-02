@@ -31,7 +31,7 @@ Citrea processes a large number of zkEVM transaction batches and submits a succi
 
 ## Citrea proofs are inscribed in Bitcoin and optimistically verified via BitVM
 
-Anyone running a Bitcoin node can both verify Citrea and access its full state. This method ensures that the data needed to transact on Citrea or verify Citrea becomes permissionlessly available for every single node in the Bitcoin network. The proof inscribed in Bitcoin is optimistically verified in Bitcoin as well, thanks to BitVM.
+Anyone running a Bitcoin node can both verify Citrea and access its full state. This method ensures that the data needed to transact on Citrea or verify Citrea becomes permissionlessly available for every single node in the Bitcoin network. The proof inscribed in Bitcoin by prover(s) is optimistically verified in Bitcoin as well, thanks to BitVM.
 
 ## Citrea supports Light Nodes
 
