@@ -1,8 +1,8 @@
 # User Tooling
 
-Citrea is fully EVM compliant, equivalent. All the existing and battle-tested tooling developed for EVM ecosystem will be ready to use for Citrea.\
-\
-Some example toolings for you to discover before the testnet:
+Citrea is a fully EVM-compliant (equivalent). All the existing and battle-tested tooling developed for EVM ecosystem will be ready to use for Citrea.
+
+Some example toolings for you to discover before the testnet goes live:
 
 * Wallets
   * [Metamask](https://metamask.io/)
