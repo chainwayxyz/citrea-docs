@@ -7,7 +7,7 @@
 * [Characteristics](technical-specs/characteristics/README.md)
   * [Execution Environment](technical-specs/characteristics/execution-environment.md)
   * [Block Production](technical-specs/characteristics/block-production/README.md)
-    * [Zero Confirmations](technical-specs/characteristics/block-production/zero-confirmations.md)
+    * [Pre-Confirmations](technical-specs/characteristics/block-production/pre-confirmations.md)
     * [Decentralized Sequencer Network](technical-specs/characteristics/block-production/decentralized-sequencer-network.md)
   * [Proof Generation](technical-specs/characteristics/proof-generation.md)
   * [Nodes](technical-specs/characteristics/nodes.md)
