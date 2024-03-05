@@ -10,5 +10,6 @@ Some example toolings for you to discover before the testnet goes live:
   * [Trust Wallet](https://trustwallet.com/)
   * [Ledger](https://www.ledger.com/)
   * [Trezor](https://trezor.io/)
+  * [OKX Wallet](https://www.okx.com/web3)
 * Block Explorers
   * [Blockscout](https://www.blockscout.com/)
