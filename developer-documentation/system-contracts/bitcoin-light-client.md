@@ -42,11 +42,9 @@ Gets triggered in the first ever Citrea block, and it sets the block height of t
 | `uint256 _blockNumber`   | Bitcoin block height corresponding to the first Citrea block  |
 
 </br>
-</br>
 
 ---
 
-</br>
 </br>
 
 ```solidity
@@ -60,11 +58,9 @@ Called by the system caller and it sets the block hash and witness root of the n
 | `bytes32 _witnessRoot`   | Witness root (merkle root of `wTXID`s) of the current Bitcoin block |
 
 </br>
-</br>
 
 ---
 
-</br>
 </br>
 
 ```solidity
@@ -81,11 +77,9 @@ Returns the block hash of the Bitcoin block corresponding to the given block hei
 | `bytes32 blockHash` | Block hash of the queried block |
 
 </br>
-</br>
 
 ---
 
-</br>
 </br>
 
 {% hint style="warning" %}
@@ -106,11 +100,9 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
 
 </br>
-</br>
 
 ---
 
-</br>
 </br>
 
 ```solidity
@@ -127,11 +119,9 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
 
 </br>
-</br>
 
 ---
 
-</br>
 </br>
 
 {% hint style="warning" %}
@@ -155,11 +145,9 @@ Verifies the inclusion of a Bitcoin transaction in a particular Bitcoin block sp
 | `bool isIncluded` | Whether the transaction is in the block specified by the block hash |
 
 </br>
-</br>
 
 ---
 
-</br>
 </br>
 
 ```solidity
