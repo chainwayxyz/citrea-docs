@@ -38,3 +38,5 @@
 ## 📖 Developer Documentation
 
 * [Deployment Guide](developer-documentation/deployment-guide.md)
+* [System Contracts](developer-documentation/system-contracts/README.md)
+  * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
