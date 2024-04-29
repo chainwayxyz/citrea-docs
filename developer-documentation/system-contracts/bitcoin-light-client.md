@@ -32,6 +32,9 @@ This contract has only one access control modifier, and it is used to check the 
 
 ## Functions
 
+<details>
+<summary>`initializeBlockNumber`</summary>
+
 ```solidity
 function initializeBlockNumber(uint256 _blockNumber) external onlySystem
 ```
@@ -41,7 +44,12 @@ Gets triggered in the first ever Citrea block, and it sets the block height of t
 |-----------|-------------|
 | `uint256 _blockNumber`   | Bitcoin block height corresponding to the first Citrea block  |
 
+</details>
+
 ---
+
+<details>
+<summary>`setBlockInfo`</summary>
 
 ```solidity
 function setBlockInfo(bytes32 _blockHash, bytes32 _witnessRoot) external onlySystem
@@ -53,7 +61,12 @@ Called by the system caller and it sets the block hash and witness root of the n
 | `bytes32 _blockHash`   | Block hash of the current Bitcoin block |
 | `bytes32 _witnessRoot`   | Witness root (merkle root of `wTXID`s) of the current Bitcoin block |
 
+</details>
+
 ---
+
+<details>
+<summary>`getBlockHash`</summary>
 
 ```solidity
 function getBlockHash(uint256 _blockNumber) external view returns (bytes32)
@@ -68,11 +81,17 @@ Returns the block hash of the Bitcoin block corresponding to the given block hei
 |-----------|-------------|
 | `bytes32 blockHash` | Block hash of the queried block |
 
+</details>
+
 ---
 
 {% hint style="warning" %}
 The following functions `getWitnessRootByHash` and `getWitnessRootByNumber` returning the zero value does **NOT** mean that there is no such a block recorded unlike the blockhash getters as it is possible for a valid witness root to be the zero value in the case of a Bitcoin block with one transaction. This happens as the `wTXId` of a coinbase transaction is the zero value and the merkle root is the leaf itself in the case of one leaf.
 {% endhint %}
+
+
+<details>
+<summary>`getWitnessRootByHash`</summary>
 
 ```solidity
 function getWitnessRootByHash(bytes32 _blockHash) external view returns (bytes32)
@@ -87,7 +106,12 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 |-----------|-------------|
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
 
+</details>
+
 ---
+
+<details>
+<summary>`getWitnessRootByNumber`</summary>
 
 ```solidity
 function getWitnessRootByNumber(uint256 _blockNumber) external view returns (bytes32)
@@ -102,11 +126,16 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 |-----------|-------------|
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
 
+</details>
+
 ---
 
 {% hint style="warning" %}
 The following `verifyInclusion` functions will pass when zero value is passed with `_wtxId` as the zero value is a valid `wTXId` for a coinbase transaction and it exists in all Bitcoin blocks. Thus the integrators must make sure to not provide the zero `wTXId` as input accidentally as it may happen in cases like sending information from a deleted Solidity user record which will have the zero `bytes32` value as that is the default value for `bytes32` in Solidity.
 {% endhint %}
+
+<details>
+<summary>`verifyInclusion`</summary>
 
 ```solidity
 function verifyInclusion(bytes32 _blockHash, bytes32 _wtxId, bytes calldata _proof, uint256 _index) external view returns (bool)
@@ -141,3 +170,5 @@ Verifies the inclusion of a Bitcoin transaction in a particular Bitcoin block sp
 | Returns    | Description |
 |-----------|-------------|
 | `bool isIncluded` | Whether the transaction is in the block specified by the block height |
+
+</details>
