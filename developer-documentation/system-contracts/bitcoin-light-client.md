@@ -99,6 +99,8 @@ function getWitnessRootByHash(bytes32 _blockHash) external view returns (bytes32
 ```
 Returns the witness root of the Bitcoin block corresponding to the given block hash.
 
+</details>
+
 | Parameters    | Description |
 |-----------|-------------|
 | `bytes32 _blockHash`   | Block hash of the queried block |
@@ -106,8 +108,6 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 | Returns    | Description |
 |-----------|-------------|
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
-
-</details>
 
 ---
 
