@@ -33,6 +33,7 @@ This contract has only one access control modifier, and it is used to check the 
 ## Functions
 
 <details>
+
 <summary>initializeBlockNumber()</summary>
 
 ```solidity
