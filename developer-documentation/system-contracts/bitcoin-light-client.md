@@ -33,7 +33,7 @@ This contract has only one access control modifier, and it is used to check the 
 ## Functions
 
 <details>
-<summary>`initializeBlockNumber`</summary>
+<summary>initializeBlockNumber()</summary>
 
 ```solidity
 function initializeBlockNumber(uint256 _blockNumber) external onlySystem
@@ -49,7 +49,7 @@ Gets triggered in the first ever Citrea block, and it sets the block height of t
 ---
 
 <details>
-<summary>`setBlockInfo`</summary>
+<summary>setBlockInfo()</summary>
 
 ```solidity
 function setBlockInfo(bytes32 _blockHash, bytes32 _witnessRoot) external onlySystem
@@ -66,7 +66,7 @@ Called by the system caller and it sets the block hash and witness root of the n
 ---
 
 <details>
-<summary>`getBlockHash`</summary>
+<summary>getBlockHash()</summary>
 
 ```solidity
 function getBlockHash(uint256 _blockNumber) external view returns (bytes32)
@@ -91,7 +91,7 @@ The following functions `getWitnessRootByHash` and `getWitnessRootByNumber` retu
 
 
 <details>
-<summary>`getWitnessRootByHash`</summary>
+<summary>getWitnessRootByHash()</summary>
 
 ```solidity
 function getWitnessRootByHash(bytes32 _blockHash) external view returns (bytes32)
@@ -111,7 +111,7 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 ---
 
 <details>
-<summary>`getWitnessRootByNumber`</summary>
+<summary>getWitnessRootByNumber()</summary>
 
 ```solidity
 function getWitnessRootByNumber(uint256 _blockNumber) external view returns (bytes32)
@@ -135,7 +135,7 @@ The following `verifyInclusion` functions will pass when zero value is passed wi
 {% endhint %}
 
 <details>
-<summary>`verifyInclusion`</summary>
+<summary>verifyInclusion()</summary>
 
 ```solidity
 function verifyInclusion(bytes32 _blockHash, bytes32 _wtxId, bytes calldata _proof, uint256 _index) external view returns (bool)
