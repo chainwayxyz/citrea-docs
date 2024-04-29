@@ -32,6 +32,8 @@ This contract has only one access control modifier, and it is used to check the 
 
 ## Functions
 
+</br>
+
 ```solidity
 function initializeBlockNumber(uint256 _blockNumber) external onlySystem
 ```
