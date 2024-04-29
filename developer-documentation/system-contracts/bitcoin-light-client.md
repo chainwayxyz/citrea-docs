@@ -9,10 +9,14 @@ uint256 public blockNumber;
 ```
 Next block height to store block hash and witness root information for.
 
+---
+
 ```solidity
 mapping(uint256 => bytes32) public blockHashes;
 ```
 A `block height: block hash` mapping. It stores the block hash of the block for a given block height in Bitcoin.
+
+---
 
 ```solidity
 mapping(bytes32 => bytes32) public witnessRoots;
@@ -37,6 +41,8 @@ Gets triggered in the first ever Citrea block, and it sets the block height of t
 |-----------|-------------|
 | `uint256 _blockNumber`   | Bitcoin block height corresponding to the first Citrea block  |
 
+---
+
 ```solidity
 function setBlockInfo(bytes32 _blockHash, bytes32 _witnessRoot) external onlySystem
 ```
@@ -46,6 +52,8 @@ Called by the system caller and it sets the block hash and witness root of the n
 |-----------|-------------|
 | `bytes32 _blockHash`   | Block hash of the current Bitcoin block |
 | `bytes32 _witnessRoot`   | Witness root (merkle root of `wTXID`s) of the current Bitcoin block |
+
+---
 
 ```solidity
 function getBlockHash(uint256 _blockNumber) external view returns (bytes32)
@@ -79,6 +87,8 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 |-----------|-------------|
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
 
+---
+
 ```solidity
 function getWitnessRootByNumber(uint256 _blockNumber) external view returns (bytes32)
 ```
@@ -91,6 +101,7 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 | Returns    | Description |
 |-----------|-------------|
 | `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
+
 ---
 
 {% hint style="warning" %}
@@ -112,6 +123,8 @@ Verifies the inclusion of a Bitcoin transaction in a particular Bitcoin block sp
 | Returns    | Description |
 |-----------|-------------|
 | `bool isIncluded` | Whether the transaction is in the block specified by the block hash |
+
+---
 
 ```solidity
 function verifyInclusion(uint256 _blockNumber, bytes32 _wtxId, bytes calldata _proof, uint256 _index) external view returns (bool)
