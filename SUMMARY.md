@@ -1,5 +1,20 @@
 # Table of contents
 
+
+## 👤 User Guide
+
+* [User Tooling](users/user-tooling.md)
+* [Run a Node](users/run-a-node.md)
+
+## 📖 Developer Documentation
+
+* [Deployment Guide](developer-documentation/deployment-guide/README.md)
+  * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
+  * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
+  * [Configure Hardhat](developer-documentation/deployment-guide/configure-hardhat.md)
+* [System Contracts](developer-documentation/system-contracts/README.md)
+  * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
+
 ## ⛓ Technical Specs
 
 * [TL;DR](README.md)
@@ -29,17 +44,3 @@
 * [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Lightning Integration](future-research/lightning-integration.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
-
-## 👤 Users
-
-* [User Tooling](users/user-tooling.md)
-* [Run a Node](users/run-a-node.md)
-
-## 📖 Developer Documentation
-
-* [Deployment Guide](developer-documentation/deployment-guide/README.md)
-  * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
-  * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
-  * [Configure Hardhat](developer-documentation/deployment-guide/configure-hardhat.md)
-* [System Contracts](developer-documentation/system-contracts/README.md)
-  * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
