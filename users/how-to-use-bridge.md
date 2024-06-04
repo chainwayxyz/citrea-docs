@@ -11,9 +11,9 @@ Let's start!
 
 ## Step 0: Install an EVM Wallet 
 
-Since Citrea is an EVM-compatible ZK-rollup, you need an EVM-compatible wallet in installed in your browser. 
+Since Citrea is an EVM-compatible ZK-rollup, you need an EVM-compatible wallet in installed in your browser.
 
-You can visit our [this guide](install-a-wallet.md) wallet guide to check some wallets that you can install & use, if you do not have any wallets installed. Along with that, if you want a more detailed explanation, follow the same page on installing a wallet (Metamask, as an example) from scratch. 
+You can visit our wallet [guide](install-a-wallet.md) to check some EVM wallets that you can install & use, if you do not have any wallets installed. Along with that, if you want a more detailed explanation, follow the same page on installing a wallet (Metamask, as an example) from scratch. 
 
 ## Step 1: Go to [citrea.xyz](https://citrea.xyz)
 
@@ -36,25 +36,6 @@ Click on the Connect Wallet button, pick the wallet you want to use from the pop
 ![Connect Wallet](/.gitbook/assets/user/2Deposit.png)
 
 If you had another network enable in your wallet, you may see a 🔴Wrong Network🔴 message in a red button, rather than the blue 🔵Connect Wallet🔵 here. In that case, you can simply click on the button and change your network from the popup very easily.
-
-<!-- Optionally, you can also check if the following information match from popups: -->
-
-<!-- >
-> **Network name** \
-> Citrea Devnet 
-> 
-> **Network URL** \
-> https://rpc.devnet.citrea.xyz
-> 
-> **Chain ID** \
-> 62298
->
-> **Currency symbol** \
-> cBTC
->
-> **Block explorer URL** \
-> https://explorer.devnet.citrea.xyz
-> -->
 
 ## Step 4: Check your EVM Address
 
