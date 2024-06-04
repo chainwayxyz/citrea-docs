@@ -79,9 +79,9 @@ Now, we will first send 0.01 BTC to the unique deposit address on your behalf. T
 
 Let's click on the 🟢Faucet Link🟢 button, and do the verification (you may be automatically verified in the faucet popup as well).
 
-![FaucetPage](/.gitbook/assets/user/5FaucetPage.png)
+![Faucet Page](/.gitbook/assets/user/5FaucetPage.png)
 
-![FaucetPopup](/.gitbook/assets/user/6FaucetPopup.png)
+![Faucet Popup](/.gitbook/assets/user/6FaucetPopup.png)
 
 ### Step 8: Check Your Wallet
 
@@ -93,4 +93,4 @@ Congrats! Your deposit transaction will be verified & completed after enough con
 
 You can check your amount from your wallet by clicking on it, and can start to use it quickly! You can send some funds to your friends, to dApps, or get some more cBTC's and start developing on Citrea! If you're interested in the latter, you're more than welcome to visit our simple development guide from [here](/developer-documentation/deployment-guide/README.md)
 
-![Metamask](/.gitbook/assets/user/10Metamask.png)
+![Metamask After Deposit Confirmation](/.gitbook/assets/user/10Metamask.png)
