@@ -93,4 +93,4 @@ Congrats! Your deposit transaction will be verified & completed after enough con
 
 You can check your amount from your wallet by clicking on it, and can start to use it quickly! You can send some funds to your friends, to dApps, or get some more cBTC's and start developing on Citrea! If you're interested in the latter, you're more than welcome to visit our simple development guide from [here](/developer-documentation/deployment-guide/README.md)
 
-![Metamask After Deposit Confirmation](/.gitbook/assets/user/10Metamask.png =400x400)
+![Metamask After Deposit Confirmation](/.gitbook/assets/user/10Metamask.png){ width=50% height=50% }
