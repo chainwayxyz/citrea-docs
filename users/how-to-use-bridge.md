@@ -17,7 +17,7 @@ Visit our beautiful website: https://citrea.xyz
 
 ### Step 2
 
-Visit our Bridge page by clicking the <span style="color: orange; display: inline;">*Bridge to Citrea*</span> button.
+Visit our Bridge page by clicking the 🟠Bridge to Citrea🟠 button.
 
 ### Step 3
 
@@ -25,7 +25,8 @@ Citrea is an EVM-compatible rollup on Bitcoin. That means:
     - you need BTCs
     - you need to bridge them to the Citrea
 
-    Through our faucet, you will get some Devnet BTCs and they will automatically be deposited to the Citrea Devnet very easily in a few clicks.
+    Through our faucet, you will get some Devnet BTCs and they will automatically be deposited to the Citrea Devnet very easily in a few clicks. 
+
 
 ### Step 4 
 
@@ -33,9 +34,9 @@ Click on the Connect Wallet button, pick the wallet you want to use from the pop
 
 ![Deposit](/.gitbook/assets/user/2Deposit.png)
 
-If you had another network enable in your wallet, you may see a <span style="color: red; display: inline;">Wrong Network</span> message in a red button, rather than the blue <span style="color: blue; display: inline;">Connect Wallet</span> here. In that case, you can simply click on the button and change your network from the popup very easily.
+If you had another network enable in your wallet, you may see a 🔴Wrong Network🔴 message in a red button, rather than the blue 🔵Connect Wallet🔵 here. In that case, you can simply click on the button and change your network from the popup very easily.
 
-Optionally, you can also check if the following information match from popups:
+<!-- Optionally, you can also check if the following information match from popups: -->
 
 <!-- >
 > **Network name** \
@@ -62,13 +63,13 @@ Now, if you've successfully connected your wallet, you should be able to see you
 
 ### Step 6
 
-It's time to generate a taproot address for recovery. This is an important step for Citrea deposits - to learn more about it, please check the following page: https://example.org
+It's time to generate a taproot address for recovery. If you want a more technical explanation, you can visit [here](https://example.org).
 
-    You can simply click on the <span style="color: blue; display: inline;">Generate New</span> button to get a system-generated Taproot Address.
+    You can simply click on the 🔵Generate New🔵 button to get a system-generated Taproot Address.
 
 ### Step 7
 
-Upon clicking, a popup will be opened with the information regarding your Taproot Address. You can download the private key & addresses by clicking the download button - in case you may need it later as discussed in the link above, in the previous step.
+Upon clicking, a popup will be opened with the information regarding your Taproot Address. While it's not that necessary for Devnet, you can download it by clicking the button.
 
     In case you missed the popup, you can generate a new one by clicking again. It's fine.
 
@@ -76,7 +77,9 @@ Upon clicking, a popup will be opened with the information regarding your Taproo
 
 ### Step 8
 
-Now, we will first send 0.01 BTC of Citrea Bitcoin Signet to the unique deposit address on your behalf. Then, this deposit will be collected by the operators & verifiers, and will be used to bridge to the Citrea Devnet via the System Contracts automatically. Let's click on the Faucet Link button, and do the verification (you may be automatically verified in the faucet popup as well).
+Now, we will first send 0.01 BTC to the unique deposit address on your behalf. Then, this deposit will be collected by the operators & verifiers, and will be used to bridged to the Citrea Devnet. 
+
+Let's click on the 🟢Faucet Link🟢 button, and do the verification (you may be automatically verified in the faucet popup as well).
 
 ![FaucetPage](/.gitbook/assets/user/5FaucetPage.png)
 
@@ -84,7 +87,7 @@ Now, we will first send 0.01 BTC of Citrea Bitcoin Signet to the unique deposit 
 
 ### Step 9
 
-Congrats! Your deposit transaction will be verified & completed in a minute or two - and that's it! 
+Congrats! Your deposit transaction will be verified & completed after enough confirmations pass - and that's it! 
 
 ![Pending](/.gitbook/assets/user/7Pending.png)
 ![Estimated](/.gitbook/assets/user/8Estimated.png)
