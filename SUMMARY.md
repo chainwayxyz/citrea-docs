@@ -6,8 +6,6 @@
 * [User Tooling](users/user-tooling.md)
 * [Run a Node](users/run-a-node.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
-* [Install a Wallet](users/install-a-wallet.md)
-  * [A technical explanation of Taproot Recovery Address](users/taproot-recovery-address.md)
 
 ## 📖 Developer Documentation
 
@@ -47,3 +45,7 @@
 * [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Lightning Integration](future-research/lightning-integration.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
+
+## 📚 Knowledge Bits
+* [Installing an EVM Wallet](users/install-a-wallet.md)
+* [Taproot Recovery Address](users/taproot-recovery-address.md)
