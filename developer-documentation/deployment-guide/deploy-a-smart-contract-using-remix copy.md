@@ -34,7 +34,7 @@ Click on the `Environment` dropdown and select `Injected Provider - Metamask`. T
 
 ![Remix-4](/.gitbook/assets/remix/4.png)
 
-## Step 5: Confitm the Transaction
+## Step 5: Confirm the Transaction
 
  Metamask will prompt you to confirm the transaction. Click on the `Confirm` button to deploy the smart contract.
 
