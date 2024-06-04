@@ -1,5 +1,20 @@
 # Table of contents
 
+
+## 👤 User Guide
+
+* [Run a Node](users/run-a-node.md)
+* [Bridge to Citrea](users/how-to-use-bridge.md)
+
+## 📖 Developer Documentation
+
+* [Deployment Guide](developer-documentation/deployment-guide/README.md)
+  * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
+  * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
+  * [Configure Hardhat](developer-documentation/deployment-guide/configure-hardhat.md)
+* [System Contracts](developer-documentation/system-contracts/README.md)
+  * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
+
 ## ⛓ Technical Specs
 
 * [TL;DR](README.md)
@@ -30,13 +45,6 @@
 * [Lightning Integration](future-research/lightning-integration.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
 
-## 👤 Users
-
-* [User Tooling](users/user-tooling.md)
-* [Run a Node](users/run-a-node.md)
-
-## 📖 Developer Documentation
-
-* [Deployment Guide](developer-documentation/deployment-guide.md)
-* [System Contracts](developer-documentation/system-contracts/README.md)
-  * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
+## 📚 Knowledge Bits
+* [Installing an EVM Wallet](users/install-a-wallet.md)
+* [Taproot Recovery Address](users/taproot-recovery-address.md)
