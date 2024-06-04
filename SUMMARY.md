@@ -37,6 +37,7 @@
 
 ## 📖 Developer Documentation
 
-* [Deployment Guide](developer-documentation/deployment-guide.md)
+* [Deployment Guide](developer-documentation/deployment-guide/README.md)
+  * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
 * [System Contracts](developer-documentation/system-contracts/README.md)
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
