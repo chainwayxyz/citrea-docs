@@ -13,9 +13,7 @@ Let's start!
 
 Since Citrea is an EVM-compatible ZK-rollup, you need an EVM-compatible wallet in installed in your browser. 
 
-You can visit our [tooling](https://docs.citrea.xyz/users/user-tooling) page to check some wallets that you can install & use, if you do not have any wallets installed.
-
-Alternatively, if you want a more detailed explanation, you can visit [this guide](install-a-wallet.md) on installing a wallet (Metamask, as an example) from scratch. 
+You can visit our [this guide](install-a-wallet.md) wallet guide to check some wallets that you can install & use, if you do not have any wallets installed. Along with that, if you want a more detailed explanation, follow the same page on installing a wallet (Metamask, as an example) from scratch. 
 
 ## Step 1: Go to [citrea.xyz](https://citrea.xyz)
 

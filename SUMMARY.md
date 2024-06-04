@@ -3,7 +3,6 @@
 
 ## 👤 User Guide
 
-* [User Tooling](users/user-tooling.md)
 * [Run a Node](users/run-a-node.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
 
