@@ -39,5 +39,7 @@
 
 * [Deployment Guide](developer-documentation/deployment-guide/README.md)
   * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
+  * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
+  * [Configure Hardhat](developer-documentation/deployment-guide/configure-hardhat.md)
 * [System Contracts](developer-documentation/system-contracts/README.md)
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
