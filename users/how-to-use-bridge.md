@@ -1,10 +1,10 @@
 
 ## Welcome to Citrea Devnet!
 
-In this tutorial, we will briefly go over steps for you to get some cBTC's from out Bridge faucet. This will enable you to join & use the network. 
+In this tutorial, we will briefly go over steps for you to get some cBTC's from our Bridge faucet. This will enable you to join & use the network. 
 
 {% hint style="warning" %}
-Citrea is now at the Devnet phase and it has launched for the testing purposes only. In that sense, BTCs and cBTCs that you're going to utilize during this phase (and this tutorial) have **no real value**. Keep in mind that **there's no Citrea token**, and please beware of scams.
+cBTC and BTC on Citrea Devnet have **no real value** and they're only used for testing purposes. Also keep in mind that **there's no Citrea token**, and please beware of scams.
 {% endhint %}
 
 Let's start!
