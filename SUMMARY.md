@@ -7,7 +7,7 @@
 * [Run a Node](users/run-a-node.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
 * [Install a Wallet](users/install-a-wallet.md)
-  * [A technical explanation of Taproot Recovery Address]
+  * [A technical explanation of Taproot Recovery Address](users/taproot-recovery-address.md)
 
 ## 📖 Developer Documentation
 
