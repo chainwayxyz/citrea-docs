@@ -9,26 +9,26 @@ If you want a more detailed explanation, you can visit [this guide](install-a-wa
 
 Let's start!
 
-### Step 1
+### Step 1: Go to [citrea.xyz](https://citrea.xyz)
 
-Visit our beautiful website: https://citrea.xyz
+Visit our beautiful website: [https://citrea.xyz](https://citrea.xyz)
 
 ![Homepage](/.gitbook/assets/user/1Homepage.png)
 
-### Step 2
+### Step 2: Go to Bridge page
 
 Visit our Bridge page by clicking the 🟠Bridge to Citrea🟠 button.
 
-### Step 3
+#### Faucet
 
-Citrea is an EVM-compatible rollup on Bitcoin. That means: 
+Citrea is an EVM-compatible ZK-rollup on Bitcoin. That means: 
     - you need BTCs
     - you need to bridge them to the Citrea
 
-    Through our faucet, you will get some Devnet BTCs and they will automatically be deposited to the Citrea Devnet very easily in a few clicks. 
+Through our faucet, you will get some Devnet BTCs and they will automatically be deposited to the Citrea Devnet very easily in a few clicks. 
 
 
-### Step 4 
+### Step 3: Connect Your Wallet
 
 Click on the Connect Wallet button, pick the wallet you want to use from the popup, then give necessary permissions to network. 
 
@@ -55,19 +55,19 @@ If you had another network enable in your wallet, you may see a 🔴Wrong Networ
 > https://explorer.devnet.citrea.xyz
 > -->
 
-### Step 5
+### Step 4: Check your EVM Address
 
 Now, if you've successfully connected your wallet, you should be able to see your address in the text box.
 
 ![WalletConnected](/.gitbook/assets/user/3WalletConnected.png)
 
-### Step 6
+### Step 5: Generate a Taproot Address
 
-It's time to generate a taproot address for recovery. If you want a more technical explanation, you can visit [here](https://example.org).
+It's time to generate a taproot address for recovery. If you want a more technical explanation, you can visit [here](taproot-recovery-address.md).
 
     You can simply click on the 🔵Generate New🔵 button to get a system-generated Taproot Address.
 
-### Step 7
+### Step 6: (Optional) Download Taproot Address Information
 
 Upon clicking, a popup will be opened with the information regarding your Taproot Address. While it's not that necessary for Devnet, you can download it by clicking the button.
 
@@ -75,7 +75,7 @@ Upon clicking, a popup will be opened with the information regarding your Taproo
 
 ![Popup](/.gitbook/assets/user/4Popup.png)
 
-### Step 8
+### Step 7: Bridge BTCs to Citrea Devnet
 
 Now, we will first send 0.01 BTC to the unique deposit address on your behalf. Then, this deposit will be collected by the operators & verifiers, and will be used to bridged to the Citrea Devnet. 
 
@@ -85,7 +85,7 @@ Let's click on the 🟢Faucet Link🟢 button, and do the verification (you may 
 
 ![FaucetPopup](/.gitbook/assets/user/6FaucetPopup.png)
 
-### Step 9
+### Step 8: Check Your Wallet
 
 Congrats! Your deposit transaction will be verified & completed after enough confirmations pass - and that's it! 
 
