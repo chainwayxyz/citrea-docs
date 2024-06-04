@@ -5,6 +5,7 @@
 
 * [User Tooling](users/user-tooling.md)
 * [Run a Node](users/run-a-node.md)
+* [How to Use Citrea Bridge](users/how-to-use-bridge.md)
 
 ## 📖 Developer Documentation
 

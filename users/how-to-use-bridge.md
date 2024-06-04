@@ -5,7 +5,7 @@ In this tutorial, we will briefly go over steps for you to get some cBTC's from 
 
 Since Citrea is an EVM-compatible ZK-rollup, for the best experience, you need an EVM-compatible wallet in installed in your browser. You can visit our https://docs.citrea.xyz/users/user-tooling for some wallets to use, if you do not have any wallets installed.
 
-If you want a more detailed explanation, here's a guide on installing Metamask from scratch. 
+If you want a more detailed explanation, you can visit [this guide]() on installing Metamask from scratch. 
 
 Let's start!
 
@@ -60,13 +60,13 @@ Optionally, you can also check if the following information match from popups:
 
 ![Popup](/.gitbook/assets/user/4Popup.png)
 
-8 - Now, we will first send 0.01 BTC of Citrea Bitcoin Signet to the unique deposit address on your behalf. Then, this deposit will be collected by the operators & verifiers, and will be used to bridge to the Citrea Devnet via the System Contracts automatically. Let's click on the Faucet Link button, and do the verification (you may be automatically verified in the faucet popup as well).
+8. Now, we will first send 0.01 BTC of Citrea Bitcoin Signet to the unique deposit address on your behalf. Then, this deposit will be collected by the operators & verifiers, and will be used to bridge to the Citrea Devnet via the System Contracts automatically. Let's click on the Faucet Link button, and do the verification (you may be automatically verified in the faucet popup as well).
 
 ![FaucetPage](/.gitbook/assets/user/5FaucetPage.png)
 
 ![FaucetPopup](/.gitbook/assets/user/6FaucetPopup.png)
 
-9 - Congrats! Your deposit transaction will be verified & completed in a minute or two - and that's it! 
+9. Congrats! Your deposit transaction will be verified & completed in a minute or two - and that's it! 
 
 ![Pending](/.gitbook/assets/user/7Pending.png)
 ![Estimated](/.gitbook/assets/user/8Estimated.png)
