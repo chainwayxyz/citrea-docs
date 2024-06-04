@@ -23,6 +23,7 @@ Visit our Bridge page by clicking the 🟠Bridge to Citrea🟠 button.
 
 > Citrea is an EVM-compatible ZK-rollup on Bitcoin. It means that you need BTCs, and you need to bridge them to the Citrea.
 > 
+>
 > Through our faucet & bridge, you will get some Devnet BTCs and they will automatically be deposited to the Citrea Devnet very easily in a few clicks. 
 
 
@@ -63,7 +64,7 @@ Now, if you've successfully connected your wallet, you should be able to see you
 
 It's time to generate a taproot address for recovery. If you want a more technical explanation, you can visit [here](taproot-recovery-address.md).
 
-You can simply click on the 🔵Generate New🔵 button to get a system-generated, completely **self-custodial** Recovery Taproot Address.
+Now, click on the 🔵Generate New🔵 button to get a system-generated, completely **self-custodial** Recovery Taproot Address.
 
 #### Step 6: (Optional) Download Recovery Taproot Address Information
 
@@ -99,7 +100,7 @@ Congrats! Your deposit transaction will be verified & completed after enough con
 ![Estimated](/.gitbook/assets/user/8Estimated.png)
 ![Completed](/.gitbook/assets/user/9Completed.png)
 
-You can check your amount from your wallet by clicking on it, and can start to use it quickly! You can send some funds to your friends, to dApps, or get some more cBTC's and start developing on Citrea! If you're interested in the latter, you're more than welcome to visit our simple development guide from [here](/developer-documentation/deployment-guide/README.md)
+You can check your amount from your wallet by clicking on it, and can start to use it quickly! You can send some funds to your friends, to dApps, or get some more cBTC's and start developing on Citrea! If you're interested in the latter, you're more than welcome to visit our simple development guide from [here](/developer-documentation/deployment-guide/README.md).
 
 ![Metamask After Deposit Confirmation](/.gitbook/assets/user/10Metamask.png)
 
