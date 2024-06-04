@@ -45,3 +45,8 @@ Click on the `Environment` dropdown and select `Injected Provider - Metamask`. T
 Once the smart contract is deployed, you can interact with it using the Remix IDE. You can call the `store` function to set the integer value and the `retrieve` function to get the integer value.
 
 ![Remix-6](/.gitbook/assets/remix/6.png)
+
+
+# Congratulations!
+
+You have successfully deployed a smart contract on Citrea using Remix. You can now start building decentralized applications on Citrea. If you have any questions or need help, feel free to ask in the [Citrea Discord](https://discord.gg/citrea).
