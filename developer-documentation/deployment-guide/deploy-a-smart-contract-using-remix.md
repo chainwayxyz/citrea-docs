@@ -2,9 +2,9 @@
 
 This guide will walk you through deploying a smart contract using [Remix](https://remix.ethereum.org/), a web-based IDE for writing and deploying smart contracts.
 
-Before you begin, make sure you did the following:
-* Add Citrea Devnet to your Metamask wallet. If you haven't done this yet, follow the [guide](TBD).
-* Deposit some test BTC to your Citrea Devnet wallet. If you haven't done this yet, follow the [guide](TBD).
+Before you begin, make sure that you have cBTCs in your account and Citrea Devnet is added to your wallet. 
+
+If these requirements are not met, follow [the bridge guide](../../users/how-to-use-bridge.md) to get some cBTC and add the network to your wallet.
 
 ## Step 1: Open Remix
 
