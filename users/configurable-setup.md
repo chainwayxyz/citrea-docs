@@ -31,6 +31,7 @@ git clone https://github.com/chainwayxyz/bitcoin_signet && cd bitcoin-signet
 ### Step 1.3: Run Bitcoin Client
 
 Run it the Bitcoin client with the following command:
+
 ```sh
 docker run -d --name bitcoin-signet-client-instance \
 --env MINERENABLED=0 \
@@ -49,7 +50,7 @@ If you don't have it, install it from [here](https://www.rust-lang.org/tools/ins
 
 ### Step 2.2: Clone the source code
 
-Let's download/clone the repository from the latest tag:
+Let's clone the repository from the latest tag:
 ```sh
 git clone https://github.com/chainwayxyz/citrea --branch=v0.4.0
 ```
@@ -66,7 +67,7 @@ node_username = "bitcoin"
 node_password = "bitcoin"
 network = "signet"
 
-[rpc] # Full Node RPC - The host & port here are the host & port that your full node RPC uses - you can keep it like this, or change in anyway you want.
+[rpc] # Full Node RPC - The host & port here are the host & port that your full node RPC uses, do not change if you're not sure how it works.
 bind_host = "127.0.0.1"
 bind_port = 12345
 
