@@ -2,18 +2,74 @@
 
 This documentation explores main ledger RPC endpoints of Citrea that are relevant to batches & proofs:
 
-- `ledger_getSoftBatchByHash`
+<!-- - `ledger_getSoftBatchByHash`
 - `ledger_getSoftBatchByNumber` 
 - `ledger_getSoftBatchRange` 
 - `ledger_getSoftConfirmationStatus` 
 - `ledger_getSequencerCommitmentsOnSlotByNumber` 
 - `ledger_getSequencerCommitmentsOnSlotByHash`
-- `ledger_getVerifiedProofsBySlotHeight` 
+- `ledger_getVerifiedProofsBySlotHeight`  -->
 
+<details>
+<summary><code>ledger_getSoftBatchByHash</code></summary>
 
 ## `ledger_getSoftBatchByHash`
 
-TODO
+
+This endpoint retrieves the soft batch data for a given `hash`.
+
+### Request
+
+- **Method:** `POST`
+- **Content-Type:** `application/json`
+- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Request Body:** You can change the hash below to the batch hash (a hexadecimal string) you want to query.
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "method": "ledger_getSoftBatchByHash",
+        "params": ["498586268de6f895a5bde5f7fc81ea16452f1ce53b266a2a09f48757046aff91"], 
+        "id": 31
+    }
+    ```
+- **Example Request:** Here's an example curl you can use directly from your terminal
+    ```sh
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchByHash","params":["498586268de6f895a5bde5f7fc81ea16452f1ce53b266a2a09f48757046aff91"], "id":31}'  https://rpc.devnet.citrea.xyz
+    ```
+
+### Response
+
+- **Content-Type:** `application/json`
+- **Response Body:**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": {
+            "da_slot_height": 7508,  // Data Availability slot height
+            "da_slot_hash": "df00a605d3723c5ce827b59547f1d343eea847683dba89ac3fb10397f7000000",  // Hash of the DA slot
+            "da_slot_txs_commitment": "0000000000000000000000000000000000000000000000000000000000000000",  // Commitment of DA slot transactions
+            "hash": "498586268de6f895a5bde5f7fc81ea16452f1ce53b266a2a09f48757046aff91",  // Hash of the soft batch
+            "txs": [
+                "884b23b8740cfa84a8d05ce0c5ca454a1d017bf2ab891b212643b2feb8f7d550e201afd8fe2b2abca89b6bc4997c514c21f3d4812973f14c9fe2a2bcfd3c6f0f52f41a5076498d1ae8bdfa57d19e91e3c2c94b6de21985d099cd48cfa7aef17405000000010000000000000000000000001200000000000000"
+            ],  // List of transactions in the soft batch
+            "pre_state_root": "2d3ebe41f2115a2ad81a68e8179b5f0845ca3a948ac6a2f4209f3bcd35f6d0c3",  // Pre-state root hash
+            "post_state_root": "c9ff9bc80c5c55a9bcbb08ea2764f9bc6c5d3fb8237e0064caa1412dcea577bf",  // Post-state root hash
+            "soft_confirmation_signature": "6a4ea116ac95899720c35e34f5aed46bf6e4cb04ddbb4077aec64c365cd1566278df5f7b2e4e01e1e0fee17fd408ab1e35c7c96ed7b0501ec3eb29f869031b00",  // Signature for soft confirmation
+            "pub_key": "52f41a5076498d1ae8bdfa57d19e91e3c2c94b6de21985d099cd48cfa7aef174",  // Public key associated with the signature
+            "deposit_data": [],  // Data related to deposits (empty if none)
+            "l1_fee_rate": 5000000000,  // Layer 1 fee rate
+            "timestamp": 1717229214  // Timestamp of the batch
+        },
+        "id": 31
+    }
+    ```
+
+</details>
+
+<br>
+
+<details>
+<summary><code>ledger_getSoftBatchByNumber</code></summary>
 
 ## `ledger_getSoftBatchByNumber`
 
@@ -65,6 +121,12 @@ This endpoint retrieves the soft batch data for a given `batch_id`.
         "id": 1
     }
     ```
+</details>
+
+<br>
+
+<details>
+<summary><code>ledger_getSoftBatchRange</code></summary>
 
 ## `ledger_getSoftBatchRange`
 
@@ -134,7 +196,12 @@ This endpoint retrieves a range of soft batch data for a given `start` and `end`
         "id": 42
     }
     ```
+</details>
 
+<br>
+
+<details>
+<summary><code>ledger_getSoftConfirmationStatus</code></summary>
 
 ## `ledger_getSoftConfirmationStatus`
 
@@ -177,7 +244,12 @@ This endpoint retrieves the soft confirmation status for a given `l2_height`.
   - `Trusted`: No confirmation yet, rely on the sequencer.
   - `Finalized`: The soft confirmation has been finalized with a sequencer commitment.
   - `Proven`: The soft batch has been ZK-proven.
+</details>
 
+<br>
+
+<details>
+<summary><code>ledger_getSequencerCommitmentsOnSlotByNumber</code></summary>
 
 ## `ledger_getSequencerCommitmentsOnSlotByNumber`
 
@@ -227,10 +299,22 @@ This endpoint retrieves the sequencer commitments for a given `height`.
 - `merkle_root`: Hex encoded Merkle root of soft confirmation hashes.
 - `l1_start_block_hash`: Hex encoded Start L1 block's hash.
 - `l1_end_block_hash`: Hex encoded End L1 block's hash.
+</details>
+
+<br>
+
+<details>
+<summary><code>ledger_getSequencerCommitmentsOnSlotByHash</code></summary>
 
 ## `ledger_getSequencerCommitmentsOnSlotByHash`
 
 TODO
+</details>
+
+<br>
+
+<details>
+<summary><code>ledger_getProofBySlotHeight</code></summary>
 
 ## `ledger_getProofBySlotHeight`
 
@@ -298,7 +382,12 @@ This endpoint retrieves the proof data for a given `height` of a DA slot.
   - `sequencer_public_key`: Hex encoded sequencer public key.
   - `sequencer_da_public_key`: Hex encoded sequencer DA public key.
   - `validity_condition`: Hex encoded validity condition.
+</details>
 
+<br>
+
+<details>
+<summary><code>ledger_getVerifiedProofsBySlotHeight</code></summary>
 
 ## `ledger_getVerifiedProofsBySlotHeight`
 
@@ -373,4 +462,4 @@ This endpoint retrieves the verified proofs for a given `height` of a DA slot.
   - `sequencer_public_key`: Hex encoded sequencer public key.
   - `sequencer_da_public_key`: Hex encoded sequencer DA public key.
   - `validity_condition`: Hex encoded validity condition.
-                                                                                         
+</details>
