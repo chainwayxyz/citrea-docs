@@ -63,7 +63,7 @@ git clone https://github.com/chainwayxyz/citrea --branch=v0.4.0
 
 ### Step 2.3: Edit rollup config file
 
-Config for Citrea Devnet resides in the `configs/devnet/` folder. There are several fields to modify, you can use the following if your Bitcoin Signet is working:
+Config for Citrea Devnet resides in the `configs/devnet/` folder, `configs/devnet/rollup_config.toml` file. There are several fields to modify, you can use the following if your Bitcoin Signet is working:
 
 <!-- ##### On DA Layer  -->
 ```toml
