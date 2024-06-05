@@ -18,7 +18,7 @@ To join the Citrea Devnet properly, we need to do two things: Running a Bitcoin 
 > If the idea so far makes sense, now we can focus on the DA aspect. Citrea is a rollup - that means, we're publishing our data (not only a hash) to the DA. Along with that, we're also settling on the DA layer as well. Given the state of Bitcoin script and its capabilities, we should also be able to test everything from the DA aspect where Bitcoin is used. Thus, we've decided to run a custom Signet - a Signet that is configurable by us so that we can test **anything** that we want. We should be ready for any bugs, any edge cases, any attacks that happens on the layer 1 - all to ensure that everything will continue to work as expected.
 > \
 > \
-> Please note that there's no Citrea token, and any asset in the Citrea Devnet does not possess any financial value. We're already providing a [faucet](https://example.com) for our Devnet. For users, for developers, for curious minds to try, it will be more than enough. If you think this is not enough or you have some other ideas, please visit our Discord and tell us. We will be more than happy to help.
+> Please note that there's no Citrea token, and any asset in the Citrea Devnet does not possess any financial value. We're already providing a [bridge & faucet](https://devnet.citrea.xyz) for our Devnet. For users, for developers, for curious minds to try, it will be more than enough. If you think this is not enough or you have some other ideas, please visit our Discord and tell us. We will be more than happy to help.
 
 Now, if everything is clear, let's start with the Bitcoin Signet Setup!
 
@@ -30,7 +30,7 @@ For this step, we've prepared a simple Docker container that you can run really 
 
 ### Step 1: Install Docker
 
-Install Docker from here: https://docs.docker.com/get-docker/
+Install Docker from here: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
 ### Step 2: Setup Bitcoin Signet
 
@@ -142,6 +142,6 @@ Awesome! Since we've now completed building the project, we can run it. Your exe
 
 ------------------------
 
-If you have any questions, please don't hesitate visit our Discord and ask us in the #developer-chat channel. 
+If you have any questions, please don't hesitate visit our [Discord](https://discord.citrea.xyz) and ask us in the #developer-chat channel. 
 
 Enjoy!

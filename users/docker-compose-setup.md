@@ -101,6 +101,6 @@ This command will start the Bitcoin Signet node and the Citrea full node. After 
   - Configured to run the Citrea Devnet.
 
 
-If you have any questions or need further assistance, please visit our Discord and ask in the #developer-chat channel.
+If you have any questions or need further assistance, please visit our [Discord](https://discord.citrea.xyz) and ask in the #developer-chat channel.
 
 Enjoy!
