@@ -2,19 +2,7 @@
 
 This documentation explores main ledger RPC endpoints of Citrea that are relevant to batches & proofs:
 
-<!-- - `ledger_getSoftBatchByHash`
-- `ledger_getSoftBatchByNumber` 
-- `ledger_getSoftBatchRange` 
-- `ledger_getSoftConfirmationStatus` 
-- `ledger_getSequencerCommitmentsOnSlotByNumber` 
-- `ledger_getSequencerCommitmentsOnSlotByHash`
-- `ledger_getVerifiedProofsBySlotHeight`  -->
-
-<details>
 <summary><code>ledger_getSoftBatchByHash</code></summary>
-
-## `ledger_getSoftBatchByHash`
-
 
 This endpoint retrieves the soft batch data for a given `hash`.
 
@@ -71,8 +59,6 @@ This endpoint retrieves the soft batch data for a given `hash`.
 <details>
 <summary><code>ledger_getSoftBatchByNumber</code></summary>
 
-## `ledger_getSoftBatchByNumber`
-
 This endpoint retrieves the soft batch data for a given `batch_id`.
 
 ### Request
@@ -127,8 +113,6 @@ This endpoint retrieves the soft batch data for a given `batch_id`.
 
 <details>
 <summary><code>ledger_getSoftBatchRange</code></summary>
-
-## `ledger_getSoftBatchRange`
 
 This endpoint retrieves a range of soft batch data for a given `start` and `end` batch ID.
 
@@ -203,8 +187,6 @@ This endpoint retrieves a range of soft batch data for a given `start` and `end`
 <details>
 <summary><code>ledger_getSoftConfirmationStatus</code></summary>
 
-## `ledger_getSoftConfirmationStatus`
-
 This endpoint retrieves the soft confirmation status for a given `l2_height`.
 
 ### Request
@@ -250,8 +232,6 @@ This endpoint retrieves the soft confirmation status for a given `l2_height`.
 
 <details>
 <summary><code>ledger_getSequencerCommitmentsOnSlotByNumber</code></summary>
-
-## `ledger_getSequencerCommitmentsOnSlotByNumber`
 
 This endpoint retrieves the sequencer commitments for a given `height`.
 
@@ -306,8 +286,6 @@ This endpoint retrieves the sequencer commitments for a given `height`.
 <details>
 <summary><code>ledger_getSequencerCommitmentsOnSlotByHash</code></summary>
 
-## `ledger_getSequencerCommitmentsOnSlotByHash`
-
 TODO
 </details>
 
@@ -315,8 +293,6 @@ TODO
 
 <details>
 <summary><code>ledger_getProofBySlotHeight</code></summary>
-
-## `ledger_getProofBySlotHeight`
 
 This endpoint retrieves the proof data for a given `height` of a DA slot.
 
@@ -388,8 +364,6 @@ This endpoint retrieves the proof data for a given `height` of a DA slot.
 
 <details>
 <summary><code>ledger_getVerifiedProofsBySlotHeight</code></summary>
-
-## `ledger_getVerifiedProofsBySlotHeight`
 
 This endpoint retrieves the verified proofs for a given `height` of a DA slot.
 
