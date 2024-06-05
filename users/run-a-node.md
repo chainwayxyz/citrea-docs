@@ -1,3 +1,13 @@
 # Run a Node
 
-Citrea allows and encourages all users to run nodes, even though they could use publicly-available RPC endpoints. A full guide for how to run both full and light nodes will be published together with the open-source codebase.
+Welcome aboard! 
+
+In the following documents, we briefly go through the steps to run Citrea Devnet nodes that you can use to verify & analyze the chain, and also be able to use its RPC for development, deployment, and much more ideas that you come up with!
+
+There are two ways to run a Devnet Node:
+- Using Docker Compose and building and running instances both Bitcoin and Citrea instances as one: [Docker Compose Setup](docker-compose-setup.md)
+- Building and running them seperately (more configurable): [Configurable Setup](configurable-setup.md)
+
+If you have any questions, please don't hesitate visit our Discord and ask us in the #developer-chat channel. 
+
+Enjoy!
