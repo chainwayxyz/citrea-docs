@@ -2,6 +2,7 @@
 
 This documentation explores main ledger RPC endpoints of Citrea that are relevant to batches & proofs:
 
+<details>
 <summary><code>ledger_getSoftBatchByHash</code></summary>
 
 This endpoint retrieves the soft batch data for a given `hash`.
