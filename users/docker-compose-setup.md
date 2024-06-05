@@ -2,8 +2,6 @@
 
 This guide goes through the simpler Docker Compose setup. It launches a custom Bitcoin Signet and a Citrea full node for quick syncing.
 
-### Step-by-Step Setup
-
 ### Step 1: Install Docker
 
 Install Docker from here: [Docker Installation Guide](https://docs.docker.com/get-docker/)

@@ -15,7 +15,7 @@ To join the Citrea Devnet properly, we need to do two things: Running a Bitcoin 
 
 ## Step 1: Bitcoin Signet Setup
 
-Citrea is a ZK-Rollup on **Bitcoin**. Thus, to verify the rollup, there should be an access to the network underneath. For this step, we've prepared a simple Docker container.
+For this step, we've prepared a simple Docker container.
 
 ### Step 1.1: Install Docker
 
@@ -23,12 +23,18 @@ Install Docker from here: [https://docs.docker.com/get-docker/](https://docs.doc
 
 ### Step 1.2: Setup Bitcoin Signet
 
-Download/Clone the Bitcoin Signet Container
+Clone the Bitcoin Signet Container and navigate to the folder
 ```sh
-git clone https://github.com/chainwayxyz/bitcoin_signet && cd bitcoin-signet
+git clone https://github.com/chainwayxyz/bitcoin_signet && cd bitcoin_signet
 ```
 
-### Step 1.3: Run Bitcoin Client
+### Step 1.3: Build Signet Container
+
+```sh
+docker build -t bitcoin-signet .
+```
+
+### Step 1.4: Run Signet Container
 
 Run it the Bitcoin client with the following command:
 
@@ -61,13 +67,15 @@ Config for Citrea Devnet resides in the `configs/devnet/` folder. There are seve
 
 <!-- ##### On DA Layer  -->
 ```toml
-[da] # DA Config
+# DA Config
+[da] 
 node_url = "http://0.0.0.0:38332"
 node_username = "bitcoin"                                     
 node_password = "bitcoin"
 network = "signet"
 
-[rpc] # Full Node RPC - The host & port here are the host & port that your full node RPC uses, do not change if you're not sure how it works.
+# Full Node RPC - The host & port here are the host & port that your full node RPC uses, do not change if you're not sure how it works.
+[rpc] 
 bind_host = "127.0.0.1"
 bind_port = 12345
 
