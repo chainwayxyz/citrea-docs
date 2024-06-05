@@ -14,6 +14,7 @@
   * [Configure Hardhat](developer-documentation/deployment-guide/configure-hardhat.md)
 * [System Contracts](developer-documentation/system-contracts/README.md)
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
+* [Rpc Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
 
 ## ⛓ Technical Specs
 
