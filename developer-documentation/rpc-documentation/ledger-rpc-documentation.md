@@ -68,7 +68,7 @@ This endpoint retrieves the soft batch data for a given `batch_id`.
 - **Content-Type:** `application/json`
 - **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
 - **Request Body:** You can change the number below to the batch ID (a decimal number) you want to query.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "method": "ledger_getSoftBatchByNumber",
@@ -86,7 +86,7 @@ This endpoint retrieves the soft batch data for a given `batch_id`.
 
 - **Content-Type:** `application/json`
 - **Response Body:**
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0", 
         "result": {
@@ -123,7 +123,7 @@ This endpoint retrieves a range of soft batch data for a given `start` and `end`
 - **Content-Type:** `application/json`
 - **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
 - **Request Body:** You can change the numbers below to the start and end batch IDs (decimal numbers) you want to query.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "method": "ledger_getSoftBatchRange",
@@ -140,7 +140,7 @@ This endpoint retrieves a range of soft batch data for a given `start` and `end`
 
 - **Content-Type:** `application/json`
 - **Response Body:**
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "result": [
@@ -196,7 +196,7 @@ This endpoint retrieves the soft confirmation status for a given `l2_height`.
 - **Content-Type:** `application/json`
 - **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
 - **Request Body:** You can change the number below to the L2 height (a decimal number) you want to query.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "method": "ledger_getSoftConfirmationStatus",
@@ -213,7 +213,7 @@ This endpoint retrieves the soft confirmation status for a given `l2_height`.
 
 - **Content-Type:** `application/json`
 - **Response Body:**
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "result": "Trusted",  // Possible values: "Trusted", "Finalized", "Proven"
@@ -242,7 +242,7 @@ This endpoint retrieves the sequencer commitments for a given `height`.
 - **Content-Type:** `application/json`
 - **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
 - **Request Body:** You can change the number below to the slot number (a decimal number) you want to query.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "method": "ledger_getSequencerCommitmentsOnSlotByNumber",
@@ -259,7 +259,7 @@ This endpoint retrieves the sequencer commitments for a given `height`.
 
 - **Content-Type:** `application/json`
 - **Response Body:**: `result` field will be `null` if no sequencer commitment is available in that slot.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "result": [
@@ -303,7 +303,7 @@ This endpoint retrieves the proof data for a given `height` of a DA slot.
 - **Content-Type:** `application/json`
 - **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
 - **Request Body:** You can change the number below to the slot height (a decimal number) you want to query.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "method": "ledger_getProofBySlotHeight",
@@ -320,7 +320,7 @@ This endpoint retrieves the proof data for a given `height` of a DA slot.
 
 - **Content-Type:** `application/json`
 - **Response Body:**
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "result": {
@@ -374,7 +374,7 @@ This endpoint retrieves the verified proofs for a given `height` of a DA slot.
 - **Content-Type:** `application/json`
 - **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
 - **Request Body:** You can change the number below to the slot height (a decimal number) you want to query.
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "method": "ledger_getVerifiedProofsBySlotHeight",
@@ -391,7 +391,7 @@ This endpoint retrieves the verified proofs for a given `height` of a DA slot.
 
 - **Content-Type:** `application/json`
 - **Response Body:**
-    ```json5
+    ```json
     {
         "jsonrpc": "2.0",
         "result": [
