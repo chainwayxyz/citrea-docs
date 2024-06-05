@@ -1,8 +1,6 @@
 
 # Running a configurable Citrea Devnet Node
 
-Welcome aboard! 
-
 In this customized setup document, we will briefly go through the steps to run a Citrea Devnet full node that you can use to verify & analyze the chain, and also be able to use its RPC for development, deployment, and much more ideas that you come up with!
 
 To join the Citrea Devnet properly, we need to do two things: Running a Bitcoin Node in Signet mode that syncs with our custom Signet, and running a Citrea Node that syncs with the Citrea Devnet.
@@ -12,11 +10,14 @@ To join the Citrea Devnet properly, we need to do two things: Running a Bitcoin 
 > To be able to answer this, we should first visit on another question: **Why Devnet**?
 >
 > Well, on our mission to scale Bitcoin securely up until now, we've implemented two major components. The first one is the sequencer & full node implementation of [Citrea](https://github.com/chainwayxyz/citrea), and the second one is [Clementine](https://github.com/chainwayxyz/clementine) - a BitVM based trust-minimized two-way Peg program for bridging. While we're shipping fast and carefully, testing always plays a crucial role for the software development. Given the environment and importance of our product, it's our duty to ensure that our code & infrastructure is tested against bugs, possible issues, and possible attacks.
->
+> \
+> \
 > In that sense, we've decided run Citrea as a public Devnet first. It will be open for everyone - users can try and feel it, developers can start to build on it & hack it, we can see that it's working as expected and move it to the next stages. It will help us test everything except BitVM fraud proofs, which is work-in-progress nowadays and going to be tested in the later phases.
-> 
+> \
+> \
 > If the idea so far makes sense, now we can focus on the DA aspect. Citrea is a rollup - that means, we're publishing our data (not only a hash) to the DA. Along with that, we're also settling on the DA layer as well. Given the state of Bitcoin script and its capabilities, we should also be able to test everything from the DA aspect where Bitcoin is used. Thus, we've decided to run a custom Signet - a Signet that is configurable by us so that we can test **anything** that we want. We should be ready for any bugs, any edge cases, any attacks that happens on the layer 1 - all to ensure that everything will continue to work as expected.
-> 
+> \
+> \
 > Please note that there's no Citrea token, and any asset in the Citrea Devnet does not possess any financial value. We're already providing a [faucet](https://example.com) for our Devnet. For users, for developers, for curious minds to try, it will be more than enough. If you think this is not enough or you have some other ideas, please visit our Discord and tell us. We will be more than happy to help.
 
 Now, if everything is clear, let's start with the Bitcoin Signet Setup!

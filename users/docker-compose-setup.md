@@ -1,6 +1,6 @@
 # Running a Configurable Citrea Devnet Node with Docker Compose
 
-Welcome aboard! This document will guide you through setting up and running a Citrea Devnet full node using Docker Compose. This setup will allow you to verify and analyze the chain, and use its RPC for development and deployment.
+This document will guide you through setting up and running a Citrea Devnet full node using Docker Compose. This setup will allow you to verify and analyze the chain, and use its RPC for development and deployment.
 
 ## Overview
 
