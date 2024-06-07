@@ -49,8 +49,9 @@ This endpoint retrieves the current synchronization status of your local Citrea 
   - `head_block_number`: The latest block number known to the node.
   - `synced_block_number`: The block number up to which the node has synced.
 
-
 </details>
+
+<br>
 
 <details>
 <summary><code>ledger_getSoftBatchByHash</code></summary>
