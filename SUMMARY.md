@@ -1,6 +1,11 @@
 # Table of contents
 
 
+## 👋 Welcome
+
+* [Getting started](/welcome/getting-started.md)
+
+
 ## 👤 User Guide
 
 * [Run a Node](users/run-a-node.md)
@@ -21,7 +26,7 @@
 ## ⛓ Technical Specs
 
 * [TL;DR](README.md)
-* [Introduction](technical-specs/introduction.md)
+* [Technical Introduction](technical-specs/introduction.md)
 * [Characteristics](technical-specs/characteristics/README.md)
   * [Execution Environment](technical-specs/characteristics/execution-environment.md)
   * [Block Production](technical-specs/characteristics/block-production/README.md)

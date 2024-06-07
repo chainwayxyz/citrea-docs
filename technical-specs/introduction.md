@@ -1,4 +1,4 @@
-# Introduction
+# Technical Introduction
 
 Bitcoin is designed to facilitate trustless payments in a decentralized network of participants. Over the years, Bitcoin blockspace has become more and more valuable because of its high success in achieving decentralization and security. Citrea uses Bitcoin blockspace to secure its execution, introducing a novel way to use it efficiently via zero-knowledge proof technology.
 
