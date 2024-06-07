@@ -3,6 +3,57 @@
 This documentation explores main ledger RPC endpoints of Citrea that are relevant to batches & proofs:
 
 <details>
+<summary><code>citrea_syncStatus</code></summary>
+
+This endpoint retrieves the current synchronization status of your local Citrea node.
+
+### Request
+
+- **Method:** `POST`
+- **Content-Type:** `application/json`
+- **Endpoint URL:** `http://0.0.0.0:8080` (This is for docker-compose setup, replace with your rpc binding)
+- **Request Body:**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "method": "citrea_syncStatus",
+        "params": [], 
+        "id": 31
+    }
+    ```
+- **Example Request:** Here's an example curl you can use directly from your terminal
+    ```sh
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"citrea_syncStatus","params":[], "id":78}'  http://0.0.0.0:8080
+    ```
+
+### Response
+
+- **Content-Type:** `application/json`
+- **Response Body:**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "result": {
+            "Syncing": {
+                "head_block_number": 264052,  // The latest block number known to the node
+                "synced_block_number": 27050  // The block number up to which the node has synced
+            }
+        },
+        "id": 31
+    }
+    ```
+
+### Response Fields Explanation
+
+- `Syncing`: The synchronization status object.
+  - `head_block_number`: The latest block number known to the node.
+  - `synced_block_number`: The block number up to which the node has synced.
+
+</details>
+
+<br>
+
+<details>
 <summary><code>ledger_getSoftBatchByHash</code></summary>
 
 This endpoint retrieves the soft batch data for a given `hash`.
