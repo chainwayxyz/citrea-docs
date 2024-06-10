@@ -19,7 +19,7 @@ You can visit our wallet [guide](install-a-wallet.md) to check some EVM wallets 
 
 ![Homepage](/.gitbook/assets/user/1Homepage.png)
 
-Visit our website, [citrea.xyz](https://citrea.xyz/bridge), and click the 🟠Bridge to Citrea🟠 button.
+Visit our website, [citrea.xyz](https://citrea.xyz/bridge), and click the 🟠Bridge to Citrea Devnet🟠 button.
 
 > Citrea is an EVM-compatible ZK-rollup on Bitcoin and uses BTC as its native token. To get started, you need to bridge test BTCs to Citrea Public Devnet. Citrea Public Devnet runs in our custom Bitcoin signet. Therefore, use our bridge website to auto deposit from our faucet to Citrea Devnet.
 
@@ -51,6 +51,8 @@ In case you missed the popup, you can generate a new one by clicking again. It's
 
 ![Taproot Address Popup](/.gitbook/assets/user/4Popup.png)
 
+For the next step, let's click Next.
+
 ## Step 6: Bridge BTCs to Citrea Devnet
 
 ![Faucet Page](/.gitbook/assets/user/5FaucetPage.png)
@@ -63,7 +65,7 @@ In case you missed the popup, you can generate a new one by clicking again. It's
 > 
 > - Recovery Taproot Address: In case your deposit gets stuck on the way, you can claim it back using this address after some time (or you can simply create a new deposit in Devnet).
 
-Now, click on the 🟢Faucet Link🟢 button to let the auto deposit mechanism to send 0.01 BTC to the unique deposit address. Then, it will be automatically bridged to the Citrea Devnet. 
+Now, click on the 🟢Deposit From Faucet🟢 button to let the auto deposit mechanism to send 0.01 BTC to the unique deposit address. Then, it will be automatically bridged to the Citrea Devnet. 
 
 The website may ask you to do the verification (or you may be automatically verified in the faucet popup as well).
 
