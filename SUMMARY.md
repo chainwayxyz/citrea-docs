@@ -9,7 +9,7 @@
 ## 👤 User Guide
 
 * [Run a Node](users/run-a-node.md)
-  * [System Requirements](users/system-requirements.md)
+  * [Hardware Requirements](users/hardware-requirements.md)
   * [Docker Compose Setup](users/docker-compose-setup.md)
   * [Configurable Setup](users/configurable-setup.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
