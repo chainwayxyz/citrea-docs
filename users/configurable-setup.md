@@ -91,7 +91,7 @@ The above config will work fine with the Docker command above, so unless you hav
 If all above works fine, build the project:
 
 ```sh
-SKIP_GUEST_BUILD=1 make build
+SKIP_GUEST_BUILD=1 make build-release
 ```
 
 This may take from 5 to 15 minutes.
