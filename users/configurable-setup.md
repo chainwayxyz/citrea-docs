@@ -42,6 +42,7 @@ Run it the Bitcoin client with the following command:
 docker run -d --name bitcoin-signet-client-instance \
 --env MINERENABLED=0 \
 --env SIGNETCHALLENGE=512102653734c749d5f7227d9576b3305574fd3b0efdeaa64f3d500f121bf235f0a43151ae \
+--env BITCOIN_DATA=/mnt/task/btc-data \
 --env ADDNODE=signet.citrea.xyz:38333 -p 38332:38332 \
 bitcoin-signet
 ```
@@ -58,7 +59,7 @@ If you don't have it, install it from [here](https://www.rust-lang.org/tools/ins
 
 Let's clone the repository from the latest tag:
 ```sh
-git clone https://github.com/chainwayxyz/citrea --branch=v0.4.0
+git clone https://github.com/chainwayxyz/citrea --branch=v0.4.1
 ```
 
 ### Step 2.3: Edit rollup config file
@@ -101,12 +102,14 @@ If you want to see proving (optional), remove the `SKIP_GUEST_BUILD` flag and ru
 make install-dev-tools
 ```
 
+If you also want to see less logs, you can put `RUST_LOG=info` to the beginning of the command.
+
 ### Step 2.5: Run
 
-Run the following command to start running the Citrea binary.
+Run the following to start running the Citrea binary.
 
 ```sh 
-./target/release/citrea --da-layer bitcoin --rollup-config-path devnet-configs/devnet.toml --genesis-paths devnet-configs/genesis
+./target/release/citrea --da-layer bitcoin --rollup-config-path configs/devnet/rollup_config.toml --genesis-paths configs/devnet/genesis-files
 ```
 
 ------------------------
