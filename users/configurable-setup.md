@@ -59,7 +59,7 @@ If you don't have it, install it from [here](https://www.rust-lang.org/tools/ins
 
 Let's clone the repository from the latest tag:
 ```sh
-git clone https://github.com/chainwayxyz/citrea --branch=v0.4.1
+git clone https://github.com/chainwayxyz/citrea --branch=v0.4.1 && cd citrea
 ```
 
 ### Step 2.3: Edit rollup config file
