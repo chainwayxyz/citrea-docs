@@ -10,6 +10,6 @@ Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace 
 This documentation serves as a knowledge base for both developers and users. If you're a developer, you can check our [developer documentation](/developer-documentation/), and if you're a user, you can start using the Citrea Devnet by following our bridge guide [here](/users/how-to-use-bridge.md). Along with that, you can check our architecture and security properties from the links in the sidebar.
 
 You can also join our community or follow us from the links below:
-- [Join our Discord](https://discord.com/invite/citrea)
+- [Join our Discord](https://discord.gg/citrea)
 - [Follow us on Twitter | X](https://x.com/citrea_xyz)
 - [Website](https://citrea.xyz)
