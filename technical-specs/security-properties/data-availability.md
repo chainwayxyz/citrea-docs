@@ -2,7 +2,7 @@
 
 <figure><img src="../../.gitbook/assets/da (1).png" alt=""><figcaption><p>DA in Citrea</p></figcaption></figure>
 
-Data availability by definition represents the availability of tha data needed to transact for everyone. Unlike existing L2 solutions on Bitcoin, Citrea keeps all the data needed to transact on the rollup in Bitcoin.
+Data availability by definition represents the availability of data needed to transact for everyone. Unlike existing L2 solutions on Bitcoin, Citrea keeps all the data needed to transact on the rollup in Bitcoin.
 
 Because the data bandwidth is limited on Bitcoin, Citrea keeps the data in a special form called state differences (state diffs in short). Instead of recording the full Citrea transaction data like signature witnesses in Bitcoin, Citrea records the state diff between two consecutive batches. The state diff is constrained by the zk circuit, which means it cannot be altered without invalidating the proof.
 

@@ -114,4 +114,4 @@ Run the following to start running the Citrea binary.
 
 ------------------------
 
-If you have any questions, please don't hesitate visit our [Discord](https://discord.gg/invite/citrea) and ask us in the #developer-chat channel. 
+If you have any questions, please don't hesitate visit our [Discord](https://discord.gg/citrea) and ask us in the #developer-chat channel. 

@@ -24,4 +24,4 @@ This command will start the Bitcoin Signet node and the Citrea full node. After 
 
 -------------------------
 
-If you have any questions or need further assistance, please visit our [Discord](https://discord.gg/invite/citrea) and ask in the #developer-chat channel.
+If you have any questions or need further assistance, please visit our [Discord](https://discord.gg/citrea) and ask in the #developer-chat channel.

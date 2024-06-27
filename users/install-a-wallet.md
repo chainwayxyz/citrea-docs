@@ -56,7 +56,7 @@ We advise you to watch the video, and save it. If you lose this phrase, and then
 
 ![Secret Recovery Phrase](/.gitbook/assets/metamask/5Phrase.png)
 
-Click to secure my wallet option, and then click to reval secret recovery phrase. Note the words down, somewhere offline if possible.
+Click to secure my wallet option, and then click to reveal secret recovery phrase. Note the words down, somewhere offline if possible.
 
 {% hint style="warning" %}
 While this process is not extremely important for Citrea Devnet (since BTCs and cBTCs do not have any real value as the network is for testing purposes only), we find it crucial for every web3 user to be aware of this notion.
