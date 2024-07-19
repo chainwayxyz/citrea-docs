@@ -100,7 +100,7 @@ If all above works fine, build the project:
 SKIP_GUEST_BUILD=1 make build-release
 ```
 
-This may take from 5 to 15 minutes.
+This step may take several minutes or more, depending on your hardware.
 
 If you want to see proving (optional), remove the `SKIP_GUEST_BUILD` flag and run the following first:
 
