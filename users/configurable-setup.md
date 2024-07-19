@@ -42,6 +42,7 @@ Run it the Bitcoin client with the following command:
 docker run -d --name bitcoin-signet-client-instance \
 --env MINERENABLED=0 \
 --env SIGNETCHALLENGE=512102653734c749d5f7227d9576b3305574fd3b0efdeaa64f3d500f121bf235f0a43151ae \
+--env RPCUSER=citrea --env RPCPASSWORD=citrea \
 --env BITCOIN_DATA=/mnt/task/btc-data \
 --env ADDNODE=signet.citrea.xyz:38333 -p 38332:38332 \
 bitcoin-signet
@@ -59,7 +60,7 @@ If you don't have it, install it from [here](https://www.rust-lang.org/tools/ins
 
 Let's clone the repository from the latest tag:
 ```sh
-git clone https://github.com/chainwayxyz/citrea --branch=v0.4.1 && cd citrea
+git clone https://github.com/chainwayxyz/citrea --branch=v0.4.5 && cd citrea
 ```
 
 ### Step 2.3: Edit rollup config file
@@ -71,9 +72,12 @@ Config for Citrea Devnet resides in the `configs/devnet/` folder, `configs/devne
 # DA Config
 [da] 
 node_url = "http://0.0.0.0:38332"
-node_username = "bitcoin"                                     
-node_password = "bitcoin"
+node_username = "citrea"                                     
+node_password = "citrea"
 network = "signet"
+
+[storage]
+path = "full-node-db"
 
 # Full Node RPC - The host & port here are the host & port that your full node RPC uses, do not change if you're not sure how it works.
 [rpc] 
@@ -84,7 +88,9 @@ bind_port = 12345
 sequencer_client_url = "https://rpc.devnet.citrea.xyz"
 include_tx_body = false # Setting false to save space by not saving Soft Batches locally. 
 ```
-The above config will work fine with the Docker command above, so unless you have an expertise, we advise you to not to change them.
+The above config will work fine with the Docker command above, so unless you have an expertise, we advise you to not to change them. 
+
+_Optionally, you can also add `db_max_open_files = 5000` under `[storage]` section and type `ulimit -n 5000` to the terminal to get a syncing speed boost. Please keep in mind them it may affect the overall performance of your system while syncing._
 
 ### Step 2.4: Build the project
 
@@ -94,7 +100,7 @@ If all above works fine, build the project:
 SKIP_GUEST_BUILD=1 make build-release
 ```
 
-This may take from 5 to 15 minutes.
+This step may take several minutes or more, depending on your hardware.
 
 If you want to see proving (optional), remove the `SKIP_GUEST_BUILD` flag and run the following first:
 
