@@ -8,7 +8,7 @@ Install Docker from here: [Docker Installation Guide](https://docs.docker.com/ge
 
 ### Step 2: Set Up Docker Compose
 
-Download the `docker-compose.yml` file from the repository: [https://github.com/chainwayxyz/citrea/blob/v0.4.0/docker-compose.yml](https://github.com/chainwayxyz/citrea/blob/v0.4.0/docker-compose.yml)
+Download the `docker-compose.yml` file from the repository: [https://raw.githubusercontent.com/chainwayxyz/citrea/v0.4.5/docker-compose.yml](https://raw.githubusercontent.com/chainwayxyz/citrea/v0.4.5/docker-compose.yml)
 
 > `ROLLUP__RUNNER__INCLUDE_TX_BODY` can be set to `false` if soft batches are not needed - it saves some space.
 
@@ -17,10 +17,16 @@ Download the `docker-compose.yml` file from the repository: [https://github.com/
 Navigate to same directory with `docker-compose.yml` file, and run the command in terminal:
 
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
-This command will start the Bitcoin Signet node and the Citrea full node. After a minute, the node will start to sync with the network.
+This command will start the Bitcoin Signet node and the Citrea full node. If you want to follow the logs, you can run the following:
+
+```sh
+docker logs --follow full-node
+```
+
+After a minute, the node will start to sync with the network.
 
 -------------------------
 
