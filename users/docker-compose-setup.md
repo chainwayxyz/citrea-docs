@@ -12,7 +12,11 @@ Download the `docker-compose.yml` file from the repository: [https://raw.githubu
 
 > `ROLLUP__RUNNER__INCLUDE_TX_BODY` can be set to `false` if soft batches are not needed - it saves some space.
 
-### Step 3: Run Docker Compose
+### Step 3 (Optional): Increase sync speed
+
+Optionally, you can type `ulimit -n 5000` to the terminal to increase the maximum number of open file descriptors to 5000. This can speed up syncing by allowing more files to be open simultaneously, but be aware it may affect overall system performance during the sync process.
+
+### Step 4: Run Docker Compose
 
 Navigate to same directory with `docker-compose.yml` file, and run the command in terminal:
 
@@ -27,8 +31,6 @@ docker logs --follow full-node
 ```
 
 After a minute, the node will start to sync with the network.
-
-_Optionally, you can type `ulimit -n 5000` in the terminal to increase the maximum number of open file descriptors to 5000. This can speed up syncing by allowing more files to be open simultaneously, but be aware it may affect overall system performance during the sync process._
 
 -------------------------
 
