@@ -28,7 +28,7 @@ docker logs --follow full-node
 
 After a minute, the node will start to sync with the network.
 
-_Optionally, you can type ulimit -n 5000 in the terminal to increase the maximum number of open file descriptors to 5000. This can speed up syncing by allowing more files to be open simultaneously, but be aware it may affect overall system performance during the sync process._
+_Optionally, you can type `ulimit -n 5000` in the terminal to increase the maximum number of open file descriptors to 5000. This can speed up syncing by allowing more files to be open simultaneously, but be aware it may affect overall system performance during the sync process._
 
 -------------------------
 
