@@ -1,6 +1,8 @@
 # Bridge
 
-This bridge contract facilitates deposits and withdrawals between Bitcoin and Citrea. It verifies Bitcoin transactions for deposits and manages withdrawal requests to be processed on the Bitcoin network.
+Serves as a facilitator of deposits and withdrawals between Bitcoin and Citrea. It verifies Bitcoin transactions for deposits and manages withdrawal requests to be processed on the Bitcoin network. 
+
+You can find the contract in the address [`0x31...002`](https://explorer.devnet.citrea.xyz/address/0x3100000000000000000000000000000000000002).
 
 ## Deposit Structure
 
