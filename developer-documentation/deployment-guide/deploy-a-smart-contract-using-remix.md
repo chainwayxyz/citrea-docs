@@ -15,11 +15,15 @@ Select contracts folder from the left sidebar and click on the `1_Storage.sol` f
 
 ## Step 2: Compile the Smart Contract
 
-Click on the `Solidity Compiler` tab from the left sidebar. You should see the following screen:
+Click on the `Solidity Compiler` tab from the left sidebar. You should see something like the following:
 
 ![Remix-2](/.gitbook/assets/remix/2.png)
 
-Click on the `Compile 1_Storage.sol` button to compile the smart contract. Compiling the smart contract will generate the ABI and Bytecode required for deploying the smart contract.
+First, click on the advanced configurations section and then select `Shanghai` as the EVM version. After these, click on the `Compile 1_Storage.sol` button to compile the smart contract. Compiling the smart contract will generate the ABI and Bytecode required for deploying the smart contract.
+
+> Normally, it's not necessary to select Shanghai as the EVM version. However, Citrea does not support Cancun update at the moment. 
+>
+> If you try to deploy a more complex contract using default configs, there might be some opcode issues. That's why we advise you to pick Shanghai version for now.
 
 ## Step 3: Open the Deploy & Run Transactions Tab
 
