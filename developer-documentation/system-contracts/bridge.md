@@ -1,0 +1,222 @@
+# Bridge
+
+Serves as a bridge contract for facilitating deposits and withdrawals between Bitcoin and Citrea. It verifies Bitcoin transactions for deposits and manages withdrawal requests to be processed on the Bitcoin network.
+
+## State Structure
+
+```solidity
+bool public initialized;
+```
+A flag indicating whether the contract has been initialized.
+
+---
+
+```solidity
+uint256 public constant DEPOSIT_AMOUNT = 0.01 ether;
+```
+The fixed amount for deposits and withdrawals, set to 0.01 ether (cBTC).
+
+---
+
+```solidity
+address public operator;
+```
+The address of the privileged operator who can process user deposits.
+
+---
+
+```solidity
+uint256 public requiredSigsCount;
+```
+The number of signatures required in the deposit script for verification.
+
+---
+
+```solidity
+bytes public depositScript;
+```
+The expected deposit script for all L1 (Bitcoin) deposits.
+
+---
+
+```solidity
+bytes public scriptSuffix;
+```
+The suffix of the deposit script that follows the receiver address.
+
+---
+
+```solidity
+mapping(bytes32 => bool) public spentWtxIds;
+```
+A mapping to keep track of spent witness transaction IDs.
+
+---
+
+```solidity
+bytes32[] public withdrawalAddrs;
+```
+An array to store Bitcoin addresses for withdrawal requests.
+
+## Access Control Structure
+
+```solidity
+modifier onlySystem()
+```
+Ensures that only the system caller (`0xdeaDDeADDEaDdeaDdEAddEADDEAdDeadDEADDEaD`) can call the function.
+
+---
+
+```solidity
+modifier onlyOperator()
+```
+Ensures that only the designated operator can call the function.
+
+---
+
+```solidity
+modifier onlyOwner()
+```
+Ensures that only the contract owner can call the function (inherited from Ownable).
+
+## Functions
+
+```solidity
+function initialize(bytes calldata _depositScript, bytes calldata _scriptSuffix, uint256 _requiredSigsCount, address _owner) external onlySystem
+```
+Initializes the bridge contract and sets the initial deposit script parameters.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes _depositScript` | The deposit script expected in the witness field for all L1 deposits |
+| `bytes _scriptSuffix` | The suffix of the deposit script that follows the receiver address |
+| `uint256 _requiredSigsCount` | The number of signatures contained in the deposit script |
+| `address _owner` | The address to be set as the owner of the contract |
+
+---
+
+```solidity
+function setDepositScript(bytes calldata _depositScript, bytes calldata _scriptSuffix, uint256 _requiredSigsCount) external onlyOwner
+```
+Updates the expected deposit script parameters.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes _depositScript` | The new deposit script |
+| `bytes _scriptSuffix` | The part of the deposit script that succeeds the receiver address |
+| `uint256 _requiredSigsCount` | The number of signatures needed for deposit transaction |
+
+---
+
+```solidity
+function deposit(DepositParams calldata p) external onlyOperator
+```
+Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction and minting cBTC to the recipient.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `DepositParams p` | Struct containing deposit transaction details from Bitcoin |
+
+---
+
+```solidity
+function withdraw(bytes32 bitcoin_address) external payable
+```
+Accepts cBTC from the sender and records a withdrawal request to be processed on Bitcoin.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes32 bitcoin_address` | The Bitcoin address of the receiver |
+
+---
+
+```solidity
+function batchWithdraw(bytes32[] calldata bitcoin_addresses) external payable
+```
+Batch version of `withdraw` that can accept multiple withdrawal requests at once.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes32[] bitcoin_addresses` | Array of Bitcoin addresses for the receivers |
+
+---
+
+```solidity
+function getWithdrawalCount() external view returns (uint256)
+```
+Returns the total number of withdrawal requests made so far.
+
+| Returns    | Description |
+|------------|-------------|
+| `uint256` | The count of withdrawals happened so far |
+
+---
+
+```solidity
+function setOperator(address _operator) external onlyOwner
+```
+Sets the operator address that can process user deposits.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `address _operator` | Address of the privileged operator |
+
+## Events
+
+```solidity
+event Deposit(bytes32 wtxId, address recipient, uint256 timestamp)
+```
+Emitted when a deposit is successfully processed.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes32 wtxId` | The witness transaction ID of the Bitcoin transaction |
+| `address recipient` | The Citrea address receiving the deposited cBTC |
+| `uint256 timestamp` | The timestamp of the deposit |
+
+---
+
+```solidity
+event Withdrawal(bytes32 bitcoin_address, uint256 index, uint256 timestamp)
+```
+Emitted when a withdrawal request is recorded.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes32 bitcoin_address` | The Bitcoin address for the withdrawal |
+| `uint256 index` | The index of the withdrawal in the `withdrawalAddrs` array |
+| `uint256 timestamp` | The timestamp of the withdrawal request |
+
+---
+
+```solidity
+event DepositScriptUpdate(bytes depositScript, bytes scriptSuffix, uint256 requiredSigsCount)
+```
+Emitted when the deposit script parameters are updated.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes depositScript` | The new deposit script |
+| `bytes scriptSuffix` | The new script suffix |
+| `uint256 requiredSigsCount` | The new required signatures count |
+
+---
+
+```solidity
+event OperatorUpdated(address oldOperator, address newOperator)
+```
+Emitted when the operator address is updated.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `address oldOperator` | The previous operator address |
+| `address newOperator` | The new operator address |
+
+## Important Notes
+
+1. The `deposit` function can only be called by the designated operator.
+2. The `withdraw` and `batchWithdraw` functions require exactly 0.01 cBTC per withdrawal request.
+3. The contract uses a fixed `BitcoinLightClient` contract at address `0x3100000000000000000000000000000000000001` for verifying Bitcoin transactions.
+4. The contract owner can update the deposit script parameters and set the operator address.
+5. The contract keeps track of spent witness transaction IDs to prevent double-spending.
+6. Withdrawal requests are stored in an array and need to be processed separately on the Bitcoin network by the operator.
