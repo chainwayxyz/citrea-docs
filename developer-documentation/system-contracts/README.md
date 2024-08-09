@@ -8,7 +8,7 @@ System transactions are transactions that are done by the system caller, which i
 
 In contrast to regular transactions, these are prepared and executed in the node level, and they are included at the beginning of Citrea blocks.
 
-Gas consumption of these transactions do not affect any balances as opposed to regular transactions, but it is accounted into the block gas limit calculations.
+Gas consumption of these transactions do not affect any fees as opposed to regular transactions, but it is accounted into the block gas limit calculations.
 
 It must be noted that some of the transactions that can be processed as system transactions, such as `deposit` which handles the bridging of BTC from Bitcoin to Citrea, can be also processed as a regular transaction.
 
