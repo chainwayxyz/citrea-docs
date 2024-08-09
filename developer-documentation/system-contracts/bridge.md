@@ -1,6 +1,24 @@
 # Bridge
 
-Serves as a bridge contract for facilitating deposits and withdrawals between Bitcoin and Citrea. It verifies Bitcoin transactions for deposits and manages withdrawal requests to be processed on the Bitcoin network.
+This bridge contract facilitates deposits and withdrawals between Bitcoin and Citrea. It verifies Bitcoin transactions for deposits and manages withdrawal requests to be processed on the Bitcoin network.
+
+## Deposit Structure
+
+The following is an explanation regarding the `DepositParams` structure, which is used to represent deposits made to Citrea from the Bitcoin network using [Clementine](https://github.com/chainwayxyz/clementine).
+
+| Parameters    | Description |
+|---------------|-------------|
+| `version`            | Version field of a transaction                      |
+| `flag`               | Marker + Flag of a segregated witness transaction   |
+| `vin`                | Index number for a transaction input                |
+| `vout`               | Index number for a transaction output               |
+| `witness`            | Transaction witness                                 |
+| `locktime`           | Transaction locktime                                |
+| `intermediate_nodes` | The proof's intermediate nodes                      |
+| `block_height`       | Block Height                                        |
+| `index`              | The leaf's index in the tree (0-indexed)            |
+
+To understand more, please check the way deposit params are used along with the `BitcoinLightClient` contract from both our [documentation](./bitcoin-light-client.md) and [explorer](https://explorer.devnet.citrea.xyz/address/0x3100000000000000000000000000000000000001?tab=contract).
 
 ## State Structure
 
@@ -49,7 +67,7 @@ The suffix of the deposit script that follows the receiver address.
 ```solidity
 mapping(bytes32 => bool) public spentWtxIds;
 ```
-A mapping to keep track of spent witness transaction IDs.
+A mapping to keep track of spent witness transaction IDs to prevent double-spending.
 
 ---
 
@@ -111,7 +129,7 @@ Updates the expected deposit script parameters.
 ```solidity
 function deposit(DepositParams calldata p) external onlyOperator
 ```
-Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction and minting cBTC to the recipient.
+Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction and minting cBTC to the recipient. Can only be called by the designated operator.
 
 | Parameters    | Description |
 |---------------|-------------|
@@ -122,7 +140,7 @@ Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction 
 ```solidity
 function withdraw(bytes32 bitcoin_address) external payable
 ```
-Accepts cBTC from the sender and records a withdrawal request to be processed on Bitcoin.
+Accepts 0.01 cBTC from the sender and records a withdrawal request to be processed on Bitcoin.
 
 | Parameters    | Description |
 |---------------|-------------|
@@ -160,6 +178,22 @@ Sets the operator address that can process user deposits.
 | Parameters    | Description |
 |---------------|-------------|
 | `address _operator` | Address of the privileged operator |
+
+```solidity
+function extractRecipientAddress(bytes memory _script) internal view returns (address)
+```
+Extracts the recipient from a given script.
+
+| Parameters    | Description |
+|---------------|-------------|
+| `bytes memory _script` | The script to be processed |
+
+| Returns    | Description |
+|------------|-------------|
+| `address` | The recipient |
+
+---
+
 
 ## Events
 
@@ -211,12 +245,3 @@ Emitted when the operator address is updated.
 |---------------|-------------|
 | `address oldOperator` | The previous operator address |
 | `address newOperator` | The new operator address |
-
-## Important Notes
-
-1. The `deposit` function can only be called by the designated operator.
-2. The `withdraw` and `batchWithdraw` functions require exactly 0.01 cBTC per withdrawal request.
-3. The contract uses a fixed `BitcoinLightClient` contract at address `0x3100000000000000000000000000000000000001` for verifying Bitcoin transactions.
-4. The contract owner can update the deposit script parameters and set the operator address.
-5. The contract keeps track of spent witness transaction IDs to prevent double-spending.
-6. Withdrawal requests are stored in an array and need to be processed separately on the Bitcoin network by the operator.
