@@ -12,8 +12,8 @@ The following is an explanation regarding the `DepositParams` structure, which i
 |---------------|-------------|
 | `version`            | Version field of a transaction                      |
 | `flag`               | Marker + Flag of a segregated witness transaction   |
-| `vin`                | Index number for a transaction input                |
-| `vout`               | Index number for a transaction output               |
+| `vin`                | Transaction inputs                                  |
+| `vout`               | Transaction outputs                                 |
 | `witness`            | Transaction witness                                 |
 | `locktime`           | Transaction locktime                                |
 | `intermediate_nodes` | The proof's intermediate nodes                      |
@@ -131,7 +131,7 @@ Updates the expected deposit script parameters.
 ```solidity
 function deposit(DepositParams calldata p) external onlyOperator
 ```
-Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction and minting cBTC to the recipient. Can only be called by the designated operator.
+Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction and sending configured bridge amount of cBTC to the recipient. Can only be called by the designated operator.
 
 | Parameters    | Description |
 |---------------|-------------|
@@ -142,7 +142,7 @@ Processes a deposit from Bitcoin to Citrea by verifying the Bitcoin transaction 
 ```solidity
 function withdraw(bytes32 bitcoin_address) external payable
 ```
-Accepts 0.01 cBTC from the sender and records a withdrawal request to be processed on Bitcoin.
+Accepts configured bridge amount of cBTC from the sender and records a withdrawal request to be processed on Bitcoin.
 
 | Parameters    | Description |
 |---------------|-------------|
