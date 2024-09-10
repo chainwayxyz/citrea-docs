@@ -5,6 +5,11 @@
 
 * [Getting started](/welcome/getting-started.md)
 
+## 👤 Community
+* [Citrea Meetups](/community/README.md)
+  * [Meetup Guide](/community/citrea-meetups/meetup-guide.md)
+  * [Resources](/community/citrea-meetups/resources.md)
+  * [Code of Conduct](/community/citrea-meetups/code-of-conduct.md)
 
 ## 👤 User Guide
 
