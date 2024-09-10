@@ -69,6 +69,12 @@ Config for Citrea Devnet resides in the `configs/devnet/` folder, `configs/devne
 
 <!-- ##### On DA Layer  -->
 ```toml
+# Public Keys
+[public_keys]
+sequencer_public_key = "52f41a5076498d1ae8bdfa57d19e91e3c2c94b6de21985d099cd48cfa7aef174"
+sequencer_da_pub_key = "039cd55f9b3dcf306c4d54f66cd7c4b27cc788632cd6fb73d80c99d303c6536486"
+prover_da_pub_key = "03fc6fb2ef68368009c895d2d4351dcca4109ec2f5f327291a0553570ce769f5e5"
+
 # DA Config
 [da] 
 node_url = "http://0.0.0.0:38332"
