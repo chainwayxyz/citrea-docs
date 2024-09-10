@@ -6,8 +6,10 @@ These slides are prepared to give some ideas. While they're available to be used
 
 ## Sample slides
 
-- [An introduction to blockchains & Citrea](Sample Community Meetup Slides)
+> Links below are not public at the moment - TODO.
 
-- [Targeted for developers who's been learning about the Web3 + EVM ecosystem](Sample Smart Contract Workshop)
+- [An introduction to blockchains & Citrea](https://docs.google.com/presentation/d/1IpHKM3A86zdE848NSQtQepNJzY9Y-1pyDiv0-Vyo3Gw/edit?usp=sharing): A sample community meetup presentation for everyone
 
-- [Targeted for experienced audience](Advanced Community Meetup)
+- [Sample Smart Contract Workshop](https://docs.google.com/presentation/d/1aJjovmo5fs0LJuev_pGysE7MjEVVO4PUb3KA8zwovj8/edit?usp=sharing): A sample community meetup presentation particularly for developers
+
+- [Bitcoin Scaling Solutions & Citrea](https://docs.google.com/presentation/d/1L-xhlKb3NKkZdWkdcGDrtQKmySp8tWpsezuUVwuUFXE/edit?usp=sharing): A sample community meetup presentation for experience people in the Web3 ecosystem
