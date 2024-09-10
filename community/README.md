@@ -16,8 +16,8 @@ We're introducing Citrea Ambrassadors & Meetups for this mission - a series of e
 
 This guide aims to empower meetup organizers, providing education and support, and encouraging collaboration within Bitcoin and Citrea ecosystems. In that sense, the rest of this guide focuses on the following. You can find more information in the following sections:
 
-- [Meetup Guide](meetup-guide.md):
-- [Code of Conduct](code-of-conduct.md) 
-- [Resources](resources.md)
+- [Meetup Guide](./citrea-meetups/meetup-guide.md)
+- [Code of Conduct](./citrea-meetups/code-of-conduct.md) 
+- [Resources](./citrea-meetups/resources.md)
 
 To become a Citrea ambassador and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/google-form-link-here). Citrea team will evaluate your application and get back to you shortly.
