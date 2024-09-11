@@ -33,4 +33,4 @@ Here's a short list for Citrea Meetup Organizers to check regarding hosting a Ci
 7. Give a heads up to the Citrea team via email
 
 
-<p style="font-size: 12px;">aaa</p>
+_Some points in this guideline are inspired by the efforts of the Arbitrum and Celestia teams. We are grateful for their contributions._
