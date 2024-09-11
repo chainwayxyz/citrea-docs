@@ -1,6 +1,6 @@
 # Meetup Guide
 
-Here's a short list for Citrea meetup Organizers to check regarding hosting a Citrea meetup. Details & topics can be discussed further upon the application.
+Here's a short list for Citrea meetup organizers to check regarding hosting a Citrea meetup. Details & topics can be discussed further upon the application.
 
 ## Before the Meetup
 
@@ -32,5 +32,6 @@ Here's a short list for Citrea meetup Organizers to check regarding hosting a Ci
 6. Start planning the next meetup, using insights to improve the experience
 7. Give a heads up to the Citrea team via email
 
+--------------------
 
 _Some points in this guideline are inspired by the efforts of the Arbitrum and Celestia teams. We are grateful for their contributions._
