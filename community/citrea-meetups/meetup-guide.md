@@ -32,6 +32,5 @@ Here's a short list for Citrea Meetup Organizers to check regarding hosting a Ci
 6. Start planning the next meetup, using insights to improve the experience
 7. Give a heads up to the Citrea team via email
 
-<br>
 
-<small>Test.</small>
+<p style="font-size: 12px;">aaa</p>
