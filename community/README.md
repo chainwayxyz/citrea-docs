@@ -24,4 +24,4 @@ This guide aims to empower meetup organizers, providing education and support, a
 
 > Application form link below is not public at the moment - TODO.
 
-To become a Citrea Meetup organizer and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/google-form-link-here). Citrea team will evaluate your application and get back to you shortly.
+To become a Citrea meetup organizer and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/google-form-link-here). Citrea team will evaluate your application and get back to you shortly.
