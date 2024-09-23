@@ -12,7 +12,7 @@ Here are some example wallets that can do the job:
 
 Of course, the list is not limited to these, but these are some common wallets used in the ecosystem.
 
-In this tutorial, we will briefly go over installing Metamask on a Chrome Browser. Using Metamask, you can interact with Citrea Devnet quite easily.
+In this tutorial, we will briefly go over installing Metamask on a Chrome Browser. Using Metamask, you can interact with Citrea Testnet quite easily.
 
 ## Step 0: Visit Metamask website
 
@@ -59,7 +59,7 @@ We advise you to watch the video, and save it. If you lose this phrase, and then
 Click to secure my wallet option, and then click to reveal secret recovery phrase. Note the words down, somewhere offline if possible.
 
 {% hint style="warning" %}
-While this process is not extremely important for Citrea Devnet (since BTCs and cBTCs do not have any real value as the network is for testing purposes only), we find it crucial for every web3 user to be aware of this notion.
+While this process is not extremely important for Citrea Testnet (since BTCs and cBTCs do not have any real value as the network is for testing purposes only), we find it crucial for every web3 user to be aware of this notion.
 {% endhint %}
 
 Once you're done, move to the next pages in the extension.
@@ -70,6 +70,6 @@ Once you're done, move to the next pages in the extension.
 
 You now created an EVM account that you can use in any EVM-compatible chain! 
 
-Now, let's get some Citrea BTCs and bridge it to the Citrea Devnet network using this EVM address so that you can start to use Citrea Devnet right away!
+Now, let's get some Citrea BTCs and yse the Citrea Testnet right away!
 
 Follow along [here](how-to-use-bridge.md)!

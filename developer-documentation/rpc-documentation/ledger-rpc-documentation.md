@@ -62,7 +62,7 @@ This endpoint retrieves the soft batch data for a given `hash`.
 
 - **Method:** `POST`
 - **Content-Type:** `application/json`
-- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Endpoint URL:** `https://rpc.testnet.citrea.xyz`
 - **Request Body:** You can change the hash below to the batch hash (a hexadecimal string) you want to query.
     ```json
     {

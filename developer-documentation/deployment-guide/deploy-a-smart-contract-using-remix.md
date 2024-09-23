@@ -2,7 +2,7 @@
 
 This guide will walk you through deploying a smart contract using [Remix](https://remix.ethereum.org/), a web-based IDE for writing and deploying smart contracts.
 
-Before you begin, make sure that you have cBTCs in your account and Citrea Devnet is added to your wallet. 
+Before you begin, make sure that you have cBTCs in your account and Citrea Testnet is added to your wallet. 
 If these requirements are not met, follow [the bridge guide](../../users/how-to-use-bridge.md) to get some cBTC and add the network to your wallet.
 
 ## Step 1: Open Remix
@@ -31,9 +31,9 @@ Click on the `Deploy & run transactions` tab from the left sidebar. You should s
 
 ![Remix-3](/.gitbook/assets/remix/3.png)
 
-## Step 4: Select Citrea Devnet as the Environment and Deploy the Smart Contract
+## Step 4: Select Citrea Testnet as the Environment and Deploy the Smart Contract
 
-Click on the `Environment` dropdown and select `Injected Provider - Metamask`. This will automatically connect Remix to your Metamask wallet. Make sure you have selected Citrea Devnet in your Metamask wallet. Click on the `Deploy` button to deploy the smart contract.
+Click on the `Environment` dropdown and select `Injected Provider - Metamask`. This will automatically connect Remix to your Metamask wallet. Make sure you have selected Citrea Testnet in your Metamask wallet. Click on the `Deploy` button to deploy the smart contract.
 
 ![Remix-4](/.gitbook/assets/remix/4.png)
 

@@ -2,7 +2,7 @@
 
 Serves as a facilitator of deposits and withdrawals between Bitcoin and Citrea. It verifies Bitcoin transactions for deposits and manages withdrawal requests to be processed on the Bitcoin network. 
 
-You can find the contract in the address `0x31000...0002`, [here](https://explorer.devnet.citrea.xyz/address/0x3100000000000000000000000000000000000002).
+You can find the contract in the address `0x31000...0002`, [here](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000002).
 
 ## Deposit Structure
 
@@ -20,7 +20,7 @@ The following is an explanation regarding the `DepositParams` structure, which i
 | `block_height`       | Block Height                                        |
 | `index`              | The leaf's index in the tree (0-indexed)            |
 
-To understand more, please check the way deposit params are used along with the `BitcoinLightClient` contract from both our [documentation](./bitcoin-light-client.md) and [explorer](https://explorer.devnet.citrea.xyz/address/0x3100000000000000000000000000000000000001?tab=contract).
+To understand more, please check the way deposit params are used along with the `BitcoinLightClient` contract from both our [documentation](./bitcoin-light-client.md) and [explorer](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001?tab=contract).
 
 ## State Structure
 

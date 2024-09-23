@@ -2,7 +2,7 @@
 
 [Hardhat](https://hardhat.org/) is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers manage the entire development cycle of their smart contracts. Hardhat is a popular choice for developers who want to build, test, and deploy smart contracts on the Ethereum network.
 
-This guide will walk you through configuring Hardhat to work with Citrea. You will learn how to set up Hardhat to deploy smart contracts on Citrea Devnet.
+This guide will walk you through configuring Hardhat to work with Citrea. You will learn how to set up Hardhat to deploy smart contracts on Citrea Testnet.
 
 ## Hardhat Installation
 
@@ -36,8 +36,8 @@ module.exports = {
     "REST_OF_YOUR_CONFIG_GOES_HERE",
     networks: {
         citrea: {
-            url: "https://rpc.devnet.citrea.xyz",
-            chainId: 62298,
+            url: "https://rpc.testnet.citrea.xyz",
+            chainId: 5115,
             accounts: ["YOUR_PRIVATE_KEY"],
         },
     },
@@ -45,20 +45,20 @@ module.exports = {
 };
 ```
 
-Replace `YOUR_PRIVATE_KEY` with your private key. Make sure to keep your private key secure and never share it with anyone. You can obtain a private key from your Citrea Devnet wallet (e.g., Metamask).
+Replace `YOUR_PRIVATE_KEY` with your private key. Make sure to keep your private key secure and never share it with anyone. You can obtain a private key from your Citrea Testnet wallet (e.g., Metamask).
 
 ## Implement Your Smart Contract and Deploy
 
 For the rest of the development process, you can follow the official Hardhat documentation to compile, deploy, test, and debug your smart contracts. You can find more information on the [Hardhat website](https://hardhat.org/).
 
-Once you have implemented your smart contract, you can deploy it to Citrea Devnet using the following command:
+Once you have implemented your smart contract, you can deploy it to Citrea Testnet using the following command:
 
 ```bash
 npx hardhat run --network citrea scripts/deploy.js
 ```
 
-This command will deploy your smart contract to the Citrea Devnet network. You can interact with your smart contract using the Citrea Devnet explorer or other tools.
+This command will deploy your smart contract to the Citrea Testnet network. You can interact with your smart contract using the Citrea Testnet explorer or other tools.
 
 # Congratulations!
 
-You have successfully configured Hardhat to work with Citrea. You can now start building and deploying smart contracts on Citrea Devnet. If you have any questions or need help, feel free to ask in the [Citrea Discord](https://discord.gg/citrea).
+You have successfully configured Hardhat to work with Citrea. You can now start building and deploying smart contracts on Citrea Testnet. If you have any questions or need help, feel free to ask in the [Citrea Discord](https://discord.gg/citrea).

@@ -2,7 +2,7 @@
 
 Serves as a smart contract based light client for Bitcoin. For each new Bitcoin block, the block hash and the witness root is written into this contract. This is done with a system transaction executed in the beginning of the first Citrea block that corresponds to the new Bitcoin block.
 
-You can find this contract in the address `0x31000...0001`, [here](https://explorer.devnet.citrea.xyz/address/0x3100000000000000000000000000000000000001).
+You can find this contract in the address `0x31000...0001`, [here](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001).
 
 ## State Structure
 
