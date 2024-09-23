@@ -8,10 +8,7 @@
 
 ## 👤 User Guide
 
-* [Run a Node](users/run-a-node.md)
-  * [Hardware Requirements](users/hardware-requirements.md)
-  * [Docker Compose Setup](users/docker-compose-setup.md)
-  * [Configurable Setup](users/configurable-setup.md)
+* [Run a Citrea Testnet Node](users/node/run-a-node.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
 
 ## 📖 Developer Documentation
