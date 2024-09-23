@@ -74,7 +74,7 @@ This endpoint retrieves the soft batch data for a given `hash`.
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchByHash","params":["498586268de6f895a5bde5f7fc81ea16452f1ce53b266a2a09f48757046aff91"], "id":31}'  https://rpc.devnet.citrea.xyz
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchByHash","params":["498586268de6f895a5bde5f7fc81ea16452f1ce53b266a2a09f48757046aff91"], "id":31}'  https://rpc.testnet.citrea.xyz
     ```
 
 ### Response
@@ -117,7 +117,7 @@ This endpoint retrieves the soft batch data for a given `batch_id`.
 
 - **Method:** `POST`
 - **Content-Type:** `application/json`
-- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Endpoint URL:** `https://rpc.testnet.citrea.xyz`
 - **Request Body:** You can change the number below to the batch ID (a decimal number) you want to query.
     ```json
     {
@@ -129,7 +129,7 @@ This endpoint retrieves the soft batch data for a given `batch_id`.
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchByNumber","params":[5], "id":1}'  https://rpc.devnet.citrea.xyz
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchByNumber","params":[5], "id":1}'  https://rpc.testnet.citrea.xyz
     ```
 
 
@@ -172,7 +172,7 @@ This endpoint retrieves a range of soft batch data for a given `start` and `end`
 
 - **Method:** `POST`
 - **Content-Type:** `application/json`
-- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Endpoint URL:** `https://rpc.testnet.citrea.xyz`
 - **Request Body:** You can change the numbers below to the start and end batch IDs (decimal numbers) you want to query.
     ```json
     {
@@ -184,7 +184,7 @@ This endpoint retrieves a range of soft batch data for a given `start` and `end`
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchRange","params":[17, 19], "id":42}'  https://rpc.devnet.citrea.xyz
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftBatchRange","params":[17, 19], "id":42}'  https://rpc.testnet.citrea.xyz
     ```
 
 ### Response
@@ -245,7 +245,7 @@ This endpoint retrieves the soft confirmation status for a given `l2_height`.
 
 - **Method:** `POST`
 - **Content-Type:** `application/json`
-- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Endpoint URL:** `https://rpc.testnet.citrea.xyz`
 - **Request Body:** You can change the number below to the L2 height (a decimal number) you want to query.
     ```json
     {
@@ -257,7 +257,7 @@ This endpoint retrieves the soft confirmation status for a given `l2_height`.
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftConfirmationStatus","params":[5], "id":1}'  https://rpc.devnet.citrea.xyz
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSoftConfirmationStatus","params":[5], "id":1}'  https://rpc.testnet.citrea.xyz
     ```
 
 ### Response
@@ -291,7 +291,7 @@ This endpoint retrieves the sequencer commitments for a given `height`.
 
 - **Method:** `POST`
 - **Content-Type:** `application/json`
-- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Endpoint URL:** `https://rpc.testnet.citrea.xyz`
 - **Request Body:** You can change the number below to the slot number (a decimal number) you want to query.
     ```json
     {
@@ -303,7 +303,7 @@ This endpoint retrieves the sequencer commitments for a given `height`.
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSequencerCommitmentsOnSlotByNumber","params":[5], "id":1}'  https://rpc.devnet.citrea.xyz
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getSequencerCommitmentsOnSlotByNumber","params":[5], "id":1}'  https://rpc.testnet.citrea.xyz
     ```
 
 ### Response
@@ -352,7 +352,7 @@ This endpoint retrieves the verified proofs for a given `height` of a DA slot.
 
 - **Method:** `POST`
 - **Content-Type:** `application/json`
-- **Endpoint URL:** `https://rpc.devnet.citrea.xyz`
+- **Endpoint URL:** `https://rpc.testnet.citrea.xyz`
 - **Request Body:** You can change the number below to the slot height (a decimal number) you want to query.
     ```json
     {
@@ -364,7 +364,7 @@ This endpoint retrieves the verified proofs for a given `height` of a DA slot.
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-      curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getVerifiedProofsBySlotHeight","params":[37763], "id":31}'  https://rpc.devnet.citrea.xyz
+      curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getVerifiedProofsBySlotHeight","params":[37763], "id":31}'  https://rpc.testnet.citrea.xyz
     ```
 
 ### Response
