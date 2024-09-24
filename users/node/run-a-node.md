@@ -1,16 +1,35 @@
 ## Run a Node
 
-Running a Citrea node is permissionless - anyone can run a full node for development & security purposes. In this section, we'll go over necessary steps to run a Citrea node.
+Running a Citrea node is permissionless - anyone can run a full node for development & security purposes. 
+
+The easiest way to run a Citrea Full Node is to use the `docker-compose.yml` that we prepared for you:
+
+#### Step 1: Install Docker
+
+Follow instructions to install Docker [here](https://docs.docker.com/engine/install/).
+
+#### Step 2: Run using Docker Compose
+
+```
+curl https://raw.githubusercontent.com/chainwayxyz/citrea/nightly/docker-compose.yml --output docker-compose.yml
+docker-compose -f docker-compose.yml up
+```
+
+This spins up a Bitcoin Testnet4 and Citrea Full Node for you to use quickly.
+
+{% hint style="info" %}
+Please note that there are no financial incentives to run a Citrea Full Node. It's for your own development setup and security practices.
+{% endhint %}
+
+------
+
+We've combined these two methods using a Docker Compose file above. However, if you do not want to use Docker Compose & do your own modifications, please proceed with the rest of this section.
 
 To sync with Citrea Testnet, you need to:
 
 1) [Run a Bitcoin Testnet4 Node](./bitcoin-testnet4/README.md)
 
 2) [Run a Citrea Full Node](./citrea-testnet/README.md)
-
-{% hint style="info" %}
-Please note that there are no financial incentives to run a Citrea Full Node. It's for your own development setup and security practices.
-{% endhint %}
 
 #### Hardware Requirements for running a node
 
