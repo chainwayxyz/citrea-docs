@@ -12,7 +12,7 @@ Here are some example wallets that can do the job:
 
 Of course, the list is not limited to these, but these are some common wallets used in the ecosystem.
 
-In this tutorial, we will briefly go over installing Metamask on a Chrome Browser. Using Metamask, you can interact with Citrea Devnet quite easily.
+In this tutorial, we will briefly go over installing Metamask on a Chrome Browser. Using Metamask, you can interact with Citrea Testnet quite easily.
 
 ## Step 0: Visit Metamask website
 
