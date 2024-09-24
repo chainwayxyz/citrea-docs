@@ -4,10 +4,10 @@ Citrea uses Bitcoin Testnet4 as a DA layer for its testnet. Thus, it is necessar
 
 In this section, we provide you two ways to run a Testnet4 node (Bitcoin v28.0rc1).
 
-- [Method 1 (Docker)](./bitcoin-testnet4/testnet4-docker.md) 
+- [Method 1 (Docker)](./testnet4-docker.md) 
     - Easier to setup but less configurable
 
-- [Method 2 (Source)](./bitcoin-testnet4/testnet4-source.md)
+- [Method 2 (Source)](./testnet4-source.md)
     - Harder to setup but more configurable
 
 -----
