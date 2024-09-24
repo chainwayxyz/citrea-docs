@@ -1,7 +1,7 @@
 # Introduction
 
 {% hint style="note" %}
-Citrea Testnet has launched on Sep 24, 2024. You can read the announcement from [here](www.blog.citrea.xyz/citrea-testnet-live-on-bitcoin-testnet4/). 
+Citrea Testnet has launched on Sep 24, 2024. You can read the announcement from [here](https://www.blog.citrea.xyz/citrea-testnet-live-on-bitcoin-testnet4/). 
 {% endhint %}
 
 Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace with zero knowledge technology. Citrea is the only scalability solution that uses Bitcoin both as a data availability and a settlement layer, via its BitVM-based trust-minimized two-way peg program - [Clementine](https://www.blog.citrea.xyz/unveiling-clementine/). Citrea is fully EVM compatible, enabling all the EVM developers to easily build on Bitcoin. 
