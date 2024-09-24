@@ -8,7 +8,9 @@
 
 ## 👤 User Guide
 
-* [Run a Citrea Testnet Node](users/node/run-a-node.md)
+* [Run a Citrea Full Node](users/node/run-a-node.md)
+  * [Run Bitcoin Testnet4](users/node/bitcoin-testnet4/testnet4-docker.md)
+  * [Run Citrea Testnet Node](users/node/citrea-testnet/citrea-testnet-executable.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
 
 ## 📖 Developer Documentation
