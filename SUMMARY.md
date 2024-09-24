@@ -35,7 +35,7 @@
   * [Citrea Full Node](users/node/citrea-testnet/README.md)
     * [Citrea Binary Executable](users/node/citrea-testnet/citrea-testnet-executable.md)
     * [Build Citrea from Source](users/node/citrea-testnet/citrea-testnet-source.md)
-* [Bridge to Citrea](users/how-to-use-bridge.md)
+* [Use Citrea Testnet Faucet](users/how-to-use-faucet.md)
 * [Installing an EVM Wallet](users/install-a-wallet.md)
 * [Taproot Recovery Address](users/taproot-recovery-address.md)
 
