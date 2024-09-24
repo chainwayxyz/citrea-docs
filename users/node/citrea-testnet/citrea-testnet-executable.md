@@ -29,7 +29,17 @@ tar -xzvf genesis.tar.gz
 
 #### Step 3: Run!
 
-Based on your operating system, run one of the following:
+First, let's grant running permission to our executable (may require `sudo`):
+
+```sh
+chmod u+x ./citrea-v0.5.0-osx-arm64
+```
+
+```sh
+chmod u+x ./citrea-v0.5.0-linux-amd64
+```
+
+Then, based on your operating system, run one of the following:
 
 Mac:
 ```sh
