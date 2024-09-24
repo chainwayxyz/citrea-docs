@@ -1,6 +1,6 @@
 ## Run Citrea Testnet Node using pre-built binary
 
-We've complied an executable for you to run a Citrea full node directly in MacOS / Linux. For the following steps, we assumet that you have a Bitcoin Testnet4 node running.
+We've complied an executable for you to run a Citrea full node directly in MacOS / Linux. For the following steps, we assume that you have a Bitcoin Testnet4 node running.
 
 #### Step 0: Make citrea folder and move in
 
@@ -53,4 +53,6 @@ A sample response (fields may vary based on sync status):
 {"jsonrpc":"2.0","id":31,"result":{"l1Status":{"Synced":46916},"l2Status":{"Syncing":{"headBlockNumber":252441,"syncedBlockNumber":123425}}}}
 ```
 
+-----
 
+If you do not want to use the provided binary executable to setup a Citrea node, you can also build it from the source code [here](citrea-testnet-source.md).

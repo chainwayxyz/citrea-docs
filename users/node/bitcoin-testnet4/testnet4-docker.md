@@ -36,6 +36,8 @@ curl --user citrea --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method":
 
 `--user` & password asked are the `rpcuser` and `rpcpassword` fields that you used to run the docker command above.
 
-Now you can proceed to run the Citrea client from [here](https://example.org).
+Now you can proceed to run the Citrea client from [here](../citrea-testnet/citrea-testnet-executable.md).
 
-If you do not want to use Docker to setup Bitcoin node, you can build it from the source code [here](https://example.org).
+-----
+
+If you do not want to use Docker to setup Bitcoin node, you can build it from the source code [here](../bitcoin-testnet4/testnet4-source.md).
