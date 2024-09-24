@@ -39,8 +39,9 @@
 * [Installing an EVM Wallet](users/install-a-wallet.md)
 * [Taproot Recovery Address](users/taproot-recovery-address.md)
 
-## 📖 [Developer Documentation](developer-documentation/README.md)
+## 📖 Developer Documentation
 
+* [Kickstart](developer-documentation/README.md)
 * [Deployment Guide](developer-documentation/deployment-guide/README.md)
   * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
   * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
