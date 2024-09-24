@@ -1,5 +1,5 @@
 # Deployment Guide
 
-Citrea is fully EVM-compatible equivalent.
+Citrea is fully EVM-compatible equivalent. 
 
-The deployment of your EVM smart contracts and applications is as easy as changing the RPC endpoint.
+The deployment of your EVM smart contracts and applications is as easy as changing the RPC endpoint. Let's continue by deploying some cool stuff!
