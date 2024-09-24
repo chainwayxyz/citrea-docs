@@ -9,5 +9,5 @@ The first spending condition is if the verifiers accept the deposit. The bridge 
 In the second spending condition is if the verifiers do not accept the deposit, which will be the case if the deposit does not equal to the predefined amount. Then, the user gets the deposit back 200 Bitcoin blocks later. The Recovery Taproot address is used for the second spending condition to allow users to trustlessly claim their deposit from the taproot address specified on the bridge page. This specified taproot address is either randomly generated on the Citrea bridge page or is provided by the user.
 
 
-The current Citrea Devnet fixed amount of deposits/withdrawals are subject to change on the Citrea mainnet.
+The current Citrea Testnet fixed amount of deposits/withdrawals are subject to change on the Citrea mainnet.
 
