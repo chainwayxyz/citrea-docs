@@ -1,6 +1,6 @@
-## Run a Bitcoin Testnet4 Node
+### Run a Bitcoin Testnet4 Node
 
-Citrea Testnet uses Bitcoin Testnet4 as a DA layer. Thus, it is necessary to have a syncing Bitcoin Testnet4 node to run a Citrea Full Node.
+Citrea uses Bitcoin Testnet4 as a DA layer for its testnet. Thus, it is necessary to have a syncing Bitcoin Testnet4 node to run a Citrea Full Node.
 
 In this section, we provide you two ways to run a Testnet4 node (Bitcoin v28.0rc1).
 
@@ -12,4 +12,4 @@ In this section, we provide you two ways to run a Testnet4 node (Bitcoin v28.0rc
 
 -----
 
-Once you're done syncing your Testnet4 node, you can proceed to run a Citrea Full Node [here](../citrea-testnet/README.md).
+Once you're done syncing your Bitcoin node, you can proceed to run a Citrea Full Node [here](../citrea-testnet/README.md).

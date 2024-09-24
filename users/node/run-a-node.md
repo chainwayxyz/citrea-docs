@@ -1,6 +1,6 @@
 ## Run a Node
 
-Running a Citrea node is permissonless - anyone can run a full node for development & security purposes. In this section, we'll go over necessary steps to run a Citrea node.
+Running a Citrea node is permissionless - anyone can run a full node for development & security purposes. In this section, we'll go over necessary steps to run a Citrea node.
 
 To sync with Citrea Testnet, you need to:
 
@@ -19,7 +19,7 @@ A Linux/Mac/Windows system with a configuration of
 - 4 core CPU
 - 25+ Mbps network connection
 
-satisfies the minimum requirements to run a Citrea node. 
+should satisfy the minimum requirements to run a Citrea node. 
 
 -----
 

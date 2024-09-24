@@ -1,5 +1,5 @@
 
-## Run Bitcoin Testnet4 node from source code
+## Run a Bitcoin Testnet4 node from the source
 
 #### Step 1: Clone the repository for Testnet4
 

@@ -1,4 +1,4 @@
-## Run Bitcoin Testnet4 node using Docker
+## Run a Bitcoin Testnet4 node using Docker
 
 Using the available Docker image is fairly easy to run a Bitcoin Testnet4 node.
 

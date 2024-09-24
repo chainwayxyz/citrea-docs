@@ -8,13 +8,13 @@
 
 ## 👤 User Guide
 
-* [Run a Citrea Full Node](users/node/run-a-node.md)
-  * [Run Bitcoin Testnet4](users/node/bitcoin-testnet4/README.md)
-    * [Docker Setup](users/node/bitcoin-testnet4/testnet4-docker.md)
-    * [Build from Source](users/node/bitcoin-testnet4/testnet4-source.md)
-  * [Run Citrea Testnet Node](users/node/citrea-testnet/README.md)
-    * [Binary Executable Setup](users/node/citrea-testnet/citrea-testnet-executable.md)
-    * [Build from Source](users/node/citrea-testnet/citrea-testnet-source.md)
+* [Run Citrea Full Node](users/node/run-a-node.md)
+  * [Bitcoin Testnet4](users/node/bitcoin-testnet4/README.md)
+    * [Testnet4 Docker Setup](users/node/bitcoin-testnet4/testnet4-docker.md)
+    * [Build Testnet4 from Source](users/node/bitcoin-testnet4/testnet4-source.md)
+  * [Citrea Full Node](users/node/citrea-testnet/README.md)
+    * [Citrea Binary Executable](users/node/citrea-testnet/citrea-testnet-executable.md)
+    * [Build Citrea from Source](users/node/citrea-testnet/citrea-testnet-source.md)
 * [Bridge to Citrea](users/how-to-use-bridge.md)
 
 ## 📖 Developer Documentation
