@@ -8,7 +8,9 @@ To sync with Citrea Testnet, you need to:
 
 2) [Run a Citrea Full Node](./citrea-testnet/README.md)
 
-Please note that there are no financial incentives to run a Citrea full node.
+{% hint style="warning" %}
+Please note that there are no financial incentives to run a Citrea Full Node. It's for your own development setup and security practices.
+{% endhint %}
 
 #### Hardware Requirements for running a node
 
