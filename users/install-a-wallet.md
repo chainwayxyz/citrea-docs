@@ -70,6 +70,6 @@ Once you're done, move to the next pages in the extension.
 
 You now created an EVM account that you can use in any EVM-compatible chain! 
 
-Now, let's get some Citrea BTCs and bridge it to the Citrea Testnet network using this EVM address so that you can start to use Citrea Testnet right away!
+Now, let's get some cBTCs using this EVM address so that you can start to use Citrea Testnet right away!
 
-Follow along [here](how-to-use-bridge.md)!
+Follow along [here](how-to-use-faucet.md)!
