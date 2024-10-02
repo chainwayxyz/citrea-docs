@@ -60,7 +60,7 @@ Changes the minimum withdraw amount.
 
 | Parameters    | Description |
 |---------------|-------------|
-| `address _minWithdraw` | New minimum withdraw amount |
+| `uint256 _minWithdraw` | New minimum withdraw amount |
 
 ## Events
 

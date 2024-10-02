@@ -1,8 +1,8 @@
 # BitcoinLightClient
 
-Serves as a smart contract based light client for Bitcoin. For each new Bitcoin block, the block hash and the witness root is written into this contract. This is done with a system transaction executed in the beginning of the first Citrea block that corresponds to the new Bitcoin block.
+Serves as a smart contract based light client for Bitcoin. For each new Bitcoin block, the block hash and the witness root are written into this contract. This is done with a system transaction executed in the beginning of the first Citrea block that corresponds to the new Bitcoin block.
 
-You can find this contract in the address `0x31000...0001`, [here](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001).
+You can find this contract at address `0x31000...0001`, [here](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001).
 
 ## State Structure
 
@@ -53,7 +53,7 @@ Called by the system caller and it sets the block hash and witness root of the n
 | Parameters    | Description |
 |-----------|-------------|
 | `bytes32 _blockHash`   | Block hash of the current Bitcoin block |
-| `bytes32 _witnessRoot`   | Witness root (merkle root of `wTXID`s) of the current Bitcoin block |
+| `bytes32 _witnessRoot`   | Witness root (Merkle root of `wTXID`s) of the current Bitcoin block |
 
 ---
 
@@ -73,7 +73,7 @@ Returns the block hash of the Bitcoin block corresponding to the given block hei
 ---
 
 {% hint style="warning" %}
-The following functions `getWitnessRootByHash` and `getWitnessRootByNumber` returning the zero value does **NOT** mean that there is no such a block recorded unlike the blockhash getters as it is possible for a valid witness root to be the zero value in the case of a Bitcoin block with one transaction. This happens as the `wTXId` of a coinbase transaction is the zero value and the merkle root is the leaf itself in the case of one leaf.
+The following functions `getWitnessRootByHash` and `getWitnessRootByNumber` returning the zero value does **NOT** mean that there is no such a block recorded unlike the blockhash getters as it is possible for a valid witness root to be the zero value in the case of a Bitcoin block with one transaction. This happens as the `wTXId` of a coinbase transaction is the zero value and the Merkle root is the leaf itself in the case of one leaf.
 {% endhint %}
 
 ```solidity
@@ -87,7 +87,7 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 
 | Returns    | Description |
 |-----------|-------------|
-| `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
+| `bytes32 witnessRoot` | Witness root (Merkle root of `wTXID`s) of the queried block |
 
 ---
 
@@ -102,7 +102,7 @@ Returns the witness root of the Bitcoin block corresponding to the given block h
 
 | Returns    | Description |
 |-----------|-------------|
-| `bytes32 witnessRoot` | Witness root (merkle root of `wTXID`s) of the queried block |
+| `bytes32 witnessRoot` | Witness root (Merkle root of `wTXID`s) of the queried block |
 
 ---
 
