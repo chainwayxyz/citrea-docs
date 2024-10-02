@@ -25,17 +25,22 @@
   * [Censorship Resistance and Force Transactions](technical-specs/security-properties/censorship-resistance-and-force-transactions/README.md)
     * [Escape Hatch](technical-specs/security-properties/censorship-resistance-and-force-transactions/escape-hatch.md)
 
-
 ## 👤 User Guide
 
-* [Run a Node](users/run-a-node.md)
-  * [Hardware Requirements](users/hardware-requirements.md)
-  * [Docker Compose Setup](users/docker-compose-setup.md)
-  * [Configurable Setup](users/configurable-setup.md)
-* [Bridge to Citrea](users/how-to-use-bridge.md)
+* [Run Citrea Full Node](users/node/run-a-node.md)
+  * [Bitcoin Testnet4](users/node/bitcoin-testnet4/README.md)
+    * [Testnet4 Docker Setup](users/node/bitcoin-testnet4/testnet4-docker.md)
+    * [Build Testnet4 from Source](users/node/bitcoin-testnet4/testnet4-source.md)
+  * [Citrea Full Node](users/node/citrea-testnet/README.md)
+    * [Citrea Binary Executable](users/node/citrea-testnet/citrea-testnet-executable.md)
+    * [Build Citrea from Source](users/node/citrea-testnet/citrea-testnet-source.md)
+* [Use Citrea Testnet Faucet](users/how-to-use-faucet.md)
+* [Installing an EVM Wallet](users/install-a-wallet.md)
+* [Taproot Recovery Address](users/taproot-recovery-address.md)
 
 ## 📖 Developer Documentation
 
+* [Kickstart](developer-documentation/README.md)
 * [Deployment Guide](developer-documentation/deployment-guide/README.md)
   * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
   * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
@@ -54,9 +59,6 @@
 * [Lightning Integration](future-research/lightning-integration.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
 
-## 📚 Knowledge Bits
-* [Installing an EVM Wallet](users/install-a-wallet.md)
-* [Taproot Recovery Address](users/taproot-recovery-address.md)
 
 ## 🌐 Community
 * [Citrea Meetups](/community/README.md)
