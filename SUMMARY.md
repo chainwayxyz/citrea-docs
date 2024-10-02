@@ -1,6 +1,5 @@
 # Table of contents
 
-
 ## 👋 Welcome
 
 * [Getting started](/welcome/getting-started.md)
@@ -51,7 +50,6 @@
   * [Bridge](developer-documentation/system-contracts/bridge.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
 
-
 ## 🔎 Future Research
 
 * [Multi VM Approach](future-research/multi-vm-approach.md)
@@ -60,3 +58,9 @@
 * [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Lightning Integration](future-research/lightning-integration.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
+
+## 🌐 Community
+* [Citrea Meetups](/community/README.md)
+  * [Meetup Guide](/community/citrea-meetups/meetup-guide.md)
+  * [Resources](/community/citrea-meetups/resources.md)
+  * [Code of Conduct](/community/citrea-meetups/code-of-conduct.md)
