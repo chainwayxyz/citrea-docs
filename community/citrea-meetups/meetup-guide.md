@@ -34,4 +34,4 @@ Here's a short list for Citrea meetup organizers to check regarding hosting a Ci
 
 --------------------
 
-_Some points in this guideline are inspired by the efforts of the Arbitrum and Celestia teams. We are grateful for their contributions._
+_Some points in this guideline are inspired by the efforts of Arbitrum and Celestia teams. We are grateful for their contributions._
