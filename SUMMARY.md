@@ -59,7 +59,6 @@
 * [Lightning Integration](future-research/lightning-integration.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
 
-
 ## 🌐 Community
 * [Citrea Meetups](/community/README.md)
   * [Meetup Guide](/community/citrea-meetups/meetup-guide.md)
