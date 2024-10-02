@@ -11,7 +11,7 @@ As a Citrea meetup organizer, you will be expected to:
 
 - Propose and launch community initiatives in your local regions
 - Host local community in-person and attend virtual meetups
-- Create technical developer resources and tooling
+- Create resources and tooling
 - Create high-quality and engaging content
 - Make an impact within the Citrea ecosystem
 {% endhint %}
@@ -22,6 +22,4 @@ This guide aims to empower meetup organizers, providing education and support, a
 - [Code of Conduct](./citrea-meetups/code-of-conduct.md) 
 - [Resources](./citrea-meetups/resources.md)
 
-> Application form link below is not public at the moment - TODO.
-
-To become a Citrea meetup organizer and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/google-form-link-here). Citrea team will evaluate your application and get back to you shortly.
+To become a Citrea meetup organizer and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/saqyYXqQLZksiQWG9). Citrea team will evaluate your application and get back to you shortly.
