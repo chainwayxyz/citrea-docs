@@ -1,10 +1,10 @@
 # Citrea Meetups
 
-Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace with zero-knowledge technology. Through our journey of enabling Bitcoin to be the execution layer of world finance, we're lucky to have an amazing community that's been supporting us from day 1.
+Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace with zero-knowledge technology. Citrea activates Bitcoin blockspace for developers to build decentralized applications and facilitates the most trust-minimized way to use BTC. As we work towards making Bitcoin the execution layer of global finance, we are grateful to have an incredible community that has supported us since day one.
 
-With the end of our successful public devnet & start of testnet, our team continues to ship in a more faster, more careful, and more secure way. With that, it's also time to reflect what Citrea offers to the world even more focused. 
+With the Citrea Public Testnet now live, our development and community efforts are accelerating as we spread the word: mainnet is coming soon. This is the perfect opportunity for our community to share what Citrea brings to the world.
 
-We're introducing **Citrea & Meetups** for this mission - a series of events that will enable our community members to propose and launch initiatives.
+We’re excited to introduce **Citrea Meetups** — a series of community-organized events that will enable members to actively contribute to Citrea’s vision of making Bitcoin the foundation of the world’s finance.
 
 {% hint style="note" %}
 As a Citrea meetup organizer, you will be expected to:
