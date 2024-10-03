@@ -1,6 +1,6 @@
 # Meetup Guide
 
-Here's a short list for Citrea meetup organizers to check regarding hosting a Citrea meetup. Details & topics can be discussed further upon the application.
+Here's a short list for Citrea Meetup organizers to check regarding hosting a Citrea Meetup. Details & topics can be discussed further upon the application.
 
 ## Before the Meetup
 

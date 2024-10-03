@@ -1,6 +1,6 @@
 # Resources for Meetups
 
-We deeply value the content quality & speaker knowledge for Citrea meetups. Therefore, here are some helpful topics & links that you and the speaker can utilize for the meetups. While they're available to be used in the meetup, preparing an original talk is **quite encouraged**. You can make a copy of below and edit from there.
+We deeply value the content quality & speaker knowledge for Citrea Meetups. Therefore, here are some helpful topics & links that you and the speaker can utilize for the meetups. While they're available to be used in the meetup, preparing an original talk is **quite encouraged**. You can make a copy of below and edit from there.
 
 ### Sample Slides
 

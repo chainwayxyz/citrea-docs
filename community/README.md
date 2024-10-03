@@ -7,7 +7,7 @@ With the Citrea Public Testnet now live, our development and community efforts a
 We’re excited to introduce **Citrea Meetups** — a series of community-organized events that will enable members to actively contribute to Citrea’s vision of making Bitcoin the foundation of the world’s finance.
 
 {% hint style="note" %}
-As a Citrea meetup organizer, you will be expected to:
+As a Citrea Meetup organizer, you will be expected to:
 
 - Host Citrea Meetups and lead community initiatives in your local region
 - Host local community in-person and attend virtual meetups
@@ -22,4 +22,4 @@ This guide aims to empower meetup organizers by providing education and support,
 - [Code of Conduct](./citrea-meetups/code-of-conduct.md) 
 - [Resources](./citrea-meetups/resources.md)
 
-To become a Citrea meetup organizer and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/saqyYXqQLZksiQWG9). Citrea team will evaluate your application and get back to you shortly.
+To become a Citrea Meetup organizer and contribute to the ecosystem, please read the links above first. Then, you can fill out the [application form](https://forms.gle/saqyYXqQLZksiQWG9). Citrea team will evaluate your application and get back to you shortly.
