@@ -4,7 +4,7 @@
 
 Full nodes in Citrea are the nodes that sync with the sequencer(s) as well as verify the zk proofs. Full nodes are designed for users who need instant confirmations from the sequencer or need the full history of Citrea.
 
-A sequencer that produced a block broadcasts the block over a network of full nodes. Full nodes apply the sequencer block to their local state. RPC endpoints can now serve the block data to explorers, wallets, and other applications without waiting for additional zk proving. After a batch of blocks is proven and inscribed in Bitcoin, full nodes extract and verify the proofs. According to the result of the proof they confirm, finalize, or revert the sequencer broadcasted blocks.
+A sequencer that produced a block then broadcasts the block over a network of full nodes. Full nodes apply the sequencer block to their local state. RPC endpoints can now serve the block data to explorers, wallets, and other applications without waiting for additional zk proving. After a batch of blocks is proven and inscribed in Bitcoin, full nodes extract and verify the proofs. According to the result of the proof they confirm, finalize, or revert the sequencer broadcasted blocks.
 
 ## Light Nodes
 
