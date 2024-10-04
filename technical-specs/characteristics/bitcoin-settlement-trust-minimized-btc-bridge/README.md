@@ -8,7 +8,7 @@ description: Citrea is the first Universal L2 that has a trust-minimized BTC bri
 
 Citrea light client proofs are natively verified in Bitcoin, thanks to BitVM. We have implemented a multi-verifier BitVM setup where an operator is responsible for peg-in and peg-out transactions and verifiers are in charge of checking invalid peg-in and peg-out transactions. Any invalid transaction can be challenged by verifiers. **As long as one verifier is honest, the peg is secure.** This is a great improvement over the existing insecure bridge constructions that mostly depend on the honest majority assumption within a closed or open federation.
 
-There are no delays on withdrawals once the proof is finalized on Bitcoin in the optimistic case. The operator does the withdrawals from its own pocket. Later, it claims the pegged-out BTC from the BitVM program with a proof showing that all the withdrawals from the canonical Citrea chain have been done on Bitcoin. If there is any fraud in the process, any verifier among set of N reacts with a fraud proof on Bitcoin, slashing prover's stake and keeping the peg secure.
+There are no delays on withdrawals once the proof is finalized on Bitcoin in the optimistic case. The operator does the withdrawals from its own pocket. Later, it claims the pegged-out BTC from the BitVM program with a proof showing that all the withdrawals from the canonical Citrea chain have been done on Bitcoin. If there is any fraud in the process, any verifier among the set of N reacts with a fraud proof on Bitcoin, slashing the prover's stake and keeping the peg secure.
 
 ## What the BitVM Contract Verifies
 
@@ -18,7 +18,7 @@ There are no delays on withdrawals once the proof is finalized on Bitcoin in the
 
 In order to reduce the program size committed on Bitcoin (and thus the fraud proof size), all of the above logic is enshrined in two Groth16 circuits. The BitVM program is actually a single Groth16 verifier, hardcoded with the circuit's verifying key.
 
-The operator provides the proof off-chain first. If everyone agrees its correct, the on-chain footprint is minimal - N/N signatures. If a verifier thinks there is a fraud, a challenge-response game starts between the verifier and operator. Eventually the loser's deposit gets slashed. If an operator is malicious, it will be removed from the committee and replaced by other pre-determined operator.
+The operator provides the proof off-chain first. If everyone agrees it's correct, the on-chain footprint is minimal - N/N signatures. If a verifier thinks there is a fraud, a challenge-response game starts between the verifier and operator. Eventually the loser's deposit gets slashed. If an operator is malicious, it will be removed from the committee and replaced by another pre-determined operator.
 
 ### Technical Limitations
 

@@ -2,7 +2,7 @@
 
 Bitcoin is designed to facilitate trustless payments in a decentralized network of participants. Over the years, Bitcoin blockspace has become more and more valuable because of its high success in achieving decentralization and security. Citrea uses Bitcoin blockspace to secure its execution, introducing a novel way to use it efficiently via zero-knowledge proof technology.
 
-Citrea uses a small subset of Bitcoin blockspace and divides the same blockspace among magnitude of transactions than can be done on the layer 1 itself. By rolling up a batch of transactions together and computing the result using the most advanced verifiable computing technique - zero-knowledge proofs - Citrea provides Bitcoin-equivalent security to a vast array of applications; including but not limited to more complex financial primitives.
+Citrea uses a small subset of Bitcoin blockspace and divides it among orders of magnitude more transactions than can be done on layer 1 itself. By rolling up a batch of transactions together and computing the result using the most advanced verifiable computing technique - zero-knowledge proofs - Citrea provides Bitcoin-equivalent security to a vast array of applications, including but not limited to more complex financial primitives.
 
 Citrea inherits full Bitcoin L1 security, including all four properties needed for its security:
 
