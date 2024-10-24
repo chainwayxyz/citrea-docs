@@ -49,6 +49,7 @@
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
   * [Bridge](developer-documentation/system-contracts/bridge.md)
   * [Fee Vaults](developer-documentation/system-contracts/fee-vaults.md)
+* [Chain Information](developer-documentation/chain-information.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
 
 ## 🔎 Future Research
