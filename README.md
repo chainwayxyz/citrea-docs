@@ -33,6 +33,8 @@ Citrea processes a large number of zkEVM transactions in batches and generates a
 
 Citrea **batch proofs** also includes the **state differences** for each batch, meaning that any changes from block A to block B in a batch are also available for anyone who's reading Bitcoin. This allows a Citrea full node to **directly read the state from Bitcoin permissionlessly** and reconstruct the state - which is the key of Citrea being a rollup on Bitcoin, rather than a sidechain.
 
+Citrea uses **Bitcoin as a Data Availability layer**, and it's the only source of truth for the system. As long as Bitcoin is secure, nodes always continue to function.
+
 ### Citrea has a native trust-minimized two-way peg: Clementine
 
 Clementine is the BitVM-based trust-minimized two-way peg mechanism implemented by Citrea Team. BTC pegging mechanism uses the idea of BitVM at it's core, and it utilizes Light Client Proofs that includes recursively proven batch proofs. 
