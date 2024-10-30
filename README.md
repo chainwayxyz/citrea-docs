@@ -37,7 +37,7 @@ Citrea uses **Bitcoin as a Data Availability layer**, and it's the only source o
 
 ### Citrea has a native trust-minimized two-way peg: Clementine
 
-Clementine is the BitVM-based trust-minimized two-way peg mechanism implemented by Citrea Team. BTC pegging mechanism uses the idea of BitVM at it's core, and it utilizes Light Client Proofs that includes recursively proven Citrea batch proofs. These proofs are used in the Clementine bridge and gets optimistically verified in Bitcoin directly, thanks to BitVM. 
+Clementine is the BitVM-based trust-minimized two-way peg mechanism implemented by Citrea Team. BTC pegging mechanism uses the idea of BitVM at its core, and it utilizes Light Client Proofs that includes recursively proven Citrea batch proofs. These proofs are used in the Clementine bridge and gets optimistically verified in Bitcoin directly, thanks to BitVM. 
 
 Clementine has a 1-of-N trust assumption, which means that as long as one single entity in the bridge multisig is honest, no party can steal the pegged BTC from the bridge. 
 
@@ -51,6 +51,6 @@ You can also check many other projects and other relevant open-sourced component
 
 -----
 
-Citrea uses $BTC as its native token. To avoid confusion and improve on/off-ramp UX; Citrea native $BTC is referred to as $cBTC in Citrea.
+Citrea uses $BTC as its native token. To avoid confusion and improve on/off-ramp UX, Citrea’s native $BTC is referred to as $cBTC.
 
 In the following pages of this documentation, you can find much more details on how Citrea works and what does each component do in its architecture.
