@@ -22,6 +22,7 @@ Citrea possesses the following characteristics, in addition to TL;DR page, very 
 * **ZK-rollup**: Citrea is a ZK-rollup. State transitions are verified using zkSNARKs.
 * **Type 2 zkEVM**: Citrea is a fully EVM-compatible, with only minor changes to block structure and tree/data storages that does not touch the application layer. Thus, it is a Type 2 zkEVM.
 * **Citrea runs a zkVM**: Citrea uses Risc Zero guest code for proof generation at the moment. It's also modular in the architecture, meaning that comes with easy modify & change with respect to the further developments in the area of zkVMs.
+* **cBTC**: Citrea uses Bitcoin as its native token. To avoid confusion and improve on/off-ramp UX; Citrea native $BTC is referred to as $cBTC in Citrea.
 
 #### Block Production:
 
