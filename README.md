@@ -27,15 +27,25 @@ Citrea is the first rollup that enhances the capabilities of Bitcoin blockspace 
 
 ### Citrea is a [Type 2 zkEVM](technical-specs/characteristics/execution-environment.md)
 
-Citrea processes a large number of zkEVM transactions in batches and generates a succint zkSNARK proof from them. These proofs are then published to Bitcoin directly. This allows for easy verification of the batch validity in an inscription-like envelope.
+Citrea processes a large number of zkEVM transactions in batches and generates a succinct zkSNARK proof from them. These proofs are then published to Bitcoin directly. This allows for easy verification of the batch validity in an inscription-like envelope.
 
-### Citrea uses Bitcoin as a Data Availability Layer
+### Citrea is a **rollup on Bitcoin**
 
-Citrea batch proofs also includes the state differences for each batch, meaning that any changes from block A to block B in a batch are also available for anyone who's reading Bitcoin. This allows a Citrea full node to directly read the state from Bitcoin permissionlessly, which is the key of Citrea being a rollup on Bitcoin, rather than a sidechain.
+Citrea **batch proofs** also includes the **state differences** for each batch, meaning that any changes from block A to block B in a batch are also available for anyone who's reading Bitcoin. This allows a Citrea full node to **directly read the state from Bitcoin permissionlessly** and reconstruct the state - which is the key of Citrea being a rollup on Bitcoin, rather than a sidechain.
 
 ### Citrea has a native trust-minimized two-way peg: Clementine
 
-Clementine is the BitVM-based trust-minimized two-way peg mechanism implemented by Citrea Team. BTC pegging mechanism uses the idea of BitVM at it's core, and it utilizes Light Client Proofs that include the batch proof. Clementine has a 1-of-N trust assumption, which means that as long as an entity in the bridge multisig is honest, no party can steal the pegged BTC from the bridge.
+Clementine is the BitVM-based trust-minimized two-way peg mechanism implemented by Citrea Team. BTC pegging mechanism uses the idea of BitVM at it's core, and it utilizes Light Client Proofs that includes recursively proven batch proofs. 
+
+Clementine has a 1-of-N trust assumption, which means that as long as one single entity in the bridge multisig is honest, no party can steal the pegged BTC from the bridge. 
+
+You can read more about Clementine [here](https://www.blog.citrea.xyz/unveiling-clementine/).
+
+### Citrea is fully open-source
+
+You can find the source code of [Citrea](https://github.com/chainwayxyz/citrea) and [Clementine](https://github.com/chainwayxyz/clementine) here. It's been built in public from day one. 
+
+You can also check many other projects and other relevant open-sourced components from our organization page on Github, [Chainway Labs](https://github.com/chainwayxyz).
 
 -----
 
