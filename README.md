@@ -48,6 +48,7 @@ You can read more about Clementine [here](https://www.blog.citrea.xyz/unveiling-
 Citrea is built in public.
 
 Citrea codebase is open-source: [https://github.com/chainwayxyz/citrea](https://github.com/chainwayxyz/citrea).
+
 Clementine codebase is source available: [https://github.com/chainwayxyz/clementine](https://github.com/chainwayxyz/clementine).
 
 -----
