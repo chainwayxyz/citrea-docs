@@ -54,3 +54,30 @@ If everything is correct, you should see some logs that looks like this:
 2024-09-20T07:46:43.267653Z  INFO citrea_fullnode::runner: New State Root after soft confirmation #273315 is: RootHash("1c04ab455e3b36da5a780b510e9d5bb1210ce6ca6027a11ac70e145bf33525d8")
 2024-09-20T07:46:44.500370Z  INFO citrea_fullnode::runner: Running soft confirmation batch #273316 with hash: 0xd7ac25afe89c509d58a044271de3cfd720c4143a7dd07a86c615b99db1a26c83 on DA block #46991
 ```
+
+----- 
+
+You can check the status with the following command (you may need to arrange the URL at the end based on your setup):
+
+```sh
+curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"citrea_syncStatus","params":[], "id":31}' http://0.0.0.0:8080
+```
+
+A sample response (fields may vary based on the sync status):
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 31,
+  "result": {
+    "l1Status": {
+      "Synced": 46916
+    },
+    "l2Status": {
+      "Syncing": {
+        "headBlockNumber": 252441,
+        "syncedBlockNumber": 123425
+      }
+    }
+  }
+}

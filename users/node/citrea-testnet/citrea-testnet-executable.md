@@ -51,7 +51,7 @@ Linux:
 ./citrea-v0.5.0-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
 ```
 
-If the paths are correct, the full node will start to sync. You can check the status with the following command (assuming the `rollup_config.toml` is the same as provided):
+If the paths are correct, the full node will start to sync. You can check the status with the following command (you may need to arrange the URL at the end based on your setup):
 
 ```sh
 curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"citrea_syncStatus","params":[], "id":31}' http://0.0.0.0:8080
