@@ -11,7 +11,7 @@ Follow instructions to install Docker [here](https://docs.docker.com/engine/inst
 #### Step 2: Run using Docker Compose
 
 ```
-curl https://raw.githubusercontent.com/chainwayxyz/citrea/nightly/docker-compose.yml --output docker-compose.yml
+curl https://raw.githubusercontent.com/chainwayxyz/citrea/refs/heads/main/docker-compose.yml --output docker-compose.yml
 docker-compose -f docker-compose.yml up
 ```
 

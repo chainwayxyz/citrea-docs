@@ -20,7 +20,7 @@ We're hosting our binary in the [Citrea](https://github.com/chainwayxyz/citrea/r
 
 To sync correctly, config & genesis files should be provided correctly. You can download & extract them using the following:
 ```sh
-curl https://raw.githubusercontent.com/chainwayxyz/citrea/nightly/resources/configs/testnet/rollup_config.toml --output rollup_config.toml
+curl https://raw.githubusercontent.com/chainwayxyz/citrea/main/resources/configs/testnet/rollup_config.toml --output rollup_config.toml
 ```
 ```sh
 curl https://static.testnet.citrea.xyz/genesis.tar.gz --output genesis.tar.gz
