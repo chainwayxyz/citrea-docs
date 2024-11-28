@@ -12,7 +12,7 @@ Follow instructions to install Docker [here](https://docs.docker.com/engine/inst
 
 ```
 curl https://raw.githubusercontent.com/chainwayxyz/citrea/refs/heads/main/docker-compose.yml --output docker-compose.yml
-docker-compose -f docker-compose.yml up
+docker compose -f docker-compose.yml up
 ```
 
 This spins up a Bitcoin Testnet4 and Citrea Full Node for you to use quickly.
