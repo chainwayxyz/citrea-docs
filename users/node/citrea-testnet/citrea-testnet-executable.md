@@ -32,23 +32,23 @@ tar -xzvf genesis.tar.gz
 First, let's grant running permission to our executable (may require `sudo`):
 
 ```sh
-chmod u+x ./citrea-v0.5.0-osx-arm64
+chmod u+x ./citrea-v0.5.4-osx-arm64
 ```
 
 ```sh
-chmod u+x ./citrea-v0.5.0-linux-amd64
+chmod u+x ./citrea-v0.5.4-linux-amd64
 ```
 
 Then, based on your operating system, run one of the following:
 
 Mac:
 ```sh
-./citrea-v0.5.0-osx-arm64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
+./citrea-v0.5.4-osx-arm64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
 ```
 
 Linux:
 ```sh
-./citrea-v0.5.0-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
+./citrea-v0.5.4-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
 ```
 
 If the paths are correct, the full node will start to sync. You can check the status with the following command (you may need to arrange the URL at the end based on your setup):
