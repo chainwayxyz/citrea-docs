@@ -1,6 +1,6 @@
 ## Run a Node
 
-Running a Citrea node is permissionless - anyone can run a full node for development & security purposes. 
+Running a Citrea node is permissionless - anyone can run a full node for development & security purposes.
 
 The easiest way to run a Citrea Full Node is to use the `docker-compose.yml` that we prepared for you:
 
@@ -11,7 +11,7 @@ Follow instructions to install Docker [here](https://docs.docker.com/engine/inst
 #### Step 2: Run using Docker Compose
 
 ```
-curl https://raw.githubusercontent.com/chainwayxyz/citrea/refs/heads/main/docker-compose.yml --output docker-compose.yml
+curl https://raw.githubusercontent.com/chainwayxyz/citrea/9626b781fcb1c974433fcce55eda84fc7f566514/docker/docker-compose.yml --output docker-compose.yml
 docker compose -f docker-compose.yml up
 ```
 
@@ -68,7 +68,7 @@ A Linux/Mac/Windows system with a configuration of
 - 4 core CPU
 - 25+ Mbps network connection
 
-should satisfy the minimum requirements to run a Citrea node. 
+should satisfy the minimum requirements to run a Citrea node.
 
 -----
 
