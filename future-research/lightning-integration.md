@@ -1,6 +1,6 @@
 # Lightning Integration
 
-<!-- TODO: Add diagram -->
+![Lightning Atomic Swap Diagram](/.gitbook/assets/lightning_swap.png)
 
 Trustless atomic swaps between Citrea and Lightning Network are being actively implemented at the moment. This will allow users of Citrea to pay Lightning invoices directly from the Citrea network or on- and off-ramp from Citrea without needing to leverage the Bitcoin base layer.
 
