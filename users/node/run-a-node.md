@@ -1,6 +1,6 @@
 ## Run a Node
 
-Running a Citrea node is permissionless - anyone can run a full node for development & security purposes. 
+Running a Citrea node is permissionless - anyone can run a full node for development & security purposes.
 
 The easiest way to run a Citrea Full Node is to use the `docker-compose.yml` that we prepared for you:
 
@@ -11,8 +11,8 @@ Follow instructions to install Docker [here](https://docs.docker.com/engine/inst
 #### Step 2: Run using Docker Compose
 
 ```
-curl https://raw.githubusercontent.com/chainwayxyz/citrea/nightly/docker-compose.yml --output docker-compose.yml
-docker-compose -f docker-compose.yml up
+curl https://raw.githubusercontent.com/chainwayxyz/citrea/9626b781fcb1c974433fcce55eda84fc7f566514/docker/docker-compose.yml --output docker-compose.yml
+docker compose -f docker-compose.yml up
 ```
 
 This spins up a Bitcoin Testnet4 and Citrea Full Node for you to use quickly.
@@ -25,13 +25,41 @@ Please note that there are no financial incentives to run a Citrea Full Node. It
 
 We've combined these two methods using a Docker Compose file above. However, if you do not want to use Docker Compose & do your own modifications, please proceed with the rest of this section.
 
-To sync with Citrea Testnet, you need to:
+To sync with Citrea Testnet, you essentially need to:
 
 1) [Run a Bitcoin Testnet4 Node](./bitcoin-testnet4/README.md)
 
 2) [Run a Citrea Full Node](./citrea-testnet/README.md)
 
-#### Hardware Requirements for running a node
+#### Step 3: Check the sync status
+
+You can check the status with the following command (you may need to arrange the URL at the end based on your setup):
+
+```sh
+curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"citrea_syncStatus","params":[], "id":31}' http://0.0.0.0:8080
+```
+
+A sample response (fields may vary based on the sync status):
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 31,
+  "result": {
+    "l1Status": {
+      "Synced": 46916
+    },
+    "l2Status": {
+      "Syncing": {
+        "headBlockNumber": 252441,
+        "syncedBlockNumber": 123425
+      }
+    }
+  }
+}
+```
+
+### Hardware Requirements for running a node
 
 A Linux/Mac/Windows system with a configuration of
 
@@ -40,7 +68,7 @@ A Linux/Mac/Windows system with a configuration of
 - 4 core CPU
 - 25+ Mbps network connection
 
-should satisfy the minimum requirements to run a Citrea node. 
+should satisfy the minimum requirements to run a Citrea node.
 
 -----
 
