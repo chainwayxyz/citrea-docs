@@ -19,4 +19,4 @@ b) Guarantees: For users who prefer to use an alternative DA branch, trust assum
 
 -----
 
-We're closely following the recent ideas & research regarding volition models. We plan to initiate the research & development process after the Citrea mainnet launch, and will continue to share the findings & progress with the community as usual.
+The idea is on the roadmap and it will be actively implemented after the mainnet launch upon more research.

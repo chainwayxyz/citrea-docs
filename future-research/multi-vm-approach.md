@@ -8,10 +8,8 @@ Two main methods that fits into this approach are:
 - Integrating Arbitrum Stylus-like* solutions to Citrea's EVM module: Essentially bringing a WASM execution model into the system.
 - Building a Wasm-based sovereign module from scratch: A dedicated WASM execution environment needs to be built and integrated with custom precompiles.
 
-<!-- TODO: Is there any other "easy" method that I miss? -->
-
 -----
 
-The idea is quite experimental and it is something team can consider some steps after the mainnet launch. It's not a high-priority idea, but can be a great feature in the future, both for the ecosystem and the developers.
+The idea is quite experimental and it will be further researched after the mainnet launch.
 
 * Arbitrum Stylus is under the BUSL License, and it is currently allowed for specific use cases in the Arbitrum Ecosystem. As cypherpunks writing code, we deeply value their work and respect their license. This will also continue with honesty & transparency when we start to implement the ideas in this document.
