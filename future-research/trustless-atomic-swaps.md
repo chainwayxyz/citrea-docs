@@ -9,6 +9,8 @@ A very basic atomic swap works as follows:
 - Some User B sees the request, and locks the equivalent amount of Bitcoin into the desired address of User A in the Bitcoin network.
 - Upon finalization of the transaction, user B can then submit the transaction details to the Atomic Swap smart contract on Citrea, which verifies the transaction and lets user B to claim the locked cBTC.
 
+![Basic Atomic Swap Diagram](/.gitbook/assets/atomic_swap.svg)
+
 In the flow above, the atomic swap is basically completed trustlessly as there are no intermediaries involved. Different implementation of atomic swaps can use preimages and HTLCs to make the swap more robust.
 
 There are several native atomic swaps projects being implemented at the moment, to be revealed in the future.
