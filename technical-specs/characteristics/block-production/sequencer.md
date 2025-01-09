@@ -21,6 +21,8 @@ A soft confirmation signed by the sequencer includes the following data:
 
 and more. 
 
+![A more detailed block cycle](../../../.gitbook/assets/block_cycle.png)
+
 Regarding the trust assumptions that comes with sequencer's role, it's important to recall that zero-knowledge proofs are used to ensure the validity of the transactions and the block. Combined with force transaction mechanism and on-chain data availability, the sequencer may cause liveness failures, but it cannot act maliciously and damage users' funds or freeze them voluntarily. 
 
 <!-- TODO: Add transaction selection logic a bit here -->
