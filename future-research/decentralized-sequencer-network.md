@@ -19,7 +19,7 @@ Currently, potential approaches that can fit with Citrea and Bitcoin are:
 - **PoS-like layer for sequencing blocks**: For users, the source of truth will always be zero-knowledge proofs in Bitcoin. The decentralized sequencing layer will reduce short-term trust in sequencers to protect ordering, as ordering will be finalized on the sequencing layer in a single slot.
 - **Shared Sequencing**: We're following the state-of-art solutions emerging in other ecosystems. Once they're proven to be secure and battle-tested throughly, a good approach could be adapting them into Citrea.
 
-One thing is not mentioned above - based sequencing. As Citrea uses Bitcoin for the DA layer, it is not possible to implement based sequencing with limited capabilities of Bitcoin script.
+One thing is not mentioned above is the based sequencing method. As Citrea uses Bitcoin for the DA layer, implementing based sequencing on Bitcoin is not feasible as each batcher would need to submit the state diff separately, and the cost would be way too high per Bitcoin block.
 
 -----
 
