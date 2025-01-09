@@ -1,23 +1,26 @@
 # Citrea Sequencer
 
-<!-- <figure><img src="../../../.gitbook/assets/block_prod.png" alt=""><figcaption><p>Block Production in Citrea</p></figcaption></figure> -->
-
 The Citrea sequencer is a specialized full node with the crucial task of ordering user transactions and building rollup blocks. It acts as the primary gateway for users to interact with the rollup by including their transactions to the blocks.
+
+#### Block Production
 
 Essentially, the Citrea sequencer continuously monitors the transaction mempool. In every two seconds, the block production is triggered and the sequencer selects some transactions from the mempool. These transactions are then executed against the current state of the rollup, and in case it's successful, the sequencer includes them into the block. The block is then signed by the sequencer and broadcasted to the network.
 
-At the time of broadcast, these transactions are also sent to the prover. Until prover submits the batch of transactions into the Bitcoin, these transactions are not finalized. In this case, the sequencer gives a _soft confirmation_ to the full nodes. A soft confirmation essentialy provides an insight for the full nodes regarding the next transactions & blocks to be written to DA. It also includes some additional data, such as
+<figure><img src="../../../.gitbook/assets/block_prod.png" alt=""><figcaption><p>Block Production in Citrea</p></figcaption></figure>
 
-- DA Block Height & Hash
-- Batch Hash
-- Previous State Root
-- Post State Root
-- L1 Fee Rate
-- Block Timestamp
+#### Soft Confirmations
 
-and so on. 
+At the time of broadcast, these transactions are also sent to the prover. Until the [sequencer commitments](./sequencer-commitments.md) & [batch proofs](https://www.blog.citrea.xyz/citreas-batch-proofs/) are submitted to Bitcoin, these transactions are not finalized. For this reason, the sequencer gives a _soft confirmation_ to the full nodes. A soft confirmation essentialy provides a soft-finality for the full nodes regarding the next transactions & blocks to be written to DA.
 
-Key idea of soft confirmations is to get a soft finality from the sequencer regarding the transcations and their orders, and progressing with further transactions until batches are finalized on Bitcoin. It's also important to recall that zero-knowledge proofs are used to ensure the validity of the transactions and the block, and combined with force transaction mechanism and on-chain data availability, the sequencer can't steal users' funds or freeze them voluntarily.
+A soft confirmation signed by the sequencer includes the following data:
+
+- Current Citrea block height
+- Citrea Citrea block hash & previous Citrea block hash
+- Current finalized Bitcoin block height & block hash
+- Transaction data & signatures
+
+and more. 
+
+Regarding the trust assumptions that comes with sequencer's role, it's important to recall that zero-knowledge proofs are used to ensure the validity of the transactions and the block. Combined with force transaction mechanism and on-chain data availability, the sequencer may cause liveness failures, but it cannot act maliciously and damage users' funds or freeze them voluntarily. 
 
 <!-- TODO: Add transaction selection logic a bit here -->
-<!-- TODO: Talk more on soft-confirmation fields -->
