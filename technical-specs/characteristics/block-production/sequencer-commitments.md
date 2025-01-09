@@ -17,9 +17,9 @@ Sequencer commitments are used to keep track of the canonical history of the rol
 
 Once a commitment is inscribed (and finalized) on Bitcoin, the sequencer cannot re-order transactions within that batch without invalidating the commitment. This ensures that the sequencer cannot manipulate the order of transactions in the batch, maintaining the integrity of the batch, and therefore the rollup's state. 
 
-While it does not fully guarantee data availability, sequencer commitments prevent re-orgs on Citrea blocks once they are commitment inscriptions are finalized. It allows full nodes to verify the sequencer's claims about the state transitions.
+While it does not fully guarantee data availability, sequencer commitments prevent re-orgs on Citrea blocks once they are finalized. It allows full nodes to verify the sequencer's claims about the state transitions.
 
-Another major usecase of sequencer commitments is that it is used in the Batch Proof circuits for Blockspace Proving. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
+Another major use case of sequencer commitments is that it is used in the Batch Proof circuits for Blockspace Proving. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
 
 ### Querying Sequencer Commitments
 
