@@ -1,15 +1,28 @@
 # Nodes
 
+Nodes are machines that run in Citrea network.
+
+There are three types of nodes in Citrea currently:
+
+- [Sequencer](/technical-specs/characteristics/block-production/sequencer.md): A special node that produces blocks in the Citrea network.
+<!-- TODO: Fix this link once prover details are more organized -->
+- [Prover](/technical-specs/characteristics/proof-generation.md): A special node that generates zero-knowledge proofs of execution for the sequencer's blocks.
+- Full Node
+
 ## Full Nodes
 
-Full nodes in Citrea are the nodes that sync with the sequencer(s) as well as verify the zk proofs. Full nodes are designed for users who need instant confirmations from the sequencer or need the full history of Citrea.
+Full nodes in Citrea are the nodes that sync with the sequencer(s) as well as verify the zk proofs. Full nodes are designed for users who need instant soft-confirmations from the sequencer or need the full history of Citrea.
 
-A sequencer that produced a block then broadcasts the block over a network of full nodes. Full nodes apply the sequencer block to their local state. RPC endpoints can now serve the block data to explorers, wallets, and other applications without waiting for additional zk proving. After a batch of blocks is proven and inscribed in Bitcoin, full nodes extract and verify the proofs. According to the result of the proof they confirm, finalize, or revert the sequencer broadcasted blocks.
+#### How it works
 
-## Light Nodes
+Once the sequencer produces a block and broadcasts it over a network of full nodes, full nodes apply the sequencer block to their local state. Their RPC endpoints can then serve the block data to explorers, wallets, and other applications without waiting for additional zk proving unless they're waiting for a finalization. 
 
-&#x20;A light node is a node that is designed to fully validate the full nodes' responses using minimal bandwidth and storage requirements. In Citrea, light nodes run next to a Bitcoin light node (SPV) or full node and only need the several latest Bitcoin block headers to trustlessly access the latest light client proof. They can also directly connect to the peer-to-peer network and retrieve the light client proof through the network.
+After a batch of blocks is proven and inscribed in Bitcoin, full nodes extract and verify the proofs. According to the result of the proof they confirm, finalize, or revert the sequencer broadcasted blocks.
 
-Using the state root extracted from the light client proof, Citrea light nodes can validate full node and RPC endpoint responses. With the advancements in light node technology on Bitcoin like ZeroSync header chain proofs, the proofs that verify a chain of Bitcoin block headers thus allow instant sync with Bitcoin headers allowing Citrea light nodes to sync with the rollup near-instantaneously.&#x20;
+Full nodes can store the entire state & history of Citrea. Depending on the run configuration, they can also provide transaction receipts with more details.
 
-This improvement significantly reduces the trust on full nodes and boosts decentralization of Citrea with more verifying nodes. Such a light node can also live in another blockchain, which enables trust-minimized bridges with every other smart contract-capable blockchain ecosystem.
+We're working towards multiple types of full node implementations, such as archival & pruned full nodes, to let users choose the node type that best suits their needs.
+
+#### Who can run a full node?
+
+Anyone can run a full node permissionlessly for their own security. However, please note that there are no keys or incentives to run a full node. For more details, you can visit the node running guide [here](/users/node/run-a-node.md).
