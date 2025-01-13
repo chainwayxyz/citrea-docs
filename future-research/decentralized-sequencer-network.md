@@ -14,13 +14,6 @@ Several important considerations regarding the decentralized sequencer networks 
 - **Latency**: Achieving consensus among multiple sequencers is a challenging task, it brings some latency to the system and it should not impact responsiveness of the rollup hugely.
 - **Economic Incentives**: There are interesting ideas stemming from an economic perspective and a game theory perspective on the decentralized networks. It's important to ensure the safety in theory, just like in practice.
 
-Currently, potential approaches that can fit with Citrea and Bitcoin are:
-
-- **PoS-like layer for sequencing blocks**: For users, the source of truth will always be zero-knowledge proofs in Bitcoin. The decentralized sequencing layer will reduce short-term trust in sequencers to protect ordering, as ordering will be finalized on the sequencing layer in a single slot.
-- **Shared Sequencing**: We're following the state-of-art solutions emerging in other ecosystems. Once they're proven to be secure and battle-tested throughly, a good approach could be adapting them into Citrea.
-
-One thing is not mentioned above is the based sequencing method. As Citrea uses Bitcoin for the DA layer, implementing based sequencing on Bitcoin is not feasible as each batcher would need to submit the state diff separately, and the cost would be way too high per Bitcoin block.
-
 -----
 
-The idea is on the roadmap and active development & implementation will kick off after the mainnet launch.
+The concept is on the roadmap and active development & implementation will kick off after the mainnet launch.
