@@ -13,7 +13,7 @@ Volition, compared to two categories above, offers a hybrid approach - it allows
 
 ![Volition Model Diagram](/.gitbook/assets/volition.png)
 
-Regardless of the DA preference, all transactions would still be process by the STF (State Transition Function), and will be verified via ZK proofs. 
+Regardless of the DA preference, all transactions will still be process by the STF (State Transition Function), and will be verified via ZK proofs. 
 
 There are two major challenges in this direction:
 
