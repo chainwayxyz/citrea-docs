@@ -4,10 +4,10 @@ Volition is a special type of data availability solution that combines off-chain
 
 Traditionally, there are two categories of rollups regarding the data storage:
 
-- **On-chain Data Availability** (e.g. Citrea): All transaction data / state diffs are stored on the L1 chain. Full nodes can simply scan L1 blocks to sync with the network. This is the most secure and trustless* way to provide data for the network; however, not the cheapest.
-    - `Trustless` here is in the context of data only and it indicates that chain data is always available as long as the L1 chain is secure. This is pretty much the standard & correct definition in this context.
+- **On-chain Data Availability** (e.g. Citrea): All transaction data / state diffs are stored on the L1 chain. Full nodes can simply scan L1 blocks to sync with the network. This is the most secure and trustless* way to provide data for the network.
+    - `Trustless` here is in the context of data only and it indicates that chain data is always available as long as the L1 chain is secure. 
 
-- **Off-chain Data Availability** (i.e. Validiums): All transaction data / state diffs are stored off-chain. Validiums are mostly cheaper than pure rollups; however, they rely on some other DA solutions and DACs. Tt introduces more trust assumptions to the system.
+- **Off-chain Data Availability** (i.e. Validiums): All transaction data / state diffs are stored off-chain. Validiums are mostly cheaper than pure rollups; however, they rely on some other DA solutions and DACs. It introduces more trust assumptions to the system.
 
 Volition, compared to two categories above, offers a hybrid approach - it allows users to choose where to publish transactions (+ relevant data), and choose the security of on-chain data availability or the cost efficiency of off-chain data availability. There will be two states for two DA branches, and latest Citrea state will be the combination of these two branches.
 
