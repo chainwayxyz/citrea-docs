@@ -52,7 +52,7 @@
 * [Chain Information](developer-documentation/chain-information.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
 
-## 🔎 Future Research
+## [🔎 Future Research](future-research/README.md)
 
 * [Decentralized Sequencer Network](future-research/decentralized-sequencer-network.md)
 * [Lightning Integration](future-research/lightning-integration.md)
