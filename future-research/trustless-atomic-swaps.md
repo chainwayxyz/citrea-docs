@@ -1,8 +1,6 @@
 # Trustless Citrea <> Bitcoin Atomic Swaps
 
-Trustless atomic swaps allow users to on- and off-ramp between Citrea and Bitcoin without using the peg mechanism. They are being actively implemented through third parties and live on Citrea Testnet, such as: 
-- [Citrex](https://citrex.xyz)
-- [Garden Finance](https://garden.finance)
+Trustless atomic swaps allow users to on- and off-ramp between Citrea and Bitcoin without using the peg mechanism. They are being actively implemented through third parties and live on Citrea Testnet, such as [Citrex](https://citrex.xyz) and [Garden Finance](https://garden.finance).
 
 A very basic atomic swap works as follows:
 
