@@ -4,15 +4,12 @@
 <!-- TODO: Include force_transaction.md in this text -->
 <!-- TODO: Possibly link prover.md -->
 
-Currently, most rollup solutions, including Citrea, rely on a single sequencer. Even though this approach provides sufficient security guarantees in terms of safety and non-custodial operation, it presents a single point of failure concerning liveness. While censorship resistance can be achieved by force transactions, for liveness, a decentralized sequencer network is one of the ideal solutions.
+A decentralized sequencer network is composed of multiple sequencers, each tasked with block production and transaction ordering according to the network’s algorithm. Citrea is a ZK Rollup that currently relies on a single sequencer, which provides strong security and non-custodial operation. However, it also introduces a single point of failure for liveness. Although censorship resistance can be achieved through force transactions, a decentralized sequencer network is ideal for addressing the liveness challenge by distributing responsibilities among multiple participants.
 
-A decentralized sequencer network essentially consists of multiple sequencers, where each sequencer is responsible for block production and transaction ordering based on the algorithm of network. 
-
-Several important considerations regarding the decentralized sequencer networks are:
-
-- **Architecture**: Deciding the sequencer set, making it permissionless or not, modifying the architecture, determining the best consensus (CometBFT, Hotstuff, MonadBFT), and making further adjustments are all crucial properties, each with tradeoffs.
-- **Latency**: Achieving consensus among multiple sequencers is a challenging task, it brings some latency to the system and it should not impact responsiveness of the rollup hugely.
-- **Economic Incentives**: There are interesting ideas stemming from an economic perspective and a game theory perspective on the decentralized networks. It's important to ensure the safety in theory, just like in practice.
+A few key challenges of decentralized sequencer networks are as follows:
+- **Architecture**: Deciding the sequencer set (permissionless or not), modifying the architecture, determining the optimal consensus mechanism (e.g., CometBFT, Hotstuff, MonadBFT).
+- **Latency**: Achieving consensus among multiple sequencers poses significant challenges due to the latency introduced by communication between sequencers. Ideally, a decentralized sequencer network should not introduce observable latency compared to the current implementation.
+- **Economic Incentives**: The economic model should be designed to ensure that sequencers are rewarded for their work and penalized for misbehavior, for the network's security and liveness.
 
 -----
 

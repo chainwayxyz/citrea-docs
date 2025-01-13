@@ -4,7 +4,7 @@ Trustless atomic swaps allow users to on- and off-ramp between Citrea and Bitcoi
 
 A very basic atomic swap works as follows:
 
-- There's a smart contract on Citrea that is used to lock some amount of cBTC. This smart contract also utilizes BitcoinLightClient on Citrea to verify Bitcoin transactions on chain (see below).
+- A smart contract on Citrea that is used to lock some amount of cBTC. This smart contract also utilizes BitcoinLightClient on Citrea to verify Bitcoin transactions on chain (see below).
 - User A locks some cBTC into the smart contract, and demands an equivalent amount of Bitcoin in return.
 - Some User B sees the request, and locks the equivalent amount of Bitcoin into the desired address of User A in the Bitcoin network.
 - Upon finalization of the transaction, user B can then submit the transaction details to the Atomic Swap smart contract on Citrea, which verifies the transaction and lets user B to claim the locked cBTC.
