@@ -11,7 +11,7 @@ There are three types of nodes in Citrea currently:
 
 ## Full Nodes
 
-Full nodes in Citrea are the nodes that sync with the sequencer(s) as well as verify the zk proofs. Full nodes are designed for users who need instant soft-confirmations from the sequencer or need the full history of Citrea.
+Full nodes in Citrea are the nodes that sync with the sequencer. They also verify the ZK proofs by reading the DA. Full nodes are designed for users who need instant soft-confirmations from the sequencer or need the full history of Citrea.
 
 #### How it works
 
