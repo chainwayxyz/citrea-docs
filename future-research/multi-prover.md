@@ -8,7 +8,7 @@ An idea to make the proof generation process more resilient is to implement a mu
 
 Currently Citrea has a template multi-prover system implemented using [Risc Zero](https://risczero.com) and [SP1](https://docs.succinct.xyz/docs/introduction). You can check the initial guest code implementation from [here](https://github.com/chainwayxyz/citrea/tree/nightly/guests). 
 
-As of Citrea Testnet, SP1 prover is not active, and we are only utilizing Risc Zero. After the mainnet launch we are planning to activate SP1 prover with additional prover implementations for multi-prover system.
+As of Citrea Testnet, SP1 prover is not active, and we are only utilizing Risc Zero. After the mainnet launch we are planning to activate SP1 prover with additional prover implementations for multi-prover system, with a possible SGX-extension.
 
 ---
 
