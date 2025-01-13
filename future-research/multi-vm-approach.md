@@ -10,6 +10,6 @@ Two main methods that fits into this approach are:
 
 -----
 
-The idea is quite experimental and it will be further researched after the mainnet launch.
+The concept is quite experimental and it will be further researched after the mainnet launch.
 
 * Arbitrum Stylus is under the BUSL License, and it is currently allowed for specific use cases in the Arbitrum Ecosystem. The term is used here to describe a similar approach, not the exact implementation.
