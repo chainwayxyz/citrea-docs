@@ -1,6 +1,6 @@
 # Multi VM Approach
 
-Citrea is designed to be compatible and interoperable with multiple virtual machines. It runs inside a generic STARK zkVM, meaning any virtual machine can be implemented and will produce execution proof. Currently on the path to mainnet, Citrea implements EVM and it will be launched that way. 
+Citrea is designed to be compatible and interoperable with multiple virtual machines. It runs inside a generic STARK zkVM, meaning any virtual machine can be implemented and will produce execution proof. Citrea currently implements Ethereum Virtual Machine (EVM).
 
 Implementing different VMs like SVM or integrating WASM-based smart contracts to Citrea is also possible thanks to its future-proof design. The objective in this approach is to build an environment where contracts can be written in multiple languages like Solidity (EVM) or Rust, C++ (WASM) and run & interact on the same blockchain, natively. 
 
