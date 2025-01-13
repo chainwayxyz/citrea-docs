@@ -9,7 +9,7 @@ Volition is a special type of data availability solution that combines off-chain
 
 Volition, compared to two categories above, offers a hybrid approach - it allows users to choose where to publish transactions (+ relevant data), and choose the security of on-chain data availability or the cost efficiency of off-chain data availability.  Essentially there will be two states for two DA branches, and latest Citrea state will be the combination of these two branches.
 
-![Volition Model Diagram](/.gitbook/assets/volition.svg)
+![Volition Model Diagram](/.gitbook/assets/volition.png)
 
 It's important to note that regardless of the DA preference, all transactions would still be process by the STF (State Transition Function), and will be verified via ZK proofs. 
 
