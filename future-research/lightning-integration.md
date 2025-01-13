@@ -2,7 +2,7 @@
 
 Trustless atomic swaps between Citrea and Lightning Network are being actively implemented at the moment through third party applications, such as [Citrex](https://citrex.xyz). This will allow users of Citrea to pay Lightning invoices directly from the Citrea network or on- and off-ramp from Citrea without needing to leverage the Bitcoin base layer.
 
-More technically, for both ways of the swap the smart contract on Citrea simply emulates the Lightning's HTLC. An LP (Lightning Liquidity Provider) behaves as a proxy on Lightning and it is responsible for all cross-network interactions - with liquidity maintained on both sides.
+More technically, for both ways of the swap the smart contract on Citrea simply emulates the Lightning's HTLC. An LP (Liquidity Provider) behaves as a proxy on Lightning and it is responsible for all cross-network interactions - with liquidity maintained on both sides.
 
 ![Lightning Atomic Swap Diagram](/.gitbook/assets/lightning_atomic_swap.png)
 
