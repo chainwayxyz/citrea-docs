@@ -21,4 +21,4 @@ b) Guarantees: For users who prefer to use an alternative DA branch, trust assum
 
 -----
 
-The idea is on the roadmap and it will be actively implemented after the mainnet launch upon more research.
+The concept is on the roadmap and it will be actively implemented after the mainnet launch upon more research.
