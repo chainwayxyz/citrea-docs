@@ -10,7 +10,7 @@
 * [Technical Introduction](technical-specs/introduction.md)
 * [Characteristics](technical-specs/characteristics/README.md)
   * [Execution Environment](technical-specs/characteristics/execution-environment.md)
-  * Block Production
+  * [Block Production](technical-specs/characteristics/block-production/README.md)
     * [Sequencer](technical-specs/characteristics/block-production/sequencer.md)
     * [Sequencer Commitments](technical-specs/characteristics/block-production/sequencer-commitments.md)
   * [Proof Generation](technical-specs/characteristics/proof-generation.md)
