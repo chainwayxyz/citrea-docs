@@ -1,42 +1,20 @@
 # Citrea Sequencer
 
-The Citrea sequencer is a specialized full node with the crucial task of ordering user transactions and building rollup blocks. It acts as the primary gateway for users to interact with the rollup by including their transactions in the blocks.
+The Citrea sequencer is a specialized full node with the crucial task of ordering user transactions and building rollup blocks. 
 
-#### Key Functions
+#### Process of Block Production
 
-- **Transaction Ordering**: The sequencer continuously monitors the mempool for pending transactions.
+Sequencer carries the following operations to build a block, in detail:
 
-- **Block Building**: Every two seconds, the sequencer assembles a new Citrea block from the transactions in the mempool. It executes these transactions against the current state of the rollup, applying the necessary state transitions using STF (State Transition Function).
+- It continuously monitors the [mempool](./mempool.md), a dedicated area for pending transactions. 
+- Every two seconds, the sequencer assembles a new block from the transactions in the mempool. The subset of transactions selected from the mempool are stated under the mempool section. The ordering of these transactions are based on their priority fees.
+- Along with user transactions, sequencer is also responsible for including system transactions, such as updating the `L1BlockHash` in the [BitcoinLightClient](/developer-documentation/system-contracts/bitcoin-light-client.md) or handling [Deposit](/developer-documentation/system-contracts/bridge.md) transacations.
+- The sequencer executes the assembled transactions against the current state of the rollup, updates the balances, storage values, and state. Gas usages and state changes are recorded in transaction receipts.
+- Once the trasactions are executed, the sequencer also generates a signed soft confirmation. This provides a soft-finality to the transactions.
+- The signed soft confirmation with block data is broadcasted to the network for full nodes to update their local chain state.
 
-- **Soft Confirmation Generation**: Upon building a new block the sequencer generates a **soft confirmation**, which consists of the following:
-
-```rust
-pub struct SoftConfirmationReceipt<DS: DaSpec> {
-    pub l2_height: u64,
-    pub hash: [u8; 32],
-    pub prev_hash: [u8; 32],
-    pub da_slot_height: u64,
-    pub da_slot_hash: <DS as DaSpec>::SlotHash,
-    pub da_slot_txs_commitment: <DS as DaSpec>::SlotHash,
-    pub l1_fee_rate: u128,
-    pub tx_hashes: Vec<[u8; 32]>,
-    pub deposit_data: Vec<Vec<u8>>,
-    pub timestamp: u64,
-    pub soft_confirmation_signature: Vec<u8>,
-    pub pub_key: Vec<u8>,
-}
-```
-
-This information is then signed & broadcasted to the network, providing a soft-finality for the full nodes regarding the next transactions & blocks to be written to Bitcoin DA.
-
-- **Sequencer Commitment Generation**: The sequencer generates a cryptographic commitment to the Citrea blocks that are inscribed on Bitcoin. This commitment is then submitted to the Bitcoin network, providing a finality for the transactions and blocks. You can check the [sequencer commitments](./sequencer-commitments.md) section for more information.
-
-- **Interaction with Prover**: Along with the process above, the sequencer also submits a batch of blocks to prover. The prover node generates a proof and inscribes it to Bitcoin, which is used by full nodes verification & proven finalization.
-
-![A more detailed block cycle](../../../.gitbook/assets/block_cycle.png)
+Soft confirmations does not provide finality - you can refer to [Sequence Commitments](./sequencer-commitments.md) for more information.
 
 #### Trust Assumptions
 
 Regarding the trust assumptions that come with sequencer's role, it's important to recall that zero-knowledge proofs are used to ensure the validity of the transactions and the block. Combined with force transaction mechanism and on-chain data availability, the sequencer may cause liveness failures, but it cannot act maliciously and damage users' funds or freeze them voluntarily. 
-
-<!-- TODO: Add transaction selection logic a bit here -->
