@@ -1,6 +1,6 @@
 # Block Production
 
-This section details how Citrea produces blocks, from transaction submission to finalization. It covers the roles of the sequencer, commitments, mempool, and overall process. 
+This section details Citrea's block production and finalization process, from transaction submission to confirmation. It covers the roles of the sequencer, commitments, mempool, and overall process. 
 
 #### Components Overview
 

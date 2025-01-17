@@ -1,6 +1,6 @@
 # Soft Confirmations
 
-Issued by the sequencer, soft confirmations in Citrea provide soft-finality for transactions in a block, allowing users to receive rapid feedback while awaiting the more secure but slower process of finalization on the DA layer. They act as intermediate acknowledgments of state updates within the rollup.
+Issued by the sequencer, soft confirmations in Citrea provide soft-finality for transactions in a block, offering users rapid feedback while the rollup awaits finalization on the DA layer. They represent interim state updates within the Citrea rollup.
 
 #### Structure
 

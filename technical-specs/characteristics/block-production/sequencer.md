@@ -1,6 +1,6 @@
 # Citrea Sequencer
 
-The Citrea sequencer is a specialized full node with the crucial task of ordering user transactions and building rollup blocks. 
+The Citrea sequencer is a specialized full node responsible for ordering user transactions and constructing rollup blocks.
 
 #### Process of Block Production
 
@@ -13,7 +13,7 @@ Sequencer carries the following operations to build a block, in detail:
 - Once the trasactions are executed, the sequencer also generates a signed [soft confirmation](./soft-confirmation.md). This provides a soft-finality to the transactions.
 - The signed soft confirmation with block data is broadcasted to the network for full nodes to update their local chain state.
 
-Soft confirmations does not provide finality - you can refer to [Sequence Commitments](./sequencer-commitments.md) for more information.
+Soft confirmations does not provide finality - you can refer to [Sequencer Commitments](./sequencer-commitments.md) for more information.
 
 #### Trust Assumptions
 
