@@ -14,7 +14,7 @@ If the transaction passes these checks, it is added to the mempool.
 
 Citrea comes with a private mempool that is not queryable from an RPC endpoint. On the ordering, the priority is given based on the priority fee of the transaction by the sequencer.
 
-Citrea mempool has custom [SubPools]((https://reth.rs/docs/reth_transaction_pool/enum.SubPool.html#variants)) that uses `reth-transaction-pool` architecture. Namely:
+Citrea mempool has custom [SubPools](https://reth.rs/docs/reth_transaction_pool/enum.SubPool.html#variants) that uses `reth-transaction-pool` architecture. Namely:
 - Queued: Includes transactions not ready to be included in the next block due to lack of funds, nonce, etc.
 - BaseFee: Includes transactions not ready to be included in the next block due to insufficient base fee.
 - Pending: Includes transactions ready to be included in the next block.

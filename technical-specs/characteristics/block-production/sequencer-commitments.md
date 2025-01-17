@@ -19,7 +19,7 @@ While it does not fully guarantee data availability, sequencer commitments preve
 
 Sequencer commitments are also used in the Batch Proof circuits for Blockspace Proving. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
 
-Lastly, Light Client Proofs that are used in BitVM based Clementine bridge also benefits from the sequencer commitments indirectly as well.
+Lastly, Light Client Proofs that are used in BitVM based Clementine bridge also benefits from the sequencer commitments indirectly as well. You can read a summary of it [here](https://x.com/citrea_xyz/status/1877746951309176971).
 
 #### Querying Sequencer Commitments
 
