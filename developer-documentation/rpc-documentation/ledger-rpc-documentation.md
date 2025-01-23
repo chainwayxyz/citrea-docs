@@ -33,13 +33,29 @@ This endpoint retrieves the current synchronization status of your local Citrea 
 
 - **Content-Type:** `application/json`
 - **Response Body:**
+    If synced fully:
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "id": 78,
+        "result": {
+            "l1Status": {
+                "Synced": 19224
+            },
+            "l2Status": {
+                "Synced": 2326433
+            }
+        }
+    }
+    ```
+    If still syncing:
     ```json
     {
         "jsonrpc": "2.0",
         "result": {
             "Syncing": {
-                "head_block_number": 264052,
-                "synced_block_number": 27050
+                "headBlockNumber": 264052,
+                "syncedBlockNumber": 27050
             }
         },
         "id": 78
@@ -49,8 +65,8 @@ This endpoint retrieves the current synchronization status of your local Citrea 
 ### Response Fields Explanation
 
 - `Syncing`: The synchronization status object.
-  - `head_block_number`: The latest block number known to the node.
-  - `synced_block_number`: The block number up to which the node has synced.
+  - `headBlockNumber`: The latest block number known to the node.
+  - `syncedBlockNumber`: The block number up to which the node has synced.
 
 </details>
 
@@ -59,7 +75,6 @@ This endpoint retrieves the current synchronization status of your local Citrea 
 <!-------------------------------------------------------------------->
 <!-------------------------------------------------------------------->
 
-<!------------------------>
 <details>
 <summary><code>ledger_getSoftConfirmationByNumber</code></summary>
 
@@ -527,9 +542,6 @@ This endpoint retrieves the sequencer commitments for a given DA `hash`.
 <!-------------------------------------------------------------------->
 <!-------------------------------------------------------------------->
 
-<!-- get batch proofs by slot height -->
-<!-- get batch proofs by slot hash -->
-
 <details>
 <summary><code>ledger_getHeadSoftConfirmation</code></summary>
 
@@ -650,7 +662,96 @@ This endpoint retrieves the L2 height of the most recent (head) soft confirmatio
 <!-------------------------------------------------------------------->
 <!-------------------------------------------------------------------->
 
-<!-- getVerifiedBatchProofsBySlotHeight -->
+
+<details>
+<summary><code>ledger_getVerifiedBatchProofsBySlotHeight</code></summary>
+
+This endpoint retrieves the last verified batch proof from the ledger.
+
+### Request
+
+- **Method:** `POST`
+- **Content-Type:** `application/json`
+- **Endpoint URL:** `http://0.0.0.0:8080` (This is for docker-compose setup, replace with your rpc binding)
+- **Request Body:**
+    ```json
+    {
+        "jsonrpc": "2.0",
+        "method": "ledger_getVerifiedBatchProofsBySlotHeight",
+        "params": [55555],
+        "id": 31
+    }
+    ```
+- **Example Request:** Here's an example curl you can use directly from your terminal
+    ```sh
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getVerifiedBatchProofsBySlotHeight","params":[55555], "id":31}'  http://0.0.0.0:8080
+    ```
+
+### Response
+
+- **Content-Type:** `application/json`
+- **Response Body:**
+    ```json
+    {
+      "jsonrpc": "2.0",
+      "id": 31,
+      "result": {
+        "proof": {
+          "proof": [
+            2,
+            0,
+            1,
+            215,
+            ... // very long response
+          ],
+          "proofOutput": {
+            "initialStateRoot": "3a0cb3797428e996e3dccf890e9a8fbb07c95745e4b72d83f8b7ac299804c43f",
+            "finalStateRoot": "b8a4a101d199164db83fc6a3a49c6bf9face9539e485a24948dadd785fb5d1e4",
+            "prevSoftConfirmationHash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "finalSoftConfirmationHash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "stateDiff": {
+              "4163636f756e74732f6163636f756e74732f4682a70af1d3fae53a5a26b682e2e75f7a1de21ad5fc8d61794ca889880d39d1": "eb9593515dd32b28a13c40fa96f6320fdd762aa6cfc2c6a8b6543b6a3ba40e346ab1050000000000","45766d2f612f1403c036ffb7dfb6b6d19f763948b8fb8faccaa529": "200000000000000000000000000000000000000000000000000011c37937e08000000000000000000000",
+              ... // very long response
+            },
+            "daSlotHash": "20f4eafc5d9657c2e22be2323a42f8f801d395fb8b4e5e1138953f0000000000",
+            "sequencerCommitmentsRange": [
+              0,
+              0
+            ],
+            "sequencerPublicKey": "4682a70af1d3fae53a5a26b682e2e75f7a1de21ad5fc8d61794ca889880d39d1",
+            "sequencerDaPublicKey": "03015a7c4d2cc1c771198686e2ebef6fe7004f4136d61f6225b061d1bb9b821b9b",
+            "preprovenCommitments": [],
+            "lastL2Height": 0
+          },
+          "height": 50684
+        }
+    }
+    ```
+
+### Response Fields Explanation
+
+- `proof`: Contains the zero-knowledge proof data.
+  - `proof`: Raw proof data, represented as an array.
+- `proofOutput`: Contains the output data of the proof verification process.
+  - `initialStateRoot`: The state root before the state transition.
+  - `finalStateRoot`: The state root after the state transition.
+  - `prevSoftConfirmationHash`: The hash of the last soft confirmation before this one.
+  - `finalSoftConfirmationHash`: The hash of the last soft confirmation in the state transition.
+  - `stateDiff`: Differences in state resulting from the batch processing (collapsed for brevity).
+  - `daSlotHash`: The Data Availability (DA) slot hash.
+  - `sequencerCommitmentsRange`: The range of sequencer commitments in the DA slot.
+  - `sequencerPublicKey`: The sequencer's public key.
+  - `sequencerDaPublicKey`: The sequencer's Data Availability (DA) public key.
+  - `preprovenCommitments`: List of pre-proven commitments (empty in this example).
+  - `lastL2Height`: The L2 height of the last block included in the proof.
+- `height`: The L1 height at which this proof was generated and verified.
+
+</details>
+
+<br>
+
+<!-------------------------------------------------------------------->
+<!-------------------------------------------------------------------->
 
 <details>
 <summary><code>ledger_getLastVerifiedBatchProof</code></summary>
