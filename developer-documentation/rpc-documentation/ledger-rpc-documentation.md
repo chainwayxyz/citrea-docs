@@ -1,7 +1,5 @@
 # RPC Documentation of Citrea Ledger
 
-<!-- TODO: FIX CAMEL CASE LOL -->
-
 This documentation explores main ledger RPC endpoints of Citrea that are relevant to batches & proofs:
 
 <!-------------------------------------------------------------------->
@@ -21,12 +19,12 @@ This endpoint retrieves the current synchronization status of your local Citrea 
         "jsonrpc": "2.0",
         "method": "citrea_syncStatus",
         "params": [], 
-        "id": 78
+        "id": 1
     }
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"citrea_syncStatus","params":[], "id":78}'  http://0.0.0.0:8080
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"citrea_syncStatus","params":[], "id":1}'  http://0.0.0.0:8080
     ```
 
 ### Response
@@ -37,7 +35,7 @@ This endpoint retrieves the current synchronization status of your local Citrea 
     ```json
     {
         "jsonrpc": "2.0",
-        "id": 78,
+        "id": 1,
         "result": {
             "l1Status": {
                 "Synced": 19224
@@ -58,7 +56,7 @@ This endpoint retrieves the current synchronization status of your local Citrea 
                 "syncedBlockNumber": 27050
             }
         },
-        "id": 78
+        "id": 1
     }
     ```
 
@@ -558,12 +556,12 @@ This endpoint retrieves the most recent (head) soft confirmation from the ledger
         "jsonrpc": "2.0",
         "method": "ledger_getHeadSoftConfirmation",
         "params": [],
-        "id": 31
+        "id": 1
     }
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getHeadSoftConfirmation","params":[], "id":31}'  http://0.0.0.0:8080
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getHeadSoftConfirmation","params":[], "id":1}'  http://0.0.0.0:8080
     ```
 
 ### Response
@@ -573,7 +571,7 @@ This endpoint retrieves the most recent (head) soft confirmation from the ledger
     ```json
     {
       "jsonrpc": "2.0",
-      "id": 31,
+      "id": 1,
       "result": {
         "l2Height": 5470829,
         "daSlotHeight": 66287,
@@ -631,12 +629,12 @@ This endpoint retrieves the L2 height of the most recent (head) soft confirmatio
         "jsonrpc": "2.0",
         "method": "ledger_getHeadSoftConfirmationHeight",
         "params": [],
-        "id": 31
+        "id": 1
     }
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getHeadSoftConfirmationHeight","params":[], "id":31}'  http://0.0.0.0:8080
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getHeadSoftConfirmationHeight","params":[], "id":1}'  http://0.0.0.0:8080
     ```
 
 ### Response
@@ -646,7 +644,7 @@ This endpoint retrieves the L2 height of the most recent (head) soft confirmatio
     ```json
     {
       "jsonrpc": "2.0",
-      "id": 31,
+      "id": 1,
       "result": 5470849
     }
     ```
@@ -679,12 +677,12 @@ This endpoint retrieves the last verified batch proof from the ledger.
         "jsonrpc": "2.0",
         "method": "ledger_getVerifiedBatchProofsBySlotHeight",
         "params": [55555],
-        "id": 31
+        "id": 1
     }
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getVerifiedBatchProofsBySlotHeight","params":[55555], "id":31}'  http://0.0.0.0:8080
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getVerifiedBatchProofsBySlotHeight","params":[55555], "id":1}'  http://0.0.0.0:8080
     ```
 
 ### Response
@@ -694,7 +692,7 @@ This endpoint retrieves the last verified batch proof from the ledger.
     ```json
     {
       "jsonrpc": "2.0",
-      "id": 31,
+      "id": 1,
       "result": {
         "proof": {
           "proof": [
@@ -769,12 +767,12 @@ This endpoint retrieves the last verified batch proof from the ledger.
         "jsonrpc": "2.0",
         "method": "ledger_getLastVerifiedBatchProof",
         "params": [],
-        "id": 31
+        "id": 1
     }
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getLastVerifiedBatchProof","params":[], "id":31}'  http://0.0.0.0:8080
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getLastVerifiedBatchProof","params":[], "id":1}'  http://0.0.0.0:8080
     ```
 
 ### Response
@@ -784,7 +782,7 @@ This endpoint retrieves the last verified batch proof from the ledger.
     ```json
     {
       "jsonrpc": "2.0",
-      "id": 31,
+      "id": 1,
       "result": {
         "proof": {
           "proof": [
@@ -859,12 +857,12 @@ This endpoint retrieves the L1 height of the last scanned block by the ledger.
         "jsonrpc": "2.0",
         "method": "ledger_getLastScannedL1Height",
         "params": [],
-        "id": 31
+        "id": 1
     }
     ```
 - **Example Request:** Here's an example curl you can use directly from your terminal
     ```sh
-    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getLastScannedL1Height","params":[], "id":31}'  http://0.0.0.0:8080
+    curl -X POST --header "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"ledger_getLastScannedL1Height","params":[], "id":1}'  http://0.0.0.0:8080
     ```
 
 ### Response
@@ -874,7 +872,7 @@ This endpoint retrieves the L1 height of the last scanned block by the ledger.
     ```json
     {
       "jsonrpc": "2.0",
-      "id": 31,
+      "id": 1,
       "result": 66295
     }
     ```
