@@ -56,12 +56,13 @@
 
 ## 🔎 Future Research
 
-* [Multi VM Approach](future-research/multi-vm-approach.md)
-* [Volition Model](future-research/volition-model.md)
 * [Decentralized Sequencer Network](future-research/decentralized-sequencer-network.md)
-* [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Lightning Integration](future-research/lightning-integration.md)
+* [Multi Prover](future-research/multi-prover.md)
+* [Multi VM Approach](future-research/multi-vm-approach.md)
+* [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
+* [Volition Model](future-research/volition-model.md)
 
 ## 🌐 Community
 * [Citrea Meetups](/community/README.md)
