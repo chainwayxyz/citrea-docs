@@ -1,6 +1,6 @@
 # Sequencer Commitments
 
-Sequencer commitments are envelopes on Bitcoin that are inscribed by the sequencer before proof generation. Such envelope contains:
+**Sequencer commitments** are envelopes on Bitcoin that are inscribed by the sequencer before proof generation. Such envelope contains:
 
 - **Soft Confirmation Hashes**: Merkle root built on top of the hashes of soft confirmations, representing a set of Citrea blocks.
 - **Start - End Block Heights**:  It includes the range information of Citrea blocks (identified by their start and end heights) that were processed to reach the new state.
@@ -17,11 +17,11 @@ Once a commitment is inscribed (and finalized) on Bitcoin, the sequencer cannot 
 
 While it does not fully guarantee data availability, sequencer commitments prevent re-orgs on Citrea blocks once they are finalized. It allows full nodes to verify the sequencer's claims about the ordering of transactions.
 
-Sequencer commitments are also used in the Batch Proof Circuits to make sure proofs are generated for the canonical batch used in sequencer commitments. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
+Sequencer commitments are also used in the **Batch Proof Circuits** to make sure proofs are generated for the canonical batch used in sequencer commitments. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
 
-Lastly, Light Client Proofs that are used in BitVM based Clementine bridge also benefits from the sequencer commitments indirectly as well. 
+Lastly, **Light Client Proofs** that are used in BitVM based **Clementine** bridge also benefits from the sequencer commitments indirectly as well. 
 Lastly, sequencer commitments are also utilized for the generation of the Light Client Proofs. Light Client Proofs are a criticial component of the BitVM based Clementine bridge, you can read more about it [here](https://x.com/citrea_xyz/status/1877746951309176971).
 
 #### Querying Sequencer Commitments
 
-Sequencer commitments can be queried by using the Citrea Batch Explorer, along with the [RPC endpoints](/developer-documentation/rpc-documentation/ledger-rpc-documentation.md). You can find the explorer [here](https://citrea.xyz/batch-explorer).
+Sequencer commitments can be queried by using the **Citrea Batch Explorer**, along with the [RPC endpoints](/developer-documentation/rpc-documentation/ledger-rpc-documentation.md). You can find the explorer [here](https://citrea.xyz/batch-explorer).
