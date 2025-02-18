@@ -15,11 +15,12 @@ Sequencer commitments are used to keep track of the canonical history of the rol
 
 Once a commitment is inscribed (and finalized) on Bitcoin, the sequencer cannot re-order transactions within that batch without invalidating the commitment. This maintains the integrity of the batch, and therefore the rollup's state. 
 
-While it does not fully guarantee data availability, sequencer commitments prevent re-orgs on Citrea blocks once they are finalized. It allows full nodes to verify the sequencer's claims about the state transitions.
+While it does not fully guarantee data availability, sequencer commitments prevent re-orgs on Citrea blocks once they are finalized. It allows full nodes to verify the sequencer's claims about the ordering of transactions.
 
-Sequencer commitments are also used in the Batch Proof circuits for Blockspace Proving. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
+Sequencer commitments are also used in the Batch Proof Circuits to make sure proofs are generated for the canonical batch used in sequencer commitments. You can read more about it [here](https://www.blog.citrea.xyz/citreas-batch-proofs/).
 
-Lastly, Light Client Proofs that are used in BitVM based Clementine bridge also benefits from the sequencer commitments indirectly as well. You can read a summary of it [here](https://x.com/citrea_xyz/status/1877746951309176971).
+Lastly, Light Client Proofs that are used in BitVM based Clementine bridge also benefits from the sequencer commitments indirectly as well. 
+Lastly, sequencer commitments are also utilized for the generation of the Light Client Proofs. Light Client Proofs are a criticial component of the BitVM based Clementine bridge, you can read more about it [here](https://x.com/citrea_xyz/status/1877746951309176971).
 
 #### Querying Sequencer Commitments
 
