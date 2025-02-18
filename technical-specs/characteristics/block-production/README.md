@@ -17,7 +17,7 @@ Here is a diagram that shows process & components of block production in Citrea.
 
 <figure><img src="../../../.gitbook/assets/block_cycle.png" alt=""><figcaption><p>Extended Block Production</p></figcaption></figure>
 
-{% hint style="warning" %}
+{% hint style="success" %}
 In short, block production in Citrea is as follows:
 - User transactions enter the mempool where they undergo some checks until they are included in a block.
 - The sequencer selects valid transactions from the mempool, orders them, and produces a rollup block.

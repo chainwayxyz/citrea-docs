@@ -21,7 +21,7 @@ Citrea mempool has custom [SubPools](https://reth.rs/docs/reth_transaction_pool/
 
 For **Queued**, **BaseFee**, and **Pending** pools, Citrea has the 10x configuration limits compared to default values of Ethereum: **100,000** transactions per subpool with **200 MB** limit.
 
-{% hint style="note" %}
+{% hint style="success" %}
 > Citrea does not have a Blob pool as it does not support blob transactions at the moment. 
 {% endhint %}
 
