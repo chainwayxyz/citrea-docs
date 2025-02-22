@@ -11,14 +11,14 @@ Follow instructions to install Docker [here](https://docs.docker.com/engine/inst
 #### Step 2: Run using Docker Compose
 
 ```
-curl https://raw.githubusercontent.com/chainwayxyz/citrea/9626b781fcb1c974433fcce55eda84fc7f566514/docker/docker-compose.yml --output docker-compose.yml
+curl https://raw.githubusercontent.com/chainwayxyz/citrea/nightly/docker/docker-compose.yml --output docker-compose.yml
 docker compose -f docker-compose.yml up
 ```
 
 This spins up a Bitcoin Testnet4 and Citrea Full Node for you to use quickly.
 
 {% hint style="info" %}
-Please note that there are no financial incentives to run a Citrea Full Node. It's for your own development setup and security practices.
+Please note that **there are no financial incentives** to run a Citrea Full Node. It's for your own development setup and security practices.
 {% endhint %}
 
 ------
@@ -65,7 +65,7 @@ A Linux/Mac/Windows system with a configuration of
 
 - 8 GB Ram
 - 256 GB SSD (NVMe recommended)
-- 4 core CPU
+- 4 core CPU (if you're using cloud)
 - 25+ Mbps network connection
 
 should satisfy the minimum requirements to run a Citrea node.

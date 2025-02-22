@@ -43,7 +43,7 @@ SKIP_GUEST_BUILD=1 cargo build --release
 Look through the `rollup_config.toml` and apply changes as you wish, if you modified any Bitcoin RPC configs, change corresponding values under `[da]`. Then, you can run the full node by the following:
 
 ```sh
-./target/release/citrea --da-layer bitcoin --rollup-config-path ./resources/configs/testnet/rollup_config.toml --genesis-paths ./resources/genesis/testnet
+RISC0_DEV_MODE=1 ./target/release/citrea --network testnet --da-layer bitcoin --rollup-config-path ./resources/configs/testnet/rollup_config.toml --genesis-paths ./resources/genesis/testnet
 ```
 
 If everything is correct, you should see some logs that looks like this:
