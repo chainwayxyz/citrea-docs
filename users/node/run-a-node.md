@@ -64,7 +64,7 @@ A sample response (fields may vary based on the sync status):
 A Linux/Mac/Windows system with a configuration of
 
 - 8 GB Ram
-- 256 GB SSD (NVMe recommended)
+- 512 GB SSD (NVMe recommended)
 - 4 core CPU (if you're using cloud)
 - 25+ Mbps network connection
 
