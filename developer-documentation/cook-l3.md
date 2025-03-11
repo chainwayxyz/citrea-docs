@@ -13,7 +13,7 @@ The following steps are appropriately modified from the [Optimism documentation]
 
 We recommend to open a separate folder in your filesystem for the rest of this guide.
 
-#### Step 1: Install Celestia Light Node and Run Light Node
+#### Step 1: Install & Run Celestia Light Node
 
 ##### Step 1.1 Install Celestia Light Node
 Follow the steps [here](https://docs.celestia.org/how-to-guides/celestia-node) to install Celestia Light Node. You may install the latest version.
@@ -25,6 +25,10 @@ Run the following to start a Celestia Mocha Light Node:
 celestia light init --p2p.network mocha
 celestia light start --core.ip rpc-mocha.pops.one --p2p.network mocha
 ```
+
+##### Step 1.3 Get funds to your address
+
+To write data into Celestia, you will need an address & funds. Please follow the steps [here](https://docs.celestia.org/tutorials/celestia-node-key#steps-for-generating-node-keys).
 
 #### Step 2: DA Server Setup
 
@@ -160,13 +164,13 @@ DEPLOY_CONFIG_PATH=./deploy-config/getting-started.json CONTRACT_ADDRESSES_PATH=
 Navigate to the `op-node` and generate the configuration for the L3 node:
 
 ```bash
-cd ~/optimism/op-node
+cd ../../op-node
 
 go run cmd/main.go genesis l2   --deploy-config ../packages/contracts-bedrock/deploy-config/getting-started.json   --l1-deployments ../packages/contracts-bedrock/deployments/5115-deploy.json   --outfile.l2 genesis.json --l2-allocs ../packages/contracts-bedrock/state-dump-511551155115-fjord.json --outfile.rollup rollup.json   --l1-rpc $L1_RPC_URL
 
 openssl rand -hex 32 > jwt.txt
-cp genesis.json ~/op-geth
-cp jwt.txt ~/op-geth
+cp genesis.json ../op-geth
+cp jwt.txt ../op-geth
 ```
 
 #### Step 5: Initialize and start op-geth
@@ -174,7 +178,7 @@ cp jwt.txt ~/op-geth
 Navigate to the `op-geth` folder and initialize the genesis config:
 
 ```bash
-cd ~/op-geth
+cd ../op-geth
 
 mkdir datadir
 make geth
@@ -191,6 +195,10 @@ Then, start the `op-geth`:
 
 Navigate to `op-node` folder and add the following to the `rollup.json`:
 
+```bash
+cd ../op-node
+```
+
 ```json
   "alt_da": {
     "da_commitment_type": "GenericCommitment",
@@ -202,31 +210,51 @@ Navigate to `op-node` folder and add the following to the `rollup.json`:
 
 #### Step 7: Run op-node
 
-Build and run `op-node`:
+Go back to optimism main folder, and build node:
 
 ```bash
+cd ..
 make op-node
+```
 
-cd ~/optimism/op-node
+Then let's run the node:
+
+```bash
+cd op-node
 
 ./bin/op-node   --l2=http://localhost:8551   --l2.jwt-secret=./jwt.txt   --sequencer.enabled   --sequencer.l1-confs=5   --verifier.l1-confs=4   --rollup.config=./rollup.json   --rpc.addr=0.0.0.0   --p2p.disable   --rpc.enable-admin   --p2p.sequencer.key=$GS_SEQUENCER_PRIVATE_KEY   --l1=$L1_RPC_URL   --l1.rpckind=$L1_RPC_KIND --altda.enabled=true --altda.da-service=true --l1.beacon=$L1_RPC_URL --l1.beacon.ignore=true --altda.da-server=http://localhost:3100 --l1.trustrpc=true --l1.http-poll-interval=2s
 ```
 
 #### Step 8: Run op-batcher
 
+Go back to optimism main folder, and build the op-batcher:
+
 ```bash
+cd ..
 make op-batcher
+```
+
+Then let's run the batcher:
+
+```bash
+cd op-batcher 
+
 ./bin/op-batcher   --l2-eth-rpc=http://localhost:8545   --rollup-rpc=http://localhost:9545   --poll-interval=1s   --sub-safety-margin=6   --num-confirmations=1   --safe-abort-nonce-too-low-count=3   --resubmission-timeout=30s   --rpc.addr=0.0.0.0   --rpc.port=8548   --rpc.enable-admin   --max-channel-duration=25   --l1-eth-rpc=$L1_RPC_URL   --private-key=$GS_BATCHER_PRIVATE_KEY --altda.enabled=true --altda.da-service=true --altda.da-server=http://localhost:3100
 ```
 
 #### Step 9: Run op-proposer
 
-Navigate to `op-proposer` folder and run the proposer:
+Go back to optimism main folder, and build the op-proposer:
 
 ```bash
+cd ..
 make op-proposer
+```
 
-cd ~/optimism/op-proposer
+Then let's run the proposer:
+
+```bash
+cd op-proposer
 
 ./bin/op-proposer   --poll-interval=2s   --rpc.port=8560   --rollup-rpc=http://localhost:9545   --l2oo-address=$(cat ../packages/contracts-bedrock/deployments/5115-deploy.json | jq -r .L2OutputOracleProxy) --private-key=$GS_PROPOSER_PRIVATE_KEY   --l1-eth-rpc=$L1_RPC_URL
 ```
