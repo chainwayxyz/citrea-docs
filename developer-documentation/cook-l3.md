@@ -1,10 +1,10 @@
 ## Build an OP Stack L3 on Citrea
 
-In this guide, we will go over deploying a OP Stack L3 on Citrea that utilizes Celestia as DA. Such layers grant access to cBTC while reducing the costs directly.
+In this guide, we will go over deploying a OP Stack L3 on Citrea that utilizes Celestia as DA.
 
 The following steps are appropriately modified from the [Optimism documentation](https://docs.optimism.io/operators/chain-operators/tutorials/create-l2-rollup#deploy-the-l1-contracts).
 
-### Prerequisites
+#### Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/) for Celestia Light Node
 - [Git](https://git-scm.com/)
@@ -178,7 +178,7 @@ cp jwt.txt ../op-geth
 Navigate to the `op-geth` folder and initialize the genesis config:
 
 ```bash
-cd ../op-geth
+cd ../../op-geth
 
 mkdir datadir
 make geth
@@ -196,16 +196,16 @@ Then, start the `op-geth`:
 Navigate to `op-node` folder and add the following to the `rollup.json`:
 
 ```bash
-cd ../op-node
+cd ../optimism/op-node
 ```
 
 ```json
-  "alt_da": {
+"alt_da": {
     "da_commitment_type": "GenericCommitment",
     "da_challenge_contract_address": "0x0000000000000000000000000000000000000000",
     "da_challenge_window": 1000,
     "da_resolve_window": 2000
-  },
+}
 ```
 
 #### Step 7: Run op-node
