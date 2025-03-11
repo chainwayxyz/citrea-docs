@@ -1,17 +1,25 @@
-## Build an OP Stack L3 on Citrea
+## Deploy a Bitcoin Appchain (L3) on Citrea
 
-In this guide, we will go over deploying a OP Stack L3 on Citrea that utilizes Celestia as DA.
+In this guide, we will walk through the process of deploying a Bitcoin Appchain (L3) on Citrea using the OP Stack, with [Celestia](https://celestia.org/) as the data availability layer.
 
 The following steps are appropriately modified from the [Optimism documentation](https://docs.optimism.io/operators/chain-operators/tutorials/create-l2-rollup#deploy-the-l1-contracts).
+
+{% hint style="info" %}
+Please note that **there are no financial incentives** to deploy a Bitcoin Appchain. This guide is primarily for developers.
+{% endhint %}
 
 #### Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/) for Celestia Light Node
+- [Foundry](https://getfoundry.sh/) for contract deployment
 - [Git](https://git-scm.com/)
 - [Go](https://go.dev)
-- [Foundry](https://getfoundry.sh/) for contract deployment
 
 We recommend to open a separate folder in your filesystem for the rest of this guide.
+
+{% hint style="success" %}
+Appchains require strong hardware to function properly. For demo purposes, we used a machine with AMD EPYC 9124 @ 3.71GHz and 128 GB of RAM.
+{% endhint %}
 
 #### Step 1: Install & Run Celestia Light Node
 
@@ -261,4 +269,4 @@ cd op-proposer
 
 -----
 
-That's it, enjoy your L3 on Citrea!
+That’s it! Enjoy your Bitcoin Appchain on Citrea!
