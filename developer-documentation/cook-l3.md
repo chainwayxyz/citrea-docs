@@ -15,17 +15,20 @@ We recommend to open a separate folder in your filesystem for the rest of this g
 
 #### Step 1: Install Celestia Light Node and Run Light Node
 
+##### Step 1.1 Install Celestia Light Node
 Follow the steps [here](https://docs.celestia.org/how-to-guides/celestia-node) to install Celestia Light Node. You may install the latest version.
 
-Then, run the following to start a Celestia Mocha Light Node:
+##### Step 1.2 Install Celestia Light Node
+Run the following to start a Celestia Mocha Light Node:
 
 ```bash
 celestia light init --p2p.network mocha
 celestia light start --core.ip rpc-mocha.pops.one --p2p.network mocha
 ```
 
-#### Step 2: Start DA Server
+#### Step 2: DA Server Setup
 
+##### Step 2.1 Build DA Server
 Let's clone the `op-plasma-celestia` repository first and build the `da-server`:
 
 ```bash
@@ -37,6 +40,7 @@ make da-server
 
 This will form the `da-server` binary in the `bin` folder.
 
+##### Step 2.2 Run DA Server
 Then, let's create a namespace:
 
 ```bash
@@ -53,17 +57,21 @@ export AUTH_TOKEN=$(celestia light auth admin --p2p.network mocha)
 
 This will start the DA server.
 
-#### Step 3: Setup Optimism repo and configure environment
+#### Step 3: Setup Optimism repositories and configure environment
 
-Clone the Optimism repostiory and checkout to `v1.9.2` for development purposes:
+##### Step 3.1: Clone repostiories
+Clone `op-geth` and Optimism mono-repostiory, then checkout to `v1.9.2` for development purposes:
 
 ```bash
+git clone https://github.com/ethereum-optimism/op-geth.git
+
 git clone https://github.com/ethereum-optimism/optimism.git
 cd optimism
 git checkout v1.9.2
 ```
 
-Then, let's setup our environment using `.envrc` file:
+##### Step 3.2: Setup environment
+Then, let's setup our environment using `.envrc` file (alternatively you can set them in your shell):
 
 ```bash
 ##################################################
@@ -125,25 +133,104 @@ export L1_BLOCK_TIME=2
 export L2_BLOCK_TIME=2
 ```
 
-Then move to `packages/contracts-bedrock` folder for L3 contract configs, and run the script:
+##### Step 3.3: Run configuration scripts
+Move to `packages/contracts-bedrock` folder for configs, and run the script:
 
 ```bash
 cd packages/contracts-bedrock
 ./scripts/getting-started/config.sh
 ```
 
-Later in the same folder, let's run the deployment script using `forge`:
+Later in the same folder, let's run the deployment script using `forge` to deploy the necessary contracts on Citrea:
 
 ```bash
 forge install
+
 DEPLOY_CONFIG_PATH=./deploy-config/getting-started.json forge script scripts/deploy/Deploy.s.sol:Deploy --private-key $GS_ADMIN_PRIVATE_KEY --broadcast --rpc-url $L1_RPC_URL
 ```
 
-And also run the L2 genesis configuration script:
+And also run the L3 genesis configuration script:
 
 ```bash
 DEPLOY_CONFIG_PATH=./deploy-config/getting-started.json CONTRACT_ADDRESSES_PATH=./deployments/5115-deploy.json forge script scripts/L2Genesis.s.sol:L2Genesis --sig "runWithStateDump()"
 ```
 
+#### Step 4: Generate node configurations
 
+Navigate to the `op-node` and generate the configuration for the L3 node:
 
+```bash
+cd ~/optimism/op-node
+
+go run cmd/main.go genesis l2   --deploy-config ../packages/contracts-bedrock/deploy-config/getting-started.json   --l1-deployments ../packages/contracts-bedrock/deployments/5115-deploy.json   --outfile.l2 genesis.json --l2-allocs ../packages/contracts-bedrock/state-dump-511551155115-fjord.json --outfile.rollup rollup.json   --l1-rpc $L1_RPC_URL
+
+openssl rand -hex 32 > jwt.txt
+cp genesis.json ~/op-geth
+cp jwt.txt ~/op-geth
+```
+
+#### Step 5: Initialize and start op-geth
+
+Navigate to the `op-geth` folder and initialize the genesis config:
+
+```bash
+cd ~/op-geth
+
+mkdir datadir
+make geth
+build/bin/geth init --state.scheme=hash --datadir=datadir genesis.json
+```
+
+Then, start the `op-geth`:
+
+```bash
+./build/bin/geth   --datadir ./datadir   --http   --http.corsdomain="*"   --http.vhosts="*"   --http.addr=0.0.0.0   --http.api=web3,debug,eth,txpool,net,engine   --ws   --ws.addr=0.0.0.0   --ws.port=8546   --ws.origins="*"   --ws.api=debug,eth,txpool,net,engine   --syncmode=full   --gcmode=archive   --nodiscover   --maxpeers=0   --networkid=511551155115   --authrpc.vhosts="*"   --authrpc.addr=0.0.0.0   --authrpc.port=8551   --authrpc.jwtsecret=./jwt.txt   --rollup.disabletxpoolgossip=true
+```
+
+#### Step 6: Add DA-config to op-node
+
+Navigate to `op-node` folder and add the following to the `rollup.json`:
+
+```json
+  "alt_da": {
+    "da_commitment_type": "GenericCommitment",
+    "da_challenge_contract_address": "0x0000000000000000000000000000000000000000",
+    "da_challenge_window": 1000,
+    "da_resolve_window": 2000
+  },
+```
+
+#### Step 7: Run op-node
+
+Build and run `op-node`:
+
+```bash
+make op-node
+
+cd ~/optimism/op-node
+
+./bin/op-node   --l2=http://localhost:8551   --l2.jwt-secret=./jwt.txt   --sequencer.enabled   --sequencer.l1-confs=5   --verifier.l1-confs=4   --rollup.config=./rollup.json   --rpc.addr=0.0.0.0   --p2p.disable   --rpc.enable-admin   --p2p.sequencer.key=$GS_SEQUENCER_PRIVATE_KEY   --l1=$L1_RPC_URL   --l1.rpckind=$L1_RPC_KIND --altda.enabled=true --altda.da-service=true --l1.beacon=$L1_RPC_URL --l1.beacon.ignore=true --altda.da-server=http://localhost:3100 --l1.trustrpc=true --l1.http-poll-interval=2s
+```
+
+#### Step 8: Run op-batcher
+
+```bash
+make op-batcher
+./bin/op-batcher   --l2-eth-rpc=http://localhost:8545   --rollup-rpc=http://localhost:9545   --poll-interval=1s   --sub-safety-margin=6   --num-confirmations=1   --safe-abort-nonce-too-low-count=3   --resubmission-timeout=30s   --rpc.addr=0.0.0.0   --rpc.port=8548   --rpc.enable-admin   --max-channel-duration=25   --l1-eth-rpc=$L1_RPC_URL   --private-key=$GS_BATCHER_PRIVATE_KEY --altda.enabled=true --altda.da-service=true --altda.da-server=http://localhost:3100
+```
+
+#### Step 9: Run op-proposer
+
+Navigate to `op-proposer` folder and run the proposer:
+
+```bash
+make op-proposer
+
+cd ~/optimism/op-proposer
+
+./bin/op-proposer   --poll-interval=2s   --rpc.port=8560   --rollup-rpc=http://localhost:9545   --l2oo-address=$(cat ../packages/contracts-bedrock/deployments/5115-deploy.json | jq -r .L2OutputOracleProxy) --private-key=$GS_PROPOSER_PRIVATE_KEY   --l1-eth-rpc=$L1_RPC_URL
+```
+
+-----
+
+That's it, enjoy your L3 on Citrea!
