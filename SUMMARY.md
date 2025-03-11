@@ -50,6 +50,7 @@
   * [Bridge](developer-documentation/system-contracts/bridge.md)
   * [Fee Vaults](developer-documentation/system-contracts/fee-vaults.md)
 * [Chain Information](developer-documentation/chain-information.md)
+* [OP Stack L3](developer-documentation/cook-l3.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
 
 ## 🔎 Future Research
