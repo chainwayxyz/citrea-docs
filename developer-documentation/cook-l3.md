@@ -18,7 +18,7 @@ We recommend to open a separate folder in your filesystem for the rest of this g
 ##### Step 1.1 Install Celestia Light Node
 Follow the steps [here](https://docs.celestia.org/how-to-guides/celestia-node) to install Celestia Light Node. You may install the latest version.
 
-##### Step 1.2 Install Celestia Light Node
+##### Step 1.2 Run Celestia Light Node
 Run the following to start a Celestia Mocha Light Node:
 
 ```bash
@@ -63,8 +63,8 @@ This will start the DA server.
 
 #### Step 3: Setup Optimism repositories and configure environment
 
-##### Step 3.1: Clone repostiories
-Clone `op-geth` and Optimism mono-repostiory, then checkout to `v1.9.2` for development purposes:
+##### Step 3.1: Clone repositories
+Clone `op-geth` and Optimism mono-repository, then checkout to `v1.9.2` for development purposes:
 
 ```bash
 git clone https://github.com/ethereum-optimism/op-geth.git
@@ -75,7 +75,7 @@ git checkout v1.9.2
 ```
 
 ##### Step 3.2: Setup environment
-Then, let's setup our environment using `.envrc` file (alternatively you can set them in your shell):
+Then, let's setup our environment using the `.envrc` file (alternatively you can set them in your shell):
 
 ```bash
 ##################################################
@@ -138,7 +138,7 @@ export L2_BLOCK_TIME=2
 ```
 
 ##### Step 3.3: Run configuration scripts
-Move to `packages/contracts-bedrock` folder for configs, and run the script:
+Navigate to the `op-node` directory and generate the configuration:
 
 ```bash
 cd packages/contracts-bedrock
@@ -175,7 +175,7 @@ cp jwt.txt ../op-geth
 
 #### Step 5: Initialize and start op-geth
 
-Navigate to the `op-geth` folder and initialize the genesis config:
+Navigate to the `op-geth` directory and initialize the genesis configuration:
 
 ```bash
 cd ../../op-geth
@@ -210,7 +210,7 @@ cd ../optimism/op-node
 
 #### Step 7: Run op-node
 
-Go back to optimism main folder, and build node:
+ Go back to the main `optimism` directory, and build `op-node`:
 
 ```bash
 cd ..
@@ -227,7 +227,7 @@ cd op-node
 
 #### Step 8: Run op-batcher
 
-Go back to optimism main folder, and build the op-batcher:
+Go back to the main `optimism` directory, and build the `op-batcher`:
 
 ```bash
 cd ..
