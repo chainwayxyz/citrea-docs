@@ -5,7 +5,7 @@ In this guide, we will walk through the process of deploying a Bitcoin Appchain 
 The following steps are appropriately modified from the [Optimism documentation](https://docs.optimism.io/operators/chain-operators/tutorials/create-l2-rollup#deploy-the-l1-contracts).
 
 {% hint style="info" %}
-Please note that **there are no financial incentives** to deploy a Bitcoin Appchain. This guide is primarily for developers.
+Please note that there are no financial incentives from Citrea team to deploy a Bitcoin Appchain. This guide is primarily for developers.
 {% endhint %}
 
 #### Prerequisites
@@ -18,7 +18,7 @@ Please note that **there are no financial incentives** to deploy a Bitcoin Appch
 We recommend to open a separate folder in your filesystem for the rest of this guide.
 
 {% hint style="success" %}
-Appchains require strong hardware to function properly. For demo purposes, we used a machine with AMD EPYC 9124 @ 3.71GHz and 128 GB of RAM.
+Appchains require strong hardware to function properly. For demo purposes, we used a machine with **AMD EPYC 9124 @ 3.71GHz** and **128 GB of RAM**.
 {% endhint %}
 
 #### Step 1: Install & Run Celestia Light Node
