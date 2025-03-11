@@ -48,6 +48,10 @@ make da-server
 
 This will form the `da-server` binary in the `bin` folder.
 
+{% hint style="info" %}
+If you encounter this [issue](https://github.com/fjl/memsize/issues/4) while building `da-server`, you can continue by reinstalling `go` with version 1.22.0 or lower.
+{% endhint %}
+
 ##### Step 2.2 Run DA Server
 Then, let's create a namespace:
 
