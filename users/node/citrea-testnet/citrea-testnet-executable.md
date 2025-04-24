@@ -43,12 +43,12 @@ Then, based on your operating system, run one of the following:
 
 Mac:
 ```sh
-./citrea-v0.7.0-osx-arm64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
+./citrea-v0.7.0-osx-arm64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis --network testnet
 ```
 
 Linux:
 ```sh
-./citrea-v0.7.0-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis
+./citrea-v0.7.0-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis --network testnet
 ```
 
 If the paths are correct, the full node will start to sync. You can check the status with the following command (you may need to arrange the URL at the end based on your setup):
