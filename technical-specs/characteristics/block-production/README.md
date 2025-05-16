@@ -22,6 +22,6 @@ In short, block production in Citrea is as follows:
 - User transactions enter the mempool where they undergo some checks until they are included in a block.
 - The sequencer selects valid transactions from the mempool, orders them, and produces a rollup block.
 - The sequencer also provides soft confirmations alongside the block data, allowing full nodes to update their local chain state with a soft-finality.
-- To finalize the ordering of the transactions, sequencer commitments are inscribed on Bitcoin by the sequencer, allowing full nodes to trustlessly verify the blocks.
+- For full nodes to finalize the ordering of the transactions, sequencer commitments are inscribed on Bitcoin by the sequencer, allowing them to trustlessly verify the blocks.
 - Lastly, the proving of execution is completed by the prover and batch proofs are inscribed (and finalized) on Bitcoin, and hence block becomes finalized & proven.
 {% endhint %}
