@@ -60,7 +60,7 @@ contract P256VerifyCaller {
         );
         (bool ok, bytes memory output) = P256_VERIFY_PRECOMPILE.staticcall(input);
         // 32-byte return, last byte == 0x01 means success
-        isValid = ok && output.length == 32 && output[31] == 0x01;
+        return ok && output.length == 32 && output[31] == 0x01;
     }
 }
 ```
@@ -120,7 +120,7 @@ contract SchnorrVerifyCaller {
         );
         (bool ok, bytes memory output) = SCHNORR_VERIFY_PRECOMPILE.staticcall(input);
         // 32-byte return, last byte == 0x01 means success
-        isValid = ok && output.length == 32 && output[31] == 0x01;
+        return ok && output.length == 32 && output[31] == 0x01;
     }
 }
 ```
