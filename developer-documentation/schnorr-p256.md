@@ -7,9 +7,9 @@ The secp256r1 and Schnorr precompiles are enabled with the [Tangerine](https://w
 RIP 7212 is an improvement proposal that introduces a precompile support for the secp256r1 curve. In Citrea, like other EVM rollups, this precompile is available at address `0x0000000000000000000000000000000000000100`.
 
 This precompile enables a whole new set of applications and use cases, such as:
-- **Hardware \& Biometric Authentication**: Native support of secp256r1 allows smart contracts to directly validate the signatures from secure enclaves and passkey devices, such as Apple's Secure Enclave, Android's Keystore, Yubikeys, and WebAuthn authenticators.
+- **Hardware \& Biometric Authentication**: Native support of secp256r1 allows smart contracts to directly validate the signatures from secure enclaves and passkey devices, such as Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), Android's [Keystore](https://developer.android.com/privacy-and-security/keystore), Yubikeys, and WebAuthn authenticators.
 - **Account Abstraction \& Smart Wallets**: Combining features above with account abstraction \& smart wallets, self-custodial platforms can be built much more easily and efficiently, such as [Tanari](https://www.tanari.io/). It also improves the security and the UX perspective of applications massively. 
-- **Gas-efficient P256 signature verification*: With this precompile, verification on P256 comes down to 3450 gas, which is significantly cheaper than any other existing smart contract verification method.
+- **Gas-efficient P256 signature verification**: With this precompile, verification on P256 comes down to `3450` gas, which is significantly cheaper than any other existing smart contract verification method.
 
 ##### Technical Details
 
@@ -20,7 +20,7 @@ The precompile accepts a 160-byte input, which is a concatenation of:
 4. `Public Key X-coordinate (32 bytes)`: The X-coordinate of the uncompressed secp256r1 public key.
 5. `Public Key Y-coordinate (32 bytes)`: The Y-coordinate of the uncompressed secp256r1 public key.
 
-Upon successful verification, the precompile returns a 32-byte value `0x00...01`. On failure (e.g., invalid signature, malformed input), it returns an empty `Bytes` array or `0x00...00`.
+Upon successful verification, the precompile returns a 32-byte value `0x00...01`. On failure (e.g., invalid signature, malformed input), it returns empty bytes: `0x`.
 
 #### Example Smart Contract
 
@@ -72,8 +72,8 @@ contract P256VerifyCaller {
 Schnorr signature is a Bitcoin-native, linear, and aggregation-friendly signature scheme. It is a key component of Bitcoin's Taproot upgrade ([BIP 340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki)) and also offers advantages for multi-signature schemes like [MuSig2](https://bitcoinops.org/en/topics/musig/). In Citrea, this precompile is available at the address `0x0000000000000000000000000000000000000200`.
 
 Schnorr precompile enables an interesting set of developments, such as:
-- Scriptless cross-chain atomic swaps: With Schnorr adaptor signatures it is possible to build BTC <> cBTC atomic swaps without HTLCs or any other third-party custody.
-- Bitcoin-aware oracles \& bridges: A smart contract on Citrea can now prove that a Taproot key signed some data without any external verifiers.
+- **Scriptless cross-chain atomic swaps**: With Schnorr adaptor signatures it is possible to build BTC <> cBTC atomic swaps without HTLCs or any other third-party custody.
+- **Bitcoin-aware oracles \& bridges**: A smart contract on Citrea can now prove that a Taproot key signed some data without any external verifiers.
 
 ##### Technical Details
 
@@ -83,7 +83,7 @@ The precompile accepts a 128-byte input, concatenated as follows:
 2. `Message Hash (32 bytes)`: The 32-byte hash of the message that was signed.
 3. `Signature (64 bytes)`: The 64-byte Schnorr signature (typically r and s components, each 32 bytes).
 
-If the signature is valid for the given message hash and public key, the precompile returns a 32-byte value `0x00...01`. If verification fails, it returns an empty `Bytes` array or `0x00...00`.
+If the signature is valid for the given message hash and public key, the precompile returns a 32-byte value `0x00...01`. If verification fails, it returns empty bytes: `0x`.
 
 Base gas cost of Schnorr precompile is set to `4600`.
 
