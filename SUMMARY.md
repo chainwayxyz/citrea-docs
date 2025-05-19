@@ -11,8 +11,10 @@
 * [Characteristics](technical-specs/characteristics/README.md)
   * [Execution Environment](technical-specs/characteristics/execution-environment.md)
   * [Block Production](technical-specs/characteristics/block-production/README.md)
-    * [Pre-Confirmations](technical-specs/characteristics/block-production/pre-confirmations.md)
-    * [Decentralized Sequencer Network](technical-specs/characteristics/block-production/decentralized-sequencer-network.md)
+    * [Mempool](technical-specs/characteristics/block-production/mempool.md)
+    * [Sequencer](technical-specs/characteristics/block-production/sequencer.md)
+    * [Sequencer Commitments](technical-specs/characteristics/block-production/sequencer-commitments.md)
+    * [Soft Confirmations](technical-specs/characteristics/block-production/soft-confirmation.md)
   * [Proof Generation](technical-specs/characteristics/proof-generation.md)
   * [Nodes](technical-specs/characteristics/nodes.md)
   * [Bitcoin Settlement: Trust-minimized BTC Bridge](technical-specs/characteristics/bitcoin-settlement-trust-minimized-btc-bridge/README.md)
@@ -51,15 +53,17 @@
   * [Fee Vaults](developer-documentation/system-contracts/fee-vaults.md)
 * [Chain Information](developer-documentation/chain-information.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
+* [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
 
 ## 🔎 Future Research
 
-* [Multi VM Approach](future-research/multi-vm-approach.md)
-* [Volition Model](future-research/volition-model.md)
 * [Decentralized Sequencer Network](future-research/decentralized-sequencer-network.md)
-* [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Lightning Integration](future-research/lightning-integration.md)
+* [Multi Prover](future-research/multi-prover.md)
+* [Multi VM Approach](future-research/multi-vm-approach.md)
+* [Trustless Atomic Swaps](future-research/trustless-atomic-swaps.md)
 * [Trustless Settlement](future-research/trustless-settlement.md)
+* [Volition Model](future-research/volition-model.md)
 
 ## 🌐 Community
 * [Citrea Meetups](/community/README.md)
