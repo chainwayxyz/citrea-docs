@@ -54,7 +54,7 @@
 * [Chain Information](developer-documentation/chain-information.md)
 * [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
-* [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-p256.md)
+* [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 
 ## 🔎 Future Research
 
