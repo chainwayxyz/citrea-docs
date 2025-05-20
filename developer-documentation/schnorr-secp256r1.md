@@ -9,7 +9,7 @@ RIP 7212 is an improvement proposal that introduces a precompile support for the
 This precompile enables a whole new set of applications and use cases, such as:
 - **Hardware \& Biometric Authentication**: Native support of secp256r1 allows smart contracts to directly validate the signatures from secure enclaves and passkey devices, such as Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), Android's [Keystore](https://developer.android.com/privacy-and-security/keystore), Yubikeys, and WebAuthn authenticators.
 - **Account Abstraction \& Smart Wallets**: Combining features above with account abstraction \& smart wallets, self-custodial platforms can be built much more easily and efficiently, such as [Tanari](https://www.tanari.io/). It also improves the security and the UX perspective of applications massively. 
-- **Gas-efficient P256 signature verification**: With this precompile, verification on P256 comes down to `3450` gas, which is significantly cheaper than any other existing smart contract verification method.
+- **Gas-efficient signature verification**: With this precompile, secp256r1 signature verification comes down to `3450` gas, which is significantly cheaper than any other existing smart contract verification method.
 
 ##### Technical Details
 
@@ -28,10 +28,10 @@ Upon successful verification, the precompile returns a 32-byte value `0x00...01`
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-/// @title P256 Precompile Example
-/// @notice Calls the P256 precompile to verify secp256r1 ECDSA signatures
-contract P256VerifyCaller {
-    address constant P256_VERIFY_PRECOMPILE = 0x0000000000000000000000000000000000000100;
+/// @title secp256r1 Precompile Example
+/// @notice Calls the secp256r1 precompile to verify secp256r1 ECDSA signatures
+contract P256R1VerifyCaller {
+    address constant P256R1_VERIFY_PRECOMPILE = 0x0000000000000000000000000000000000000100;
 
     /**
      * @notice Verifies a secp256r1 (RIP-7212) ECDSA signature.
@@ -43,7 +43,7 @@ contract P256VerifyCaller {
      * @param pubKeyY 32-byte public key Y coordinate 
      * @return isValid True if signature is valid, false otherwise.
      */
-    function callP256Verify(
+    function callP256R1Verify(
         bytes32 messageHash,
         bytes32 r,
         bytes32 s,
@@ -58,7 +58,7 @@ contract P256VerifyCaller {
             pubKeyX,
             pubKeyY
         );
-        (bool ok, bytes memory output) = P256_VERIFY_PRECOMPILE.staticcall(input);
+        (bool ok, bytes memory output) = P256R1_VERIFY_PRECOMPILE.staticcall(input);
         // 32-byte return, last byte == 0x01 means success
         return ok && output.length == 32 && output[31] == 0x01;
     }
