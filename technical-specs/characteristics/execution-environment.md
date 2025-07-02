@@ -4,8 +4,6 @@ The Citrea VM is a fully Ethereum Virtual Machine (EVM) equivalent VM running on
 
 Citrea implements its own EVM, referred to as a "zkEVM". A zkEVM is a special EVM implementation that makes the full VM implementation provable. Citrea zkEVM is classified as Type 2, which means full equivalency and a scalable and trustless proof system due to being based on zk-STARKs. Citrea zkEVM is built using RISC Zero.
 
-For further compatibility, Citrea is implemented intentionally to make multiple VMs interoperable.
-
 #### Different characteristics of Citrea
 
 Being a Type 2 zkEVM, Citrea has some different characteristics compared to Ethereum and other EVM blockchains:
@@ -18,6 +16,6 @@ Being a Type 2 zkEVM, Citrea has some different characteristics compared to Ethe
 - **EVM Version & Tweaks**: Citrea supports **Pectra** version of EVM with some tweaks:
     - **EIP-4844**: EIP-4844 is not supported on Citrea, along with KZG precompile. If the address `0x0A` is called it will return as an EOA address.
     - **EIP-2935**: EIP-2935 is not supported on Citrea, which means that `BLOCKHASH` still returns the latest 256 blockhashes (instead of 8192).
-- **Additional Precompiles**: Compared to Pectra version, Citrea offers two additional precompiles: **secp256r1** and **Schnorr**. You can read more about them (here)[https://docs.citrea.xyz/developer-documentation/schnorr-secp256r1].
+- **Additional Precompiles**: Compared to Pectra version, Citrea offers two additional precompiles: **secp256r1** and **Schnorr**. You can read more about them [here](https://docs.citrea.xyz/developer-documentation/schnorr-secp256r1).
 - **Merkle Tree**: Citrea uses Jellyfish Merkle Tree for its state instead of Patricia Merkle Tree.
-- **System Smart Contracts**: There are special system smart contracts of Citrea that is optimized for system level operations: `BitcoinLightClient`, `Bridge`, and `FeeVault`. You can read more about them (here)[https://docs.citrea.xyz/developer-documentation/system-contracts].
+- **System Smart Contracts**: There are special system smart contracts of Citrea that is optimized for system level operations: `BitcoinLightClient`, `Bridge`, and `FeeVault`. You can read more about them [here](https://docs.citrea.xyz/developer-documentation/system-contracts).
