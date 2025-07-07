@@ -53,9 +53,7 @@
   * [Fee Vaults](developer-documentation/system-contracts/fee-vaults.md)
 * [Chain Information](developer-documentation/chain-information.md)
 * [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
-* [RPC Documentation](developer-documentation/rpc-documentation/ledger-rpc-documentation.md)
-* [Ledger RPC](developer-documentation/rpc-documentation/new-rpc-doc.md)
-* [Misc RPC](developer-documentation/rpc-documentation/misc-rpc.md)
+* [RPC Documentation](developer-documentation/rpc-documentation/citrea-rpc-documentation.md)
 * [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 
 ## 🔎 Future Research
