@@ -1,6 +1,6 @@
 # Citrea RPC Documentation
 
-Complete reference for Citrea's JSON-RPC API endpoints for interacting with the ledger, blockchain data, and debugging tools.
+Complete reference for Citrea's special JSON-RPC API endpoints for interacting with the ledger data and debugging, outside of the standard Ethereum JSON-RPC methods.
 
 ## Base URLs
 

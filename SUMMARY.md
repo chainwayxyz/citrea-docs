@@ -54,6 +54,7 @@
 * [Chain Information](developer-documentation/chain-information.md)
 * [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/citrea-rpc-documentation.md)
+* [Ethereum RPC Endpoints](developer-documentation/rpc-documentation/ethereum-rpc-endpoints.md)
 * [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 
 ## 🔎 Future Research
