@@ -51,11 +51,12 @@
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
   * [Bridge](developer-documentation/system-contracts/bridge.md)
   * [Fee Vaults](developer-documentation/system-contracts/fee-vaults.md)
-* [Chain Information](developer-documentation/chain-information.md)
-* [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
-* RPC Documentation
+* [RPC Documentation](developer-documentation/rpc-documentation/README.md)
   * [Citrea JSON-RPC Endpoints](developer-documentation/rpc-documentation/citrea-rpc-documentation.md)
   * [EVM JSON-RPC Endpoints](developer-documentation/rpc-documentation/eth-rpc-endpoints.md)
+* [Chain Information](developer-documentation/chain-information.md)
+* [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
+
 * [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 
 ## 🔎 Future Research
