@@ -5,9 +5,8 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 ## Base URLs
 
 - **Local node:** `http://0.0.0.0:8080`
-- **Public Testnet:** `https://rpc.testnet.citrea.xyz`
-
-> **Quick Start**: You can immediately start using these endpoints with a full node or the Testnet RPC (`https://rpc.testnet.citrea.xyz`). No setup required!
+- **Public Testnet:** `https://rpc.testnet.citrea.xyz` 
+- **Alternative RPC Providers:** Check [BlastAPI](https://blastapi.io) as an alternative RPC service with generous free limits & better rate limits for Citrea Testnet.
 
 ---
 
@@ -59,9 +58,11 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 
 - **[`eth_getBlockTransactionCountByNumber`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_getblocktransactioncountbynumber)** - Returns number of transactions in block by number
 
-- **[`eth_getBlockByHash`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_getblockbyhash)** - Returns block by hash
+- **[`eth_getBlockByHash`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_getblockbyhash)** - Returns block by hash 
+    - *Note*: There is an extra field in the response, `l1FeeRate`.
 
 - **[`eth_getBlockByNumber`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_getblockbynumber)** - Returns block by number
+    - *Note*: There is an extra field in this response, `l1FeeRate`.
 
 - **[`eth_getUncleByBlockHashAndIndex`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_getunclebyblockhashAndindex)** - Returns null (no uncles in Citrea)
 
@@ -76,6 +77,7 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 - **[`eth_getTransactionByBlockNumberAndIndex`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_gettransactionbyblocknumberandindex)** - Returns transaction by block number and index
 
 - **[`eth_getTransactionReceipt`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_gettransactionreceipt)** - Returns transaction receipt by hash
+    - *Note*: There are extra fields in the response, `l1FeeRate` and `l1DiffSize`.
 
 #### Call & Execution
 
@@ -117,9 +119,7 @@ The following methods are implemented in Citrea but are extensions beyond the st
 
 ## Notes
 
-- All implemented methods follow the standard Ethereum JSON-RPC specification format
-- Use WebSocket connections for subscription methods (`eth_subscribe`/`eth_unsubscribe`)
-- Use `eth_getLogs` for log filtering instead of filter-based methods
-- Uncle block methods always return null as Citrea doesn't produce uncle blocks
-- Mining-related methods are not applicable to Citrea as it's a rollup
+- Almost all methods follow the standard Ethereum JSON-RPC specification format (see notes above)
+- You can use WebSocket connections for subscription methods (`eth_subscribe`/`eth_unsubscribe`) on your full node
+- You can use `eth_getLogs` for log filtering instead of filter-based methods
 - Please visit [Citrea-Specific RPC Documentation](./citrea-rpc-documentation.md)  for Citrea-specific endpoints
