@@ -264,9 +264,9 @@ https://rpc.testnet.citrea.xyz
   "jsonrpc": "2.0",
   "id": 1,
   "result": [
-    { /* Block 1000333 */ },
-    { /* Block 1000334 */ },
-    { /* Block 1000335 */ }
+    { /* Block 1000333 in ledger_getL2BlockByNumber response structure */ },
+    { /* Block 1000334 in ledger_getL2BlockByNumber response structure */ },
+    { /* Block 1000335 in ledger_getL2BlockByNumber response structure */ }
   ]
 }
 ```
@@ -1140,7 +1140,7 @@ All endpoints may return standard JSON-RPC error responses:
 ## Notes
 
 - All hex values should include the `0x` prefix
-- Block heights can be specified as integers or hex strings
+- Block heights can be specified as integers or hex strings (block tags of Ethereum-spec also works)
 - Response data may be truncated in documentation for readability
 - Large responses (like proofs) may be several MB in size
 - Always check for error responses before processing results 
