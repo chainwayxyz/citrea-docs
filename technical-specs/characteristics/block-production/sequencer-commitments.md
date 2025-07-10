@@ -23,4 +23,4 @@ Lastly, **Light Client Proofs** that are used in BitVM based [**Clementine**](ht
 
 #### Querying Sequencer Commitments
 
-Sequencer commitments can be queried by using the **Citrea Batch Explorer**, along with the [RPC endpoints](/developer-documentation/rpc-documentation/ledger-rpc-documentation.md). You can find the explorer [here](https://citrea.xyz/batch-explorer).
+Sequencer commitments can be queried by using the **Citrea Batch Explorer**, along with the [RPC endpoints](/developer-documentation/rpc-documentation/citrea-rpc-documentation.md). You can find the explorer [here](https://citrea.xyz/batch-explorer).
