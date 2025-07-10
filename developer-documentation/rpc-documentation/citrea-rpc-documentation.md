@@ -923,14 +923,7 @@ https://rpc.testnet.citrea.xyz
 ```
 
 #### Parameters
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `from` | `string` | **Yes** | Sender address |
-| `to` | `string` | **Yes** | Recipient address |
-| `value` | `string` | **Yes** | Amount to send (wei) |
-| `gas` | `string` | No | Gas limit |
-| `gasPrice` | `string` | No | Gas price |
-| `data` | `string` | No | Transaction data |
+Same as [`eth_estimateGas`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_estimategas).
 
 #### Example Response
 ```json
