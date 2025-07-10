@@ -1,6 +1,6 @@
 # Ethereum JSON-RPC Endpoints
 
-Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by Citrea. These endpoints follow the standard Ethereum JSON-RPC specification and provide compatibility with existing Ethereum tooling and libraries.
+Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by Citrea. These endpoints provide compatibility with existing EVM tooling and libraries.
 
 ## Base URLs
 
@@ -10,7 +10,7 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 
 ---
 
-## Supported Ethereum JSON-RPC Methods
+## Supported JSON-RPC Methods
 
 ### Web3 Methods
 
@@ -91,12 +91,6 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 
 - **[`eth_getLogs`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_getlogs)** - Returns logs matching filter criteria
 
----
-
-## Additional Ethereum Extensions
-
-The following methods are implemented in Citrea but are extensions beyond the standard Ethereum JSON-RPC specification:
-
 ### State Proofs & Access Lists
 
 - **[`eth_getProof`](https://docs.blastapi.io/blast-documentation/apis-documentation/core-api/ethereum/eth_getproof)** - Returns account and storage proof (EIP-1186)
@@ -105,7 +99,8 @@ The following methods are implemented in Citrea but are extensions beyond the st
 
 ### Bulk Operations
 
-- **`eth_getBlockReceipts`** - Returns all transaction receipts for a block
+- **[`eth_getBlockReceipts`](https://docs.blastapi.io/blast-documentation/erigon-api/eth_getblockreceipts)** - Returns all transaction receipts for a block
+    - *Note*: There are extra fields in some objects of the response, such as `l1FeeRate` and `l1DiffSize`.
 
 ### Citrea-Specific Extensions
 
@@ -129,7 +124,7 @@ The following methods are implemented in Citrea but are extensions beyond the st
 
 ## Notes
 
-- Almost all methods follow the standard Ethereum JSON-RPC specification format (see notes above)
+- Almost all methods follow the standard Ethereum JSON-RPC specification formats (see notes above)
 - You can use WebSocket connections for subscription methods (`eth_subscribe`/`eth_unsubscribe`) on your full node
 - You can use `eth_getLogs` for log filtering instead of filter-based methods
 - Please visit [Citrea-Specific RPC Documentation](./citrea-rpc-documentation.md)  for Citrea-specific endpoints
