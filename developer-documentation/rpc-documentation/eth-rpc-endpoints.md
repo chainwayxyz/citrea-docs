@@ -36,9 +36,10 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 
 - **[`eth_feeHistory`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_feehistory)** - Returns historical base fees and reward percentiles (EIP-1559)
 
-- **`eth_maxPriorityFeePerGas`** - Returns suggested priority fee (tip) per gas
+- **[`eth_maxPriorityFeePerGas`](https://docs.blastapi.io/blast-documentation/apis-documentation/core-api/ethereum/eth_maxpriorityfeepergas)** - Returns suggested priority fee (tip) per gas
 
 - **`eth_maxFeePerGas`** - Returns estimated maximum fee per gas
+    - `curl -H "Content-type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_maxFeePerGas","params":[],"id":1}' https://rpc.testnet.citrea.xyz | jq .`
 
 #### Account & Balance
 
@@ -84,6 +85,7 @@ Complete reference for Ethereum-compatible JSON-RPC API endpoints supported by C
 - **[`eth_call`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_call)** - Executes a read-only call
 
 - **[`eth_estimateGas`](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_estimategas)** - Returns gas estimate for a transaction
+    - *Note*: eth_estimateGas carries a tiny overhead for the L1 fee costs. For a more precise estimation that separates L1 and L2 costs, please use [`eth_estimateDiffSize`](./citrea-rpc-documentation.md#eth_estimatediffsize) (Citrea-specific).
 
 #### Logs
 
@@ -108,6 +110,14 @@ The following methods are implemented in Citrea but are extensions beyond the st
 ### Citrea-Specific Extensions
 
 - **[`eth_estimateDiffSize`](./citrea-rpc-documentation.md#eth_estimatediffsize)** - Estimates L1 data diff size for rollup transaction
+
+### Debug Endpoints
+
+- **[`debug_traceTransaction`](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug#debug-tracetransaction)** - Traces execution of a transaction (requires full node)
+
+- **[`debug_traceBlockByHash`](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug#debug-traceblockbyhash)** - Traces all transactions in a block by hash
+
+- **[`debug_traceBlockByNumber`](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug#debug-traceblockbynumber)** - Traces all transactions in a block by number
 
 ### Subscription Methods (WebSocket only)
 
