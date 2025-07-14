@@ -9,7 +9,7 @@ You can read more on each component of the block production process with detaile
 - [Mempool](./mempool.md): A holding area for user transactions before they are included in a block.
 - [Sequencer](./sequencer.md): A special full node that orders the transactions, produces rollup blocks, and publishes commitments to the Bitcoin DA.
 - [Sequencer Commitments](./sequencer-commitments.md): Cryptographic commitments to the Citrea blocks that are inscribed on Bitcoin by the sequencer to prevent reorgs.
-- [Soft Confirmations](./soft-confirmations.md): A confirmation mechanism used by the sequencer to provide soft-finality of blocks.
+- [Soft Confirmations](./soft-confirmation.md): A confirmation mechanism used by the sequencer to provide soft-finality of blocks.
 
 #### Block Production Process
 
