@@ -15,7 +15,7 @@ You can read more on each component of the block production process with detaile
 
 Here is a diagram that shows process & components of block production in Citrea. Feel free to check each component above for more detailed information in the diagram.
 
-<figure><img src="../../../.gitbook/assets/block_cycle.png" alt=""><figcaption><p>Extended Block Production</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/block-cycle.png" alt=""><figcaption><p>Extended Block Production</p></figcaption></figure>
 
 {% hint style="success" %}
 In short, block production in Citrea is as follows:
