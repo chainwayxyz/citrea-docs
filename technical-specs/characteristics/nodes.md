@@ -22,7 +22,7 @@ A full node in Citrea has several responsibilities:
 - Validates the [batch proofs](./block-production/batch-proof.md) produced by the Batch Prover, which are also inscribed on Bitcoin.
 - Provides a [JSON-RPC interface](/developer-documentation/rpc-documentation/README.md) for users, wallets, explorers, or any application to interact with the network - allows them to query the state, send transactions, and more.
 
-In short, full nodes enables independent verification of all chain data with sequencer commitments and batch proofs. They do not carry and transaction producing/ordering responsibilities. They act as independent data access points for users and applications, allowing them to interact with the Citrea network without relying on any third-party.
+In short, full nodes enable independent verification of all chain data with sequencer commitments and batch proofs. They do not carry any transaction producing/ordering responsibilities. They act as independent data access points for users and applications, allowing them to interact with the Citrea network without relying on any third-party.
 
 ### 3. [Batch Prover](#batch-prover)
 
@@ -30,7 +30,7 @@ In short, full nodes enables independent verification of all chain data with seq
 
 The Batch Prover is a special node that generates ZK Proofs of correct execution for batches of Citrea blocks. 
 
-As mentioned in the [block production](./block-production/README.md), the sequencer posts sequencer commitments on Bitcoin. Once they are finalized, the batch prover fetches these commitments and also retrieves the corresponding batch of Citrea blocks from its local state. Combining these two, the batch prover produces a succinct proof that the transition from the previous state to the new state was computed correctly. Therefore, it attests the following: “**_if you start from the last proven state and execute all these transactions in order, you will arrive at the state root claimed by the sequencer_**” – using this, anyone (e.g. full nodes) can verify without replaying the transactions themselves. 
+As mentioned in the [block production](./block-production/README.md), the sequencer posts sequencer commitments on Bitcoin. Once they are finalized, the batch prover fetches these commitments and also retrieves the corresponding batch of Citrea blocks from its local state. Using these two inputs, the batch prover produces a succinct proof that the transition from the previous state to the new state was computed correctly. Therefore, it attests the following: “**_if you start from the last proven state and execute all these transactions in order, you will arrive at the state root claimed by the sequencer_**” – using this, anyone (e.g. full nodes) can verify without replaying the transactions themselves. 
 
 Citrea’s batch prover uses a Groth16 circuit (running in the [Risc0](https://risczero.com) zkVM environment, with [Boundless](https://beboundless.xyz)) to achieve this. Once the proof for a given batch of blocks is generated, the batch prover packages the proof (and any needed public inputs, like the old and new state root, and the range of block indices covered) into a transaction that is posted on the Bitcoin network. 
 
@@ -46,4 +46,4 @@ The mission of LCP is to enable light clients (and other external verifiers like
 
 Essentially, each light client proof builds on the prior one, forming an unbroken chain of proofs (a recursive proof sequence) from the start of the rollup up to the current state. By verifying just the latest proof, a light client can be confident that all the Citrea blocks and all the batch proofs in the rollup’s history (up to that point) were valid and consistent with what was posted on Bitcoin. 
 
-The primary use case for the LCP’s output in Citrea’s design is to feed into [Clementine](https://citrea.xyz/clementine_whitepaper): the Bitcoin bridge require a valid LCP to resolve any disputes about the rollup state in BitVM. Thereby, it inherits the security from the ZK proof if an operator tries to cheat. The LCP combines the security of both Bitcoin and the batch proofs into one succinct artifact.
+The primary use case for the LCP’s output in Citrea’s design is to feed into [Clementine](https://citrea.xyz/clementine_whitepaper): the Bitcoin bridge requires a valid LCP to resolve any disputes about the rollup state in BitVM. This way, it inherits the security from the ZK proof if an operator tries to cheat. The LCP combines the security of both Bitcoin and the batch proofs into one succinct artifact.
