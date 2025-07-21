@@ -15,7 +15,7 @@ docker run -d \
   --name bitcoin-testnet4 \
   -p 18443:18443 \
   -p 18444:18444 \
-  bitcoin/bitcoin:28.0rc1 \
+  bitcoin/bitcoin:29 \
   -printtoconsole \
   -testnet4=1 \
   -rest \

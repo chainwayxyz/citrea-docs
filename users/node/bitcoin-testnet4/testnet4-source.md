@@ -8,7 +8,7 @@ Clone the repository from the official Bitcoin Core repository:
 ```sh
 git clone https://github.com/bitcoin/bitcoin.git
 cd bitcoin
-git checkout v28.0rc1
+git checkout v29.0
 ```
 
 #### Step 2: Build Bitcoin Core
