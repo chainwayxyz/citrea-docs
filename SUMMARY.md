@@ -74,6 +74,5 @@
   * [Resources](/community/citrea-meetups/resources.md)
   * [Code of Conduct](/community/citrea-meetups/code-of-conduct.md)
 
----
-
+## 🔒 Audits and Security
 * [Audits and Security](audits-security.md)
