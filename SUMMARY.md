@@ -58,9 +58,7 @@
 * [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
 * [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 
-## 🔒 Audits and Security
-
-* [Audits and Security](/audits-and-security/README.md)
+## 🔒 [Audits and Security](/audits-and-security/README.md)
 
 ## 🔎 Future Research
 
