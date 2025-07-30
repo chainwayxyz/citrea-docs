@@ -60,7 +60,7 @@
 
 ## 🔒 Audits and Security
 
-* [Audits and Security](audits-security.md)
+* [Audits and Security](audits-security/README.md)
 
 ## 🔎 Future Research
 
