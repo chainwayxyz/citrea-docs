@@ -58,6 +58,10 @@
 * [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
 * [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 
+## 🔒 Audits and Security
+
+* [Audits and Security](audits-security.md)
+
 ## 🔎 Future Research
 
 * [Decentralized Sequencer Network](future-research/decentralized-sequencer-network.md)
@@ -73,6 +77,3 @@
   * [Meetup Guide](/community/citrea-meetups/meetup-guide.md)
   * [Resources](/community/citrea-meetups/resources.md)
   * [Code of Conduct](/community/citrea-meetups/code-of-conduct.md)
-
-## 🔒 Audits and Security
-* [Audits and Security](audits-security.md)
