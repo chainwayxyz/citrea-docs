@@ -56,8 +56,11 @@
   * [EVM JSON-RPC Endpoints](developer-documentation/rpc-documentation/eth-rpc-endpoints.md)
 * [Chain Information](developer-documentation/chain-information.md)
 * [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
-
 * [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
+
+## 🔒 Audits and Security
+
+* [Audits and Security](audits-security.md)
 
 ## 🔎 Future Research
 
