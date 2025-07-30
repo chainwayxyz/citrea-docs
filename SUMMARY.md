@@ -60,7 +60,7 @@
 
 ## 🔒 Security
 
-* [Audits \& Security](/audits-inquiries.md)
+* [Audits \& Security](security/audits-inquiries.md)
 
 ## 🔎 Future Research
 
