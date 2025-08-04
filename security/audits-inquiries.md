@@ -7,6 +7,7 @@ Below you may find the security audits and security-related information for Citr
 | Auditor | Date (publish) | Report | 
 | ------- | ---- | ------ |
 | [SigmaPrime](https://sigmaprime.io/) | July 2025 | [view](https://github.com/chainwayxyz/citrea/blob/nightly/audits/Sigma_Prime_Chainway_Citrea_Security_Assessment_Report_v2_2.pdf) |
+| [SigmaPrime](https://sigmaprime.io/) | August 2025 | [view](https://github.com/chainwayxyz/clementine/blob/main/audits/Sigma_Prime_Chainway_Labs_Clementine_Security_Assessment_Report_v2_0.pdf) |
 
 
 Citrea client is now undergoing a public audit competition at [Cantina](https://cantina.xyz) as well. $80,000+ in rewards up for grabs, running until **15 August 2025** - you can check the details [here](
