@@ -4,6 +4,8 @@ Since Citrea is an EVM-compatible ZK-rollup on Bitcoin, you need an EVM-compatib
 
 Here are some example wallets that can do the job:
 
+* [Keplr Wallet](https://keplr.app/)
+* [Leap Wallet](https://leapwallet.io/)
 * [Metamask](https://metamask.io/)
 * [Rabby](https://rabby.io/)
 * [Trust Wallet](https://trustwallet.com/)
