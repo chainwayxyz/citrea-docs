@@ -22,6 +22,14 @@ Deployed by [Protofire](https://www.protofire.io), [Safe{Wallet}](https://safe.c
 
 ---
 
+### Asigna
+
+[Asigna](https://www.asigna.io/) is a non-custodial multisig vault designed for secure, multi-party Bitcoin asset management on Bitcoin \& Bitcoin L2s. Available on the Citrea Testnet, it allows teams and DAOs manage shared BTC treasuries and interact with apps securely.
+
+You can check the SDK documentation [here](https://asigna.gitbook.io/asigna/developers/multisig-sdk/evm-sdk) and kickstart your development.
+
+---
+
 {% hint style="note" %}
 Citrea is EVM compatible, so you can add Citrea Testnet to any EVM wallet with the content available at the [chain information](/developer-documentation/chain-information.md) section.
 {% endhint %}

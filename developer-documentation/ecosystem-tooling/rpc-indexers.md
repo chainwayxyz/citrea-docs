@@ -8,7 +8,7 @@ However, for larger projects or production use, we recommend [setting up your ow
 
 #### Blast API
 
-[Blast API](https://blastapi.io/) is an RPC provider that offers a free tier and paid plans for higher usage for Citrea. You may refer to their documentation and webpage for more details on the usage.
+[Blast API](https://blastapi.io/public-api/citrea) is an RPC provider that offers a generous free tier and stronger paid plans for higher usage for Citrea. You may refer to their webpage for more details on the usage, under `Citrea Testnet`.
 
 ---
 
