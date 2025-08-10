@@ -6,13 +6,13 @@ Citrea operates with four main distinct types of nodes.
 
 ### 1. [Sequencer](#sequencer-node)
 
-> **Implementation:** <https://github.com/otaliptus/citrea/tree/nightly/crates/sequencer>
+> **Implementation:** <https://github.com/chainwayxyz/citrea/tree/nightly/crates/sequencer>
 
 The sequencer is responsible for the block production and the ordering of transactions. You can read more about it in the [Sequencer](./block-production/sequencer.md) section. 
 
 ### 2. [Full Node](#full-node)
 
-> **Implementation:** <https://github.com/otaliptus/citrea/tree/nightly/crates/fullnode>
+> **Implementation:** <https://github.com/chainwayxyz/citrea/tree/nightly/crates/fullnode>
 
 A full node in Citrea has several responsibilities:
 
@@ -26,7 +26,7 @@ In short, full nodes enable independent verification of all chain data with sequ
 
 ### 3. [Batch Prover](#batch-prover)
 
-> **Implementation:** <https://github.com/otaliptus/citrea/tree/nightly/crates/batch-prover>
+> **Implementation:** <https://github.com/chainwayxyz/citrea/tree/nightly/crates/batch-prover>
 
 The Batch Prover is a special node that generates ZK Proofs of correct execution for batches of Citrea blocks. 
 
@@ -38,7 +38,7 @@ Posting the proof to Bitcoin serves a similar purpose as posting sequencer commi
 
 ### 4. [Light Client Prover](#light-client-prover)
 
-> **Implementation:** <https://github.com/otaliptus/citrea/tree/nightly/crates/light-client-prover>
+> **Implementation:** <https://github.com/chainwayxyz/citrea/tree/nightly/crates/light-client-prover>
 
 The Light Client Prover (LCP) is a specialized node that produces a recursive proof of the entire Citrea rollup state.
 
