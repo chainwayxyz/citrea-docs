@@ -2,11 +2,11 @@
 
 ## 👋 Welcome
 
-* [Getting started](/welcome/getting-started.md)
+* [Getting started](README.md)
 
-## ⛓ Technical Specs
+## ⛓️ Technical Specs
 
-* [TL;DR](README.md)
+* [TL;DR](<README (1).md>)
 * [Technical Introduction](technical-specs/introduction.md)
 * [Characteristics](technical-specs/characteristics/README.md)
   * [Execution Environment](technical-specs/characteristics/execution-environment.md)
@@ -17,9 +17,7 @@
     * [Soft Confirmations](technical-specs/characteristics/block-production/soft-confirmation.md)
   * [Proof Generation](technical-specs/characteristics/proof-generation.md)
   * [Nodes](technical-specs/characteristics/nodes.md)
-  * [Bitcoin Settlement: Trust-minimized BTC Bridge](technical-specs/characteristics/bitcoin-settlement-trust-minimized-btc-bridge/README.md)
-    * [BitVM](technical-specs/characteristics/bitcoin-settlement-trust-minimized-btc-bridge/bitvm.md)
-    * [Optimistic Verification](technical-specs/characteristics/bitcoin-settlement-trust-minimized-btc-bridge/optimistic-verification.md)
+  * [Clementine: trust-minimized Bitcoin Bridge](technical-specs/characteristics/clementine-trust-minimized-bitcoin-bridge.md)
 * [Security Properties](technical-specs/security-properties/README.md)
   * [Validity](technical-specs/security-properties/validity.md)
   * [Data Availability](technical-specs/security-properties/data-availability.md)
@@ -65,7 +63,7 @@
 
 ## 🔒 Security
 
-* [Audits \& Security](security/audits-inquiries.md)
+* [Audits & Security](security/audits-inquiries.md)
 
 ## 🔎 Future Research
 
@@ -78,7 +76,8 @@
 * [Volition Model](future-research/volition-model.md)
 
 ## 🌐 Community
-* [Citrea Meetups](/community/README.md)
-  * [Meetup Guide](/community/citrea-meetups/meetup-guide.md)
-  * [Resources](/community/citrea-meetups/resources.md)
-  * [Code of Conduct](/community/citrea-meetups/code-of-conduct.md)
+
+* [Citrea Meetups](community/README.md)
+  * [Meetup Guide](community/citrea-meetups/meetup-guide.md)
+  * [Resources](community/citrea-meetups/resources.md)
+  * [Code of Conduct](community/citrea-meetups/code-of-conduct.md)
