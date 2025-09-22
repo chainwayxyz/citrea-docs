@@ -3,6 +3,7 @@
 ## 👋 Welcome
 
 * [Getting started](README.md)
+* [Chain Information](welcome/chain-information.md)
 
 ## ⛓️ Technical Specs
 
