@@ -1,8 +1,12 @@
 # System Contracts
 
-#### Citrea Specific System Contracts
+System contracts are a set of pre-deployed smart contracts on Citrea that are responsible for the core functionalities. These contracts are embedded in the genesis state. They contain functions that can be only processed through a system transaction, in addition to regular functions that can be called by any address.
 
-| Address                                      | Name & Link                                                                                                                   |
+{% hint style="success" %}
+System contracts are also audited under Citrea and Clementine - you can find the reports at [audits-inquiries](https://docs.citrea.xyz/security/audits-inquiries "mention") section.
+{% endhint %}
+
+| Address                                      | Name & Explorer Link                                                                                                          |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `0x3100000000000000000000000000000000000001` | [Bitcoin Light Client Proxy](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001)          |
 | `0x3100000000000000000000000000000000000002` | [Bridge Proxy](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000002)                        |
@@ -10,25 +14,52 @@
 | `0x3100000000000000000000000000000000000004` | [L1 Fee Vault Proxy](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000004)                  |
 | `0x3100000000000000000000000000000000000005` | [Priority Fee Vault Proxy](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000005)            |
 | `0x3100000000000000000000000000000000000006` | [WCBTC](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000006)                               |
+| `0x3100000000000000000000000000000000000007` | [Failed Deposit Vault Proxy](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000007)          |
 | `0x3200000000000000000000000000000000000001` | [Bitcoin Light Client Implementation](https://explorer.testnet.citrea.xyz/address/0x3200000000000000000000000000000000000001) |
 | `0x3200000000000000000000000000000000000002` | [Bridge Implementation](https://explorer.testnet.citrea.xyz/address/0x3200000000000000000000000000000000000002)               |
 | `0x3200000000000000000000000000000000000003` | [Base Fee Vault Implementation](https://explorer.testnet.citrea.xyz/address/0x3200000000000000000000000000000000000003)       |
 | `0x3200000000000000000000000000000000000004` | [L1 Fee Vault Implementation](https://explorer.testnet.citrea.xyz/address/0x3200000000000000000000000000000000000004)         |
 | `0x3200000000000000000000000000000000000005` | [Priority Fee Vault Implementation](https://explorer.testnet.citrea.xyz/address/0x3200000000000000000000000000000000000005)   |
+| `0x3200000000000000000000000000000000000007` | [Failed Deposit Vault Implementation](https://explorer.testnet.citrea.xyz/address/0x3200000000000000000000000000000000000007) |
 | `0x31ffffffffffffffffffffffffffffffffffffff` | [Proxy Admin](https://explorer.testnet.citrea.xyz/address/0x31ffffffffffffffffffffffffffffffffffffff)                         |
 
+In this section we're going over three main system smart contracts of Citrea:&#x20;
 
+* [bitcoin-light-client](https://docs.citrea.xyz/developer-documentation/system-contracts/bitcoin-light-client "mention")
+* [bridge](https://docs.citrea.xyz/developer-documentation/system-contracts/bridge "mention")
+* [fee-vaults](https://docs.citrea.xyz/developer-documentation/system-contracts/fee-vaults "mention")
 
-System contracts are a set of pre-deployed smart contracts responsible for the core functionalities of the Citrea. These contracts are embedded in the genesis state. They contain functions that can be only processed through a system transaction, in addition to regular functions that can be called by any address.
+<figure><img src="https://4199298141-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FtFU3ZD7rSzMi2uz6wz9W%2Fuploads%2FXOvqLtMbo8dA08qyO49X%2Fimage.png?alt=media&#x26;token=33de669b-1b70-4599-84af-36589ca28921" alt=""><figcaption></figcaption></figure>
 
-## System Transactions
+### System Transactions
 
-System transactions are transactions that are done by the system caller, which is an EVM address without a corresponding known private key, and is hardcoded in the system contracts and at the node level. System caller address is `0xdeaDDeADDEaDdeaDdEAddEADDEAdDeadDEADDEaD` and it is chosen as it is a non-random address. To illustrate how hard it is to find the corresponding private key for the system caller address, it is worth mentioning that the probability of finding a private key for a given address is 1 in 2^160. If all the Bitcoin miners stopped what they are doing and started searching for the private key of this address, it would take 80 quintillion years (8 \* 10^19 years) to find it. Our universe is only 13.8 billion years old, so that is like the age of the universe squared, that's how hard this is.
+System transactions originate from a hardcoded address with no private key:
 
-In contrast to regular transactions, these are prepared and executed in the node level, and they are included at the beginning of Citrea blocks.
+```solidity
+address constant SYSTEM_CALLER = 0xdeaDDeADDEaDdeaDdEAddEADDEAdDeadDEADDEaD;
+```
 
-Gas consumption of these transactions do not affect any fees as opposed to regular transactions, but it is accounted into the block gas limit calculations.
+Finding the corresponding private key is a 1-in-2^160 problem, which is practically impossible within the lifetime of the universe.&#x20;
 
-It must be noted that some of the transactions that can be processed as system transactions, such as `deposit` which handles the bridging of BTC from Bitcoin to Citrea, can be also processed as a regular transaction.
+The sequencer prepares the calls and injects them at the start of every block. They spend no balance from the sender, but their gas consumption still counts toward the block gas limit (which is *10 million*).
 
-These transactions are inherently trustless because they are programmed directly into the node, ensuring their inclusion in blocks.
+Typical system transactions include the one-time bootstraps
+
+```solidity
+lightClient.initializeBlockNumber(uint256 height);
+bridge.initialize(bytes prefix, bytes suffix, uint256 depositAmount);
+```
+
+as well as the per-Bitcoin-block maintenance call
+
+```solidity
+lightClient.setBlockInfo(bytes32 blockHash, bytes32 witnessRoot, uint256 coinbaseDepth);
+```
+
+and the bridge’s deposit handler:
+
+```solidity
+bridge.deposit(Transaction moveTx, MerkleProof proof, bytes32 shaScriptPubkeys);
+```
+
+Because their inclusion is enforced, these transactions are deterministic and cannot be censored by external actors even though no private key signs them.
