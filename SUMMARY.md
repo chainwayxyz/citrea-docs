@@ -1,11 +1,11 @@
 # Table of contents
 
-## Welcome
+## 👋 Welcome
 
 * [Getting started](README.md)
 * [Chain Information - Quickstart](welcome/chain-information-quickstart.md)
 
-## Essentials
+## 🔎 Essentials
 
 * [TL;DR](essentials/readme.md)
 * [Architecture and Transaction Lifecycle](essentials/architecture-and-transaction-lifecycle.md)
@@ -14,7 +14,7 @@
 * [Security Properties](essentials/security-properties.md)
 * [Transaction Finality](essentials/transaction-finality.md)
 
-## Developer Documentation
+## 📖 Developer Documentation
 
 * [Kickstart](developer-documentation/developer-documentation.md)
 * [Chain Information](developer-documentation/chain-information.md)
@@ -46,12 +46,12 @@
   * [Deploy an L3 using Avail](developer-documentation/bitcoin-appchain/deploy-an-l3-using-avail.md)
   * [Deploy an L3 using Celestia](developer-documentation/bitcoin-appchain/deploy-an-l3-using-celestia.md)
 
-## Security
+## 🔒 Security
 
 * [Audits & Security](security/audits-inquiries.md)
 * [Trusted Setup Verification](security/verify-trusted-setup.md)
 
-## Future Research
+## 🔬 Future Research
 
 * [Decentralized Sequencer Network](future-research/decentralized-sequencer-network.md)
 * [Lightning Integration](future-research/lightning-integration.md)
@@ -61,7 +61,7 @@
 * [Trustless Settlement](future-research/trustless-settlement.md)
 * [Volition Model](future-research/volition-model.md)
 
-## Community
+## 🌐 Community
 
 * [Citrea Meetups](community/community/README.md)
   * [Meetup Guide](community/community/meetup-guide.md)
