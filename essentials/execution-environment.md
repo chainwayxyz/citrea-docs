@@ -15,7 +15,7 @@ Being a Type 2 zkEVM, Citrea has some different characteristics compared to Ethe
   * **Diff Size**: The size of the state diff in bytes.
 * **EVM Version & Tweaks**: Citrea supports **Pectra** version of EVM with some tweaks:
   * **EIP-4844**: EIP-4844 is not supported on Citrea, along with KZG precompile. If the address `0x0A` is called it will return as an EOA address.
-  * **EIP-2935**: EIP-2935 is not supported on Citrea, which means that `BLOCKHASH` still returns the latest 256 blockhashes (instead of 8192).
+  * **EIP-2935**: EIP-2935 is not supported on Citrea.
 * **Additional Precompiles**: Compared to Pectra version, Citrea offers two additional precompiles: **secp256r1** and **Schnorr**. You can read more about them [here](https://docs.citrea.xyz/developer-documentation/schnorr-secp256r1).
 * **Merkle Tree**: Citrea uses Jellyfish Merkle Tree for its state instead of Patricia Merkle Tree.
 * **System Smart Contracts**: There are special system smart contracts of Citrea that are optimized for system level operations: `BitcoinLightClient`, `Bridge`, and `FeeVault`. You can read more about them [here](https://docs.citrea.xyz/developer-documentation/system-contracts).
