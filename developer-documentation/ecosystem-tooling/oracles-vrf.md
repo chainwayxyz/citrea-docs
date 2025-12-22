@@ -4,7 +4,7 @@
 
 [Redstone](https://redstone.finance) is a modular oracle network that provides secure price feeds for blockchain protocols.
 
-Following price feeds are provided by Redstone on Citrea Testnet: `BTC/USD`, `ETH/USD`, `USDT/USD`, `pxETH/USD`, `solvBTC/USD`
+The following price feeds are provided by Redstone on Citrea Testnet: `BTC/USD`, `ETH/USD`, `USDT/USD`, `pxETH/USD`, `solvBTC/USD`
 
 You can find the contract addresses & feeds on the [Redstone documentation](https://app.redstone.finance/app/feeds/?networks=5115\&page=1\&sortBy=popularity\&sortDesc=false\&perPage=32).
 
@@ -14,7 +14,7 @@ You can find the contract addresses & feeds on the [Redstone documentation](http
 
 [Blocksense](https://blocksense.network) is a decentralized oracle protocol designed to scale data feeds using zero-knowledge rollups. It allows anyone to create secure oracles through a permissionless process.
 
-Following price feeds are provided with a Chainlink-compatible interface by Blocksense on Citrea, with a heartbeat of 5 minutes: `BTC`, `ETH`, `EURC`, `USDT`, `USDC`, `PAXG`, `TBTC`, `WBTC`, `WSTETH`.
+The following price feeds are provided with a Chainlink-compatible interface by Blocksense on Citrea, with a heartbeat of 5 minutes: `BTC`, `ETH`, `EURC`, `USDT`, `USDC`, `PAXG`, `TBTC`, `WBTC`, `WSTETH`.
 
 You can find the contract addresses & feeds on the [Blocksense documentation](https://docs.blocksense.network/docs/contracts/deployed-contracts#citrea-testnet).
 

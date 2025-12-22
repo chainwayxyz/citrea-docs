@@ -20,13 +20,13 @@ You can access the bundler/paymaster endpoints at [https://api.pimlico.io/v2/511
 
 ### Safe{Wallet}
 
-Deployed by [Protofire](https://www.protofire.io), [Safe{Wallet}](https://safe.citrea.xyz) is available on Citrea. It enables more choices for your custody needs, let's you set spending rules for your assets, and activates smarter & safer wallets.
+Deployed by [Protofire](https://www.protofire.io), [Safe{Wallet}](https://safe.citrea.xyz) is available on Citrea. It enables more choices for your custody needs, lets you set spending rules for your assets, and activates smarter & safer wallets.
 
 ***
 
 ### Asigna
 
-[Asigna](https://www.asigna.io/) is a non-custodial multisig vault designed for secure, multi-party Bitcoin asset management on Bitcoin & Bitcoin L2s. Available on the Citrea Testnet, it allows teams and DAOs manage shared BTC treasuries and interact with apps securely.
+[Asigna](https://www.asigna.io/) is a non-custodial multisig vault designed for secure, multi-party Bitcoin asset management on Bitcoin & Bitcoin L2s. Available on the Citrea Testnet, it allows teams and DAOs to manage shared BTC treasuries and interact with apps securely.
 
 You can check the SDK documentation [here](https://asigna.gitbook.io/asigna/developers/multisig-sdk/evm-sdk) and kickstart your development.
 

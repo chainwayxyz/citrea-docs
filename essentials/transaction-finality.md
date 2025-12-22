@@ -12,7 +12,7 @@ When BTC <-> cBTC moves across the bridge, Bitcoin settlement and a short challe
 
 ### Soft Confirmations
 
-A transaction on Citrea first appears inside a **sequencer-signed soft confirmation (L2 Blocks)** with a block. At this point, the block has been executed in the zkEVM, a new state root has been produced, and full nodes can update their local view immediately. Soft-confirmations enable responsive interfaces and optimistic flows. On the other hand, though, they are not anchored to Bitcoin yet and remains mutable.&#x20;
+A transaction on Citrea first appears inside a **sequencer-signed soft confirmation (L2 Blocks)** with a block. At this point, the block has been executed in the zkEVM, a new state root has been produced, and full nodes can update their local view immediately. Soft-confirmations enable responsive interfaces and optimistic flows. On the other hand, though, they are not anchored to Bitcoin yet and remain mutable.&#x20;
 
 The sequencer's signature provides a soft-finality for full nodes. However, as mentioned, the sequencer could still reorder transactions in this range - therefore soft confirmations are great for the UX as a direct confirmation from the sequencer itself but the transactions are not finalized at this stage.
 
@@ -39,14 +39,14 @@ The structure above is signed and distributed to the network. Soft confirmations
 
 ### Finalized
 
-A batch window of Citrea becomes finalized when the sequencer ***inscribes*** a commitment to Bitcoin and that inscription reaches the required confirmation depth. These commitments are called **Sequencer Commitments** and contains the following info:
+A batch window of Citrea becomes finalized when the sequencer ***inscribes*** a commitment to Bitcoin and that inscription reaches the required confirmation depth. These commitments are called **Sequencer Commitments** and contain the following info:
 
 * a Merkle root over the soft-confirmation hashes
 * the batch window’s start and end heights on Citrea&#x20;
 
-Once a sequencer commitment is finalized on Bitcoin, the ordering of blocks in that window is pinned and the exact set of soft-confirmed blocks that will be proven next is canonical. Therefore, the sequencer commitments provide a great degree of finalization as the order of transactions are blocks are now certain. The finalization here does not prove the execution itself. Yet, it defines the canonical sequence to be proved next.
+Once a sequencer commitment is finalized on Bitcoin, the ordering of blocks in that window is pinned and the exact set of soft-confirmed blocks that will be proven next is canonical. Therefore, the sequencer commitments provide a great degree of finalization as the order of transactions and blocks are now certain. The finalization here does not prove the execution itself. Yet, it defines the canonical sequence to be proved next.
 
-Sequencer commitments are also used in the **Batch Proof Circuits** to make sure proofs are generated for the canonical batch used in sequencer commitments, too. **Light Client Proofs** that are used in BitVM based [Clementine](https://docs.citrea.xyz/essentials/clementine-trust-minimized-bitcoin-bridge) bridge benefits from the sequencer commitments indirectly, too.&#x20;
+Sequencer commitments are also used in the **Batch Proof Circuits** to make sure proofs are generated for the canonical batch used in sequencer commitments, too. **Light Client Proofs** that are used in BitVM based [Clementine](https://docs.citrea.xyz/essentials/clementine-trust-minimized-bitcoin-bridge) bridge benefit from the sequencer commitments indirectly, too.&#x20;
 
 <details>
 
@@ -62,7 +62,7 @@ The highest level of finality is reached when a batch’s **execution is proven*
 
 Proven finality provides an **irrefutable guarantee** of correctness. Full nodes will retrieve the batch proof transaction from Bitcoin, verify the zkSNARK, and if the proof is valid, the batch of L2 blocks is conclusively final. Even if the sequencer (or any actor) was malicious, they *cannot* fake a valid proof for an incorrect state transition - thus proven finality is the ultimate safeguard for Citrea’s security.&#x20;
 
-The rollup blocks are as secure as the Bitcoin proof-of-work that cemented its data and the cryptographic soundness of the zk-proof. Except an extreme Bitcoin reorganization beyond the finality depth (e.g. >6 blocks), a proven batch cannot be reversed or disputed – the L2 block is effectively as final as an L1 Bitcoin transaction.
+The rollup blocks are as secure as the Bitcoin proof-of-work that cemented its data and the cryptographic soundness of the zk-proof. Except for an extreme Bitcoin reorganization beyond the finality depth (e.g. >6 blocks), a proven batch cannot be reversed or disputed – the L2 block is effectively as final as an L1 Bitcoin transaction.
 
 <details>
 

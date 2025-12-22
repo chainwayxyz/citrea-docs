@@ -20,7 +20,7 @@ The system caller is a hardcoded address with no private key. It is used to exec
 event BlockInfoAdded(uint256 height, bytes32 blockHash, bytes32 witnessRoot, uint256 coinbaseDepth);
 ```
 
-Only the system caller can mutate state; the modifier rejects everyone else and there is no separate admin role. All hashes are treated as ***little endian*** during verification-block hashes, wtxids, and each proof. Therefore, callers must respect that encoding when constructing proofs. Every update emits `BlockInfoAdded` with the height, block hash, witness root, and coinbase depth for indexing and debugging.
+Only the system caller can mutate state; the modifier rejects everyone else and there is no separate admin role. All hashes are treated as ***little endian*** during verification - block hashes, wtxids, and each proof. Therefore, callers must respect that encoding when constructing proofs. Every update emits `BlockInfoAdded` with the height, block hash, witness root, and coinbase depth for indexing and debugging.
 
 ### State
 

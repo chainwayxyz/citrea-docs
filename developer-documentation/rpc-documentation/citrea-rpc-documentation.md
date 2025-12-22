@@ -1069,7 +1069,7 @@ All endpoints may return standard JSON-RPC error responses:
 ## Notes
 
 * All hex values should include the `0x` prefix
-* Block heights can be specified as integers or hex strings (block tags of Ethereum-spec also works)
+* Block heights can be specified as integers or hex strings (block tags of Ethereum-spec also work)
 * Response data may be truncated in documentation for readability
 * Large responses (like proofs) may be several MB in size
 * Always check for error responses before processing results

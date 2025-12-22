@@ -16,7 +16,7 @@
 
 [KRNL Labs kOS](https://www.krnl.xyz/) acts as a “superconnector,” wiring Citrea smart contracts to external EVM chains, Web2 APIs and AI models. By plugging into kOS you can enrich transactions with off‑chain data **before** they hit Citrea’s zkEVM, or trigger cross‑chain side effects without writing bespoke bridge code.
 
-You can checkout the KRNL documentation to kickstart your development: <https://www.krnl.xyz/docs>
+You can check out the KRNL documentation to kickstart your development: <https://www.krnl.xyz/docs>
 
 ***
 

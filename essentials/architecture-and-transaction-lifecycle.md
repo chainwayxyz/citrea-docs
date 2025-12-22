@@ -45,7 +45,7 @@ Citrea does not have a Blob pool as it does not support blob transactions at the
 
 The Citrea sequencer is a specialized full node responsible for ordering user transactions and constructing rollup blocks. It continuously monitors the mempool and, every two seconds, selects a batch of valid transactions (prioritized by fees) to form the next block. Along with these user transactions, the sequencer also injects [system transactions](https://docs.citrea.xyz/developer-documentation/system-contracts#system-transactions) at the beginning of the block, covering important operations such as updating the latest Bitcoin block headers or handling bridge events. The sequencer executes all these transactions against the current state of the rollup, updates balances and contract storage, and computes a new state root. Gas usage and state changes are also stored in transaction receipts.&#x20;
 
-Upon assembling and executing a block, the sequencer generates, signs, and broadcasts a **soft confirmation** that attests to the blocks content and the state root. This provides a fast & provisional confirmation of transactions/blocks for full nodes (i.e., soft-finality).
+Upon assembling and executing a block, the sequencer generates, signs, and broadcasts a **soft confirmation** that attests to the block's content and the state root. This provides a fast & provisional confirmation of transactions/blocks for full nodes (i.e., soft-finality).
 
 Lastly, the sequencer is also responsible for generating sequencer commitments, which provide finality for transactions and blocks once settled on Bitcoin.
 
@@ -84,7 +84,7 @@ The primary use case for the LCP’s output in Citrea’s design is to feed into
 A full node is a permissionless participant that anyone can run to fully verify the rollup’s state and serve data to others. A full node keeps a complete copy of Citrea’s state (all accounts, contracts, etc.) and the history of transactions. Its responsibilities include:
 
 * **Syncing Citrea Blocks:** It connects to the Sequencer and receives every new block (and soft-confirmation). The full node replays the transactions in each block, applying the **state transition function** to update its copy of the state (and recompute the new state root).
-* **Monitoring Bitcoin:** The full node follows Bitcoin’s blocks to detect Citrea data posted on Bitcoin. For every finalized Bitcoin blocks, it fetches and verifies **sequencer commitments** and **batch proofs** from Bitcoin. Essentially, full nodes use Bitcoin as the source of truth to cross-verify the sequencer’s output.
+* **Monitoring Bitcoin:** The full node follows Bitcoin’s blocks to detect Citrea data posted on Bitcoin. For every finalized Bitcoin block, it fetches and verifies **sequencer commitments** and **batch proofs** from Bitcoin. Essentially, full nodes use Bitcoin as the source of truth to cross-verify the sequencer’s output.
 * **Serving Data & RPC:** Full nodes expose a standard **JSON-RPC API** (compatible with Ethereum’s EVM interface) to allow wallets, dApps, explorers, and users to interact with the Citrea network. Through a full node, one can query contract states, submit transactions, retrieve receipts and proofs, etc., without relying on any centralized service.
 
 In essence, full nodes **ensure trustlessness**: users don’t have to trust the sequencer or any single party, because they can run a full node to independently validate every block and proof. Unlike miners in Bitcoin, Citrea’s full nodes do **not** compete to produce blocks – their role is purely to verify and relay information.&#x20;
@@ -149,7 +149,7 @@ There can be multiple batch proofs posted for any Bitcoin block.
 Finally, Citrea full nodes (as well as any external observers) fetch the newly posted batch proofs directly from Bitcoin and verify them against the claimed state transition. Upon sufficient confirmations, full nodes:
 
 * verify the succinct proof for a batch of blocks,
-* check whether they match the commitment’s root and `[start, end],`
+* check whether they match the commitment’s root and `[start, end]`
 * update the last finalized/proven block and transaction information in its database.
 
 The node advances its proven tip to the batch’s end height; all transactions in that window are now **proven** on Citrea (reversal would require a deep Bitcoin reorg).

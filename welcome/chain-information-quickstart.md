@@ -43,12 +43,12 @@ If you have BTC on Bitcoin Testnet4, you can also use [Garden Finance](https://t
 
 ## Where to go from here?
 
-Here are quick links that can you might be looking for:
+Here are quick links you might be looking for:
 
 * [RPC Endpoints](https://docs.citrea.xyz/developer-documentation/rpc-documentation)
   * includes support for `eth_` endpoints, along with useful Bitcoin & finality related endpoints of Citrea
 * [Ecosystem Tooling](https://docs.citrea.xyz/developer-documentation/ecosystem-tooling)
-  * partners to checkout for Interop, Oracles, Indexers, Wallets, Account Abstraction...
+  * partners to check out for Interop, Oracles, Indexers, Wallets, Account Abstraction...
 * [Citrea Execution Environment](https://docs.citrea.xyz/essentials/execution-environment)
   * explainers on subtle differences of Citrea compared to Ethereum and other EVM environments
 * [System Contracts](https://docs.citrea.xyz/developer-documentation/system-contracts)
