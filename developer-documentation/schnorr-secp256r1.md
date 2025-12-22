@@ -1,19 +1,21 @@
-## secp256r1 and Schnorr Precompiles
+# secp256r1 & Schnorr Precompiles
 
 The secp256r1 and Schnorr precompiles are enabled with the [Tangerine](https://www.blog.citrea.xyz/tangerine-upgrade-bitvm-activation-on-clementine/) upgrade of Citrea. In this document we will go over the details of these precompiles and how to use them.
 
-#### secp256r1 Curve Support ([RIP 7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md))
+### secp256r1 Curve Support ([RIP 7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md))
 
 RIP 7212 is an improvement proposal that introduces a precompile support for the secp256r1 curve. In Citrea, like other EVM rollups, this precompile is available at address `0x0000000000000000000000000000000000000100`.
 
 This precompile enables a whole new set of applications and use cases, such as:
-- **Hardware \& Biometric Authentication**: Native support of secp256r1 allows smart contracts to directly validate the signatures from secure enclaves and passkey devices, such as Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), Android's [Keystore](https://developer.android.com/privacy-and-security/keystore), Yubikeys, and WebAuthn authenticators.
-- **Account Abstraction \& Smart Wallets**: Combining features above with account abstraction \& smart wallets, self-custodial platforms can be built much more easily and efficiently, such as [Tanari](https://www.tanari.io/). It also improves the security and the UX perspective of applications massively. 
-- **Gas-efficient signature verification**: With this precompile, secp256r1 signature verification comes down to `3450` gas, which is significantly cheaper than any other existing smart contract verification method.
 
-##### Technical Details
+* **Hardware & Biometric Authentication**: Native support of secp256r1 allows smart contracts to directly validate the signatures from secure enclaves and passkey devices, such as Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), Android's [Keystore](https://developer.android.com/privacy-and-security/keystore), Yubikeys, and WebAuthn authenticators.
+* **Account Abstraction & Smart Wallets**: Combining features above with account abstraction & smart wallets, self-custodial platforms can be built much more easily and efficiently, such as [Tanari](https://www.tanari.io/). It also improves the security and the UX perspective of applications massively.
+* **Gas-efficient signature verification**: With this precompile, secp256r1 signature verification comes down to `3450` gas, which is significantly cheaper than any other existing smart contract verification method.
+
+#### Technical Details
 
 The precompile accepts a 160-byte input, which is a concatenation of:
+
 1. `Message Hash (32 bytes)`: The 32-byte hash of the message that was signed.
 2. `Signature r value (32 bytes)`: The r component of the ECDSA signature.
 3. `Signature s value (32 bytes)`: The s component of the ECDSA signature.
@@ -22,7 +24,7 @@ The precompile accepts a 160-byte input, which is a concatenation of:
 
 Upon successful verification, the precompile returns a 32-byte value `0x00...01`. On failure (e.g., invalid signature, malformed input), it returns empty bytes: `0x`.
 
-#### Example Smart Contract
+### Example Smart Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -65,17 +67,18 @@ contract P256R1VerifyCaller {
 }
 ```
 
------ 
+***
 
-#### Schnorr Signature Verification 
+### Schnorr Signature Verification
 
 Schnorr signature is a Bitcoin-native, linear, and aggregation-friendly signature scheme. It is a key component of Bitcoin's Taproot upgrade ([BIP 340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki)) and also offers advantages for multi-signature schemes like [MuSig2](https://bitcoinops.org/en/topics/musig/). In Citrea, this precompile is available at the address `0x0000000000000000000000000000000000000200`.
 
 Schnorr precompile enables an interesting set of developments, such as:
-- **Scriptless cross-chain atomic swaps**: With Schnorr adaptor signatures it is possible to build BTC <> cBTC atomic swaps without HTLCs or any other third-party custody.
-- **Bitcoin-aware oracles \& bridges**: A smart contract on Citrea can now prove that a Taproot key signed some data without any external verifiers.
 
-##### Technical Details
+* **Scriptless cross-chain atomic swaps**: With Schnorr adaptor signatures it is possible to build BTC <> cBTC atomic swaps without HTLCs or any other third-party custody.
+* **Bitcoin-aware oracles & bridges**: A smart contract on Citrea can now prove that a Taproot key signed some data without any external verifiers.
+
+#### Technical Details
 
 The precompile accepts a 128-byte input, concatenated as follows:
 
@@ -87,7 +90,7 @@ If the signature is valid for the given message hash and public key, the precomp
 
 Base gas cost of Schnorr precompile is set to `4600`.
 
-#### Example Smart Contract
+### Example Smart Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT

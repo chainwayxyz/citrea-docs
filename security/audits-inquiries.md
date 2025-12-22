@@ -1,23 +1,21 @@
-## Audits \& Security
+# Audits & Security
 
 Below you may find the security audits and security-related information for Citrea.
 
-### Audits
+## Audits
 
-| Auditor | Scope | Date (publish) | Report | 
-| ------- | ------ | ---- | ------ |
-| [SigmaPrime](https://sigmaprime.io/) | Citrea | July 2025 | [view](https://github.com/chainwayxyz/citrea/blob/nightly/audits/Sigma_Prime_Chainway_Citrea_Security_Assessment_Report_v2_2.pdf) |
-| [SigmaPrime](https://sigmaprime.io/) | Clementine | August 2025 | [view](https://github.com/chainwayxyz/clementine/blob/main/audits/Sigma_Prime_Chainway_Labs_Clementine_Security_Assessment_Report_v2_0.pdf) |
+| Auditor                                                                                      | Scope      | Date (publish) | Report                                                                                                                                      |
+| -------------------------------------------------------------------------------------------- | ---------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SigmaPrime](https://sigmaprime.io/)                                                         | Citrea     | July 2025      | [view](https://github.com/chainwayxyz/citrea/blob/nightly/audits/Sigma_Prime_Chainway_Citrea_Security_Assessment_Report_v2_2.pdf)           |
+| [SigmaPrime](https://sigmaprime.io/)                                                         | Clementine | August 2025    | [view](https://github.com/chainwayxyz/clementine/blob/main/audits/Sigma_Prime_Chainway_Labs_Clementine_Security_Assessment_Report_v2_0.pdf) |
+| [Cantina Competition](https://cantina.xyz/competitions/49b9e08d-4f8f-4103-b6e5-f5f43cf9faa1) | Citrea     | Oct 2025       | [view](https://github.com/chainwayxyz/citrea/blob/nightly/audits/cantina_competition_citrea_jul2025.pdf)                                    |
+| [Cantina Competition](https://cantina.xyz/competitions/ce181972-2b40-4047-8ee9-89ec43527686) | Clementine | Oct 2025       | [view](https://github.com/chainwayxyz/clementine/blob/main/audits/cantina-competition-report.pdf)                                           |
 
+Further audits of Citrea and Clementine will also be published on this page.
 
-Citrea client is now undergoing a public audit competition at [Cantina](https://cantina.xyz) as well. $80,000+ in rewards up for grabs, running until **15 August 2025** - you can check the details [here](
-https://cantina.xyz/competitions/49b9e08d-4f8f-4103-b6e5-f5f43cf9faa1).
+***
 
-Further audits of Citrea and Clementine are underway and will also be published on this page.
-
---- 
-
-### Security
+## Security
 
 For security related inquiries, please contact the Citrea security team by email with the following email address:
 
@@ -27,7 +25,9 @@ security@citrea.xyz
 
 If the issue is sensitive, please encrypt your email using the provided GPG key:
 
-<details><summary>Click here for the GPG Key</summary>
+<details>
+
+<summary>Click here for the GPG Key</summary>
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----

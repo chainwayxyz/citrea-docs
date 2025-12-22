@@ -1,145 +1,108 @@
-# BitcoinLightClient
+# Bitcoin Light Client
 
-Serves as a smart contract based light client for Bitcoin. For each new Bitcoin block, the block hash and the witness root are written into this contract. This is done with a system transaction executed in the beginning of the first Citrea block that corresponds to the new Bitcoin block.
+Citrea’s on-chain light client for Bitcoin. Each finalized Bitcoin block is pushed into this contract via a system transaction so that other contracts (most importantly the bridge) can prove transactions of Bitcoin. For each new Bitcoin block, the block hash and the witness root are written.
 
-You can find this contract at address `0x31000...0001`, [here](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001).
+```solidity
+address constant BITCOIN_LIGHT_CLIENT = 0x3100000000000000000000000000000000000001;
+```
 
-## State Structure
+That proxy address `0x3100…0001` hosts the client on testnet: [explorer link](https://explorer.testnet.citrea.xyz/address/0x3100000000000000000000000000000000000001).
+
+### Important to Know
+
+```solidity
+address constant SYSTEM_CALLER = 0xdeaDDeADDEaDdeaDdEAddEADDEAdDeadDEADDEaD;
+```
+
+The system caller is a hardcoded address with no private key. It is used to execute system transactions that mutate the state of the contract.
+
+```solidity
+event BlockInfoAdded(uint256 height, bytes32 blockHash, bytes32 witnessRoot, uint256 coinbaseDepth);
+```
+
+Only the system caller can mutate state; the modifier rejects everyone else and there is no separate admin role. All hashes are treated as ***little endian*** during verification-block hashes, wtxids, and each proof. Therefore, callers must respect that encoding when constructing proofs. Every update emits `BlockInfoAdded` with the height, block hash, witness root, and coinbase depth for indexing and debugging.
+
+### State
 
 ```solidity
 uint256 public blockNumber;
-```
-Next block height to store block hash and witness root information for.
-
----
-
-```solidity
 mapping(uint256 => bytes32) public blockHashes;
-```
-A `block height: block hash` mapping. It stores the block hash of the block for a given block height in Bitcoin.
-
----
-
-```solidity
 mapping(bytes32 => bytes32) public witnessRoots;
+mapping(bytes32 => uint256) public coinbaseDepths;
 ```
-A `block hash: witness root` mapping. It stores the witness root of the block corresponding to a given block hash in Bitcoin.
 
-## Access Control Structure
+The `blockNumber` slot marks the next Bitcoin height the contract expects to append. Each successful update stores the block hash at its height, and also keys `witnessRoots` and `coinbaseDepths` by that block hash. The depth tracks where the coinbase transaction sits inside the tree so proof lengths can be enforced.
+
+Be careful when reading `witnessRoots`: a zero root can either mean “*not recorded*” or “*single-transaction block whose coinbase wtxid is zero*,” so downstream contracts must distinguish those cases instead of assuming zero means missing data.
+
+### Access Control
 
 ```solidity
-modifier onlySystem() 
+modifier onlySystem()
 ```
-This contract has only one access control modifier, and it is used to check the caller of a function against the hardcoded system caller address which is `0xdeaDDeADDEaDdeaDdEAddEADDEAdDeadDEADDEaD`.
 
-## Functions
+Calls that mutate state must come from the system caller. With no owner exposed, there is nothing to reconfigure or override once deployed, which keeps the light client deterministic and narrow in scope.
+
+Citrea purposely lags behind Bitcoin by a configurable finality depth enforced in the node. The sequencer only calls `setBlockInfo` for a Bitcoin block after it has sat that many confirmations deep, so `blockNumber` is always behind Bitcoin tip. This buffer avoids propagating shallow Bitcoin reorgs into Citrea (which could otherwise halt the chain).
+
+On Citrea Testnet, that depth is set to `100` confirmations to withstand the frequent super-deep reorgs on Bitcoin Testnet4, so you should expect roughly 100-block latency between a Bitcoin event and its availability to on-chain contracts like the bridge.
+
+### Functions
 
 ```solidity
 function initializeBlockNumber(uint256 _blockNumber) external onlySystem
 ```
-Gets triggered in the first ever Citrea block, and it sets the block height of the Bitcoin block that corresponds to the first Citrea block. This function is called only once during the lifetime of the contract and it is called by the system caller.
 
-| Parameters    | Description |
-|-----------|-------------|
-| `uint256 _blockNumber`   | Bitcoin block height corresponding to the first Citrea block  |
-
----
+This one-time bootstrap anchors the light client to the Bitcoin height used when Citrea genesis is derived. Any second attempt reverts, so the sequencer must ensure it runs exactly once in the first block.
 
 ```solidity
-function setBlockInfo(bytes32 _blockHash, bytes32 _witnessRoot) external onlySystem
+function setBlockInfo(bytes32 _blockHash, bytes32 _witnessRoot, uint256 _coinbaseDepth) external onlySystem
 ```
-Called by the system caller and it sets the block hash and witness root of the next Bitcoin block denoted by the `blockNumber`. It also increments the `blockNumber` by one.
 
-| Parameters    | Description |
-|-----------|-------------|
-| `bytes32 _blockHash`   | Block hash of the current Bitcoin block |
-| `bytes32 _witnessRoot`   | Witness root (Merkle root of `wTXID`s) of the current Bitcoin block |
-
----
+Appends the next Bitcoin block in order. The call writes the provided block hash to `blockHashes` at the current `blockNumber`, stores the witness root and coinbase depth keyed by that hash, emits `BlockInfoAdded`, and finally increments `blockNumber`. Heights cannot be skipped or overwritten - if the sequencer attempts to jump ahead or rewind, the transaction will fail, keeping the light client consistent with Bitcoin’s linear history.
 
 ```solidity
-function getBlockHash(uint256 _blockNumber) external view returns (bytes32)
+function getBlockHash(uint256 height) external view returns (bytes32)
+function getWitnessRootByHash(bytes32 blockHash) external view returns (bytes32)
+function getWitnessRootByNumber(uint256 height) external view returns (bytes32)
 ```
-Returns the block hash of the Bitcoin block corresponding to the given block height.
 
-| Parameters    | Description |
-|-----------|-------------|
-| `uint256 _blockNumber`   | Block height of the queried block |
+The getters expose stored data for other contracts. A missing block hash returns zero.
 
-| Returns    | Description |
-|-----------|-------------|
-| `bytes32 blockHash` | Block hash of the queried block |
+Witness root getters mirror the storage semantics: they return zero when data has not been written, but they also return zero legitimately when the witness root itself is zero (single-transaction blocks where the coinbase wtxid is zero). Callers must not treat a zero witness root as proof of absence without additional context.
 
----
+```solidity
+function verifyInclusion(
+    bytes32 blockHash,
+    bytes32 wtxId,
+    bytes calldata proof,
+    uint256 index
+) external view returns (bool)
+```
+
+```solidity
+function verifyInclusion(
+    uint256 height,
+    bytes32 wtxId,
+    bytes calldata proof,
+    uint256 index
+) external view returns (bool)
+```
+
+Both overloads rebuild the witness Merkle root from the provided wtxid, proof bytes, and index and compare it against storage. The proof length must equal the stored coinbase depth multiplied by 32 bytes, which hardens the verifier against variable-depth Merkle tricks such as the [Bitslog](https://bitslog.com/2018/06/09/leaf-node-weakness-in-bitcoin-merkle-tree-design/) attack.
+
+```solidity
+function verifyInclusionByTxId(
+    uint256 height,
+    bytes32 txId,
+    bytes calldata blockHeader,
+    bytes calldata proof,
+    uint256 index
+) external view returns (bool)
+```
+
+This variant works for legacy txids. It first hashes the provided header to confirm it matches the stored block hash, uses the coinbase depth to enforce proof length, extracts the transaction Merkle root from the header, and then delegates to `ValidateSPV.prove` for the inclusion check. Callers should keep the height in sync with the header to avoid mismatched proofs.
 
 {% hint style="warning" %}
-The following functions `getWitnessRootByHash` and `getWitnessRootByNumber` returning the zero value does **NOT** mean that there is no such a block recorded unlike the blockhash getters as it is possible for a valid witness root to be the zero value in the case of a Bitcoin block with one transaction. This happens as the `wTXId` of a coinbase transaction is the zero value and the Merkle root is the leaf itself in the case of one leaf.
+Passing a zero wtxid will verify because coinbase wtxids are zero. Please ensure that callers do not inadvertently prove inclusion of the coinbase transaction when they intended to prove user-supplied data, especially when any non-coinbase input is required for downstream logic.
 {% endhint %}
-
-```solidity
-function getWitnessRootByHash(bytes32 _blockHash) external view returns (bytes32)
-```
-Returns the witness root of the Bitcoin block corresponding to the given block hash.
-
-| Parameters    | Description |
-|-----------|-------------|
-| `bytes32 _blockHash`   | Block hash of the queried block |
-
-| Returns    | Description |
-|-----------|-------------|
-| `bytes32 witnessRoot` | Witness root (Merkle root of `wTXID`s) of the queried block |
-
----
-
-```solidity
-function getWitnessRootByNumber(uint256 _blockNumber) external view returns (bytes32)
-```
-Returns the witness root of the Bitcoin block corresponding to the given block height.
-
-| Parameters    | Description |
-|-----------|-------------|
-| `uint256 _blockNumber`   | Block height of the queried block |
-
-| Returns    | Description |
-|-----------|-------------|
-| `bytes32 witnessRoot` | Witness root (Merkle root of `wTXID`s) of the queried block |
-
----
-
-{% hint style="warning" %}
-The following `verifyInclusion` functions will pass when zero value is passed with `_wtxId` as the zero value is a valid `wTXId` for a coinbase transaction and it exists in all Bitcoin blocks. Thus the integrators must make sure to not provide the zero `wTXId` as input accidentally as it may happen in cases like sending information from a deleted Solidity user record which will have the zero `bytes32` value as that is the default value for `bytes32` in Solidity.
-{% endhint %}
-
-```solidity
-function verifyInclusion(bytes32 _blockHash, bytes32 _wtxId, bytes calldata _proof, uint256 _index) external view returns (bool)
-```
-Verifies the inclusion of a Bitcoin transaction in a particular Bitcoin block specified by its block hash. Returns whether the transaction is included in the given block. It functions by constructing the Merkle root from the `wTXID` of the queried transaction and provided Merkle path as `_proof` and then comparing it with the witness root stored in this contract of the block specified by the passed block hash.
-
-| Parameters    | Description |
-|-----------|-------------|
-| `bytes32 _blockHash`   | Block hash of the block the queried transaction should be in |
-| `bytes32 _wtxId`   | `wTXID` of the queried transaction |
-| `bytes _proof`   | Merkle inclusion proof of the transaction, this is a Merkle path used to construct to Merkle root |
-| `uint256 _index`   | Leaf index of the transaction in the Merkle tree |
-
-| Returns    | Description |
-|-----------|-------------|
-| `bool isIncluded` | Whether the transaction is in the block specified by the block hash |
-
----
-
-```solidity
-function verifyInclusion(uint256 _blockNumber, bytes32 _wtxId, bytes calldata _proof, uint256 _index) external view returns (bool)
-```
-Verifies the inclusion of a Bitcoin transaction in a particular Bitcoin block specified by its block height. Returns whether the transaction is included in the given block. It functions by constructing the Merkle root from the `wTXID` of the queried transaction and provided Merkle path as `_proof` and then comparing it with the witness root stored in this contract of the block specified by the passed block height.
-
-| Parameters    | Description |
-|-----------|-------------|
-| `uint256 _blockNumber`   | Block height of the block the queried transaction should be in |
-| `bytes32 _wtxId`   | `wTXID` of the queried transaction |
-| `bytes _proof`   | Merkle inclusion proof of the transaction, this is a Merkle path used to construct to Merkle root |
-| `uint256 _index`   | Leaf index of the transaction in the Merkle tree |
-
-| Returns    | Description |
-|-----------|-------------|
-| `bool isIncluded` | Whether the transaction is in the block specified by the block height |

@@ -3,45 +3,28 @@
 ## 👋 Welcome
 
 * [Getting started](README.md)
-* [Chain Information](welcome/chain-information.md)
+* [Chain Information - Quickstart](welcome/chain-information-quickstart.md)
 
-## ⛓️ Technical Specs
+## 🔎 Essentials
 
-* [TL;DR](<README (1).md>)
-* [Technical Introduction](technical-specs/introduction.md)
-* [Characteristics](technical-specs/characteristics/README.md)
-  * [Execution Environment](technical-specs/characteristics/execution-environment.md)
-  * [Block Production](technical-specs/characteristics/block-production/README.md)
-    * [Mempool](technical-specs/characteristics/block-production/mempool.md)
-    * [Sequencer](technical-specs/characteristics/block-production/sequencer.md)
-    * [Sequencer Commitments](technical-specs/characteristics/block-production/sequencer-commitments.md)
-    * [Soft Confirmations](technical-specs/characteristics/block-production/soft-confirmation.md)
-  * [Proof Generation](technical-specs/characteristics/proof-generation.md)
-  * [Nodes](technical-specs/characteristics/nodes.md)
-  * [Clementine: trust-minimized Bitcoin Bridge](technical-specs/characteristics/clementine-trust-minimized-bitcoin-bridge.md)
-* [Security Properties](technical-specs/security-properties/README.md)
-  * [Validity](technical-specs/security-properties/validity.md)
-  * [Data Availability](technical-specs/security-properties/data-availability.md)
-  * [Re-org Resistance](technical-specs/security-properties/re-org-resistance.md)
-  * [Censorship Resistance and Force Transactions](technical-specs/security-properties/censorship-resistance-and-force-transactions/README.md)
-    * [Escape Hatch](technical-specs/security-properties/censorship-resistance-and-force-transactions/escape-hatch.md)
-
-## 👤 User Guide
-
-* [Run Citrea Full Node](users/node/run-a-node.md)
-  * [Bitcoin Testnet4](users/node/bitcoin-testnet4/README.md)
-    * [Testnet4 Docker Setup](users/node/bitcoin-testnet4/testnet4-docker.md)
-    * [Build Testnet4 from Source](users/node/bitcoin-testnet4/testnet4-source.md)
-  * [Citrea Full Node](users/node/citrea-testnet/README.md)
-    * [Citrea Binary Executable](users/node/citrea-testnet/citrea-testnet-executable.md)
-    * [Build Citrea from Source](users/node/citrea-testnet/citrea-testnet-source.md)
-* [Use Citrea Testnet Faucet](users/how-to-use-faucet.md)
-* [Installing an EVM Wallet](users/install-a-wallet.md)
-* [Taproot Recovery Address](users/taproot-recovery-address.md)
+* [TL;DR](essentials/introduction.md)
+* [Architecture and Transaction Lifecycle](essentials/architecture-and-transaction-lifecycle.md)
+* [Clementine: trust-minimized Bitcoin Bridge](essentials/clementine-trust-minimized-bitcoin-bridge.md)
+* [Execution Environment](essentials/execution-environment.md)
+* [Security Properties](essentials/security-properties.md)
+* [Transaction Finality](essentials/transaction-finality.md)
 
 ## 📖 Developer Documentation
 
-* [Kickstart](developer-documentation/README.md)
+* [Kickstart](developer-documentation/developer-documentation.md)
+* [Chain Information](developer-documentation/chain-information.md)
+* [Run Citrea Full Node](developer-documentation/run-a-node/README.md)
+  * [Bitcoin Testnet4](developer-documentation/run-a-node/bitcoin-testnet4/README.md)
+    * [Testnet4 Docker Setup](developer-documentation/run-a-node/bitcoin-testnet4/testnet4-docker.md)
+    * [Build Testnet4 from Source](developer-documentation/run-a-node/bitcoin-testnet4/testnet4-source.md)
+  * [Citrea Full Node](developer-documentation/run-a-node/citrea-testnet/README.md)
+    * [Citrea Binary Executable](developer-documentation/run-a-node/citrea-testnet/citrea-testnet-executable.md)
+    * [Build Citrea from Source](developer-documentation/run-a-node/citrea-testnet/citrea-testnet-source.md)
 * [Deployment Guide](developer-documentation/deployment-guide/README.md)
   * [Deploy a Smart Contract Using Remix](developer-documentation/deployment-guide/deploy-a-smart-contract-using-remix.md)
   * [Deploy a Token](developer-documentation/deployment-guide/deploy-a-token.md)
@@ -55,18 +38,20 @@
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
   * [Bridge](developer-documentation/system-contracts/bridge.md)
   * [Fee Vaults](developer-documentation/system-contracts/fee-vaults.md)
+* [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
 * [RPC Documentation](developer-documentation/rpc-documentation/README.md)
   * [Citrea JSON-RPC Endpoints](developer-documentation/rpc-documentation/citrea-rpc-documentation.md)
   * [EVM JSON-RPC Endpoints](developer-documentation/rpc-documentation/eth-rpc-endpoints.md)
-* [Chain Information](developer-documentation/chain-information.md)
-* [Deploy a Bitcoin Appchain (L3)](developer-documentation/bitcoin-appchain.md)
-* [secp256r1 & Schnorr Precompiles](developer-documentation/schnorr-secp256r1.md)
+* [Bitcoin Appchains (L3)](developer-documentation/bitcoin-appchain/README.md)
+  * [Deploy an L3 using Avail](developer-documentation/bitcoin-appchain/deploy-an-l3-using-avail.md)
+  * [Deploy an L3 using Celestia](developer-documentation/bitcoin-appchain/deploy-an-l3-using-celestia.md)
 
 ## 🔒 Security
 
 * [Audits & Security](security/audits-inquiries.md)
+* [Trusted Setup Verification](security/verify-trusted-setup.md)
 
-## 🔎 Future Research
+## 🔬 Future Research
 
 * [Decentralized Sequencer Network](future-research/decentralized-sequencer-network.md)
 * [Lightning Integration](future-research/lightning-integration.md)
@@ -78,7 +63,7 @@
 
 ## 🌐 Community
 
-* [Citrea Meetups](community/README.md)
-  * [Meetup Guide](community/citrea-meetups/meetup-guide.md)
-  * [Resources](community/citrea-meetups/resources.md)
-  * [Code of Conduct](community/citrea-meetups/code-of-conduct.md)
+* [Citrea Meetups](community/community/README.md)
+  * [Meetup Guide](community/community/meetup-guide.md)
+  * [Resources](community/community/resources.md)
+  * [Code of Conduct](community/community/code-of-conduct.md)
