@@ -7,7 +7,7 @@
 
 ## 🔎 Essentials
 
-* [TL;DR](essentials/readme.md)
+* [TL;DR](essentials/README.md)
 * [Architecture and Transaction Lifecycle](essentials/architecture-and-transaction-lifecycle.md)
 * [Clementine: trust-minimized Bitcoin Bridge](essentials/clementine-trust-minimized-bitcoin-bridge.md)
 * [Execution Environment](essentials/execution-environment.md)
