@@ -28,16 +28,16 @@ docker run -d \
   -txindex=1
 ```
 
-Bitcoin Testnet4 node should be running in your system. You can check it with the following commmand:
+Bitcoin Testnet4 node should be running in your system. You can check it with the following command:
 
 ```sh
 curl --user citrea --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getblockcount", "params": []}' -H 'content-type: text/plain;' http://0.0.0.0:18443
 ```
 
-`--user` & password asked are the `rpcuser` and `rpcpassword` fields that you used to run the docker command above.
+The `--user` flag and the password are the `rpcuser` and `rpcpassword` values that you used to run the Docker command above.
 
 Now you can proceed to run the Citrea client from [here](https://docs.citrea.xyz/developer-documentation/run-a-node/citrea-testnet/citrea-testnet-executable).
 
 ***
 
-If you do not want to use Docker to setup Bitcoin node, you can build it from the source code [here](https://docs.citrea.xyz/developer-documentation/run-a-node/bitcoin-testnet4/testnet4-source).
+If you do not want to use Docker to setup a Bitcoin node, you can build it from the source code [here](https://docs.citrea.xyz/developer-documentation/run-a-node/bitcoin-testnet4/testnet4-source).

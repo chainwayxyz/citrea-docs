@@ -62,7 +62,7 @@ A sample response (fields may vary based on the sync status):
 
 A Linux/Mac/Windows system with a configuration of
 
-* 8 GB Ram
+* 8 GB RAM
 * 2 TB SSD (NVMe recommended)
 * 4 core CPU (if you're using cloud)
 * 25+ Mbps network connection
@@ -71,4 +71,4 @@ should satisfy the minimum requirements to run a Citrea node. Allocating more re
 
 ***
 
-If you encounter any problems during the node running even though you have a system that fits the requirements, please visit our [Discord](https://discord.gg/citrea) and let us now by opening a ticket.
+If you encounter any problems during the node running even though you have a system that fits the requirements, please visit our [Discord](https://discord.gg/citrea) and let us know by opening a ticket.

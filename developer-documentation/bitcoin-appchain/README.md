@@ -121,6 +121,6 @@ If you are deploying an L3 beyond experimentation, you should add operational mo
 
 ***
 
-For the remaining of this section we provide example deployments of ₿appchains.&#x20;
+For the remainder of this section we provide example deployments of ₿appchains.&#x20;
 
 If you want to learn more or build one from a business perspective, feel free to reach us at [https://origins.citrea.xyz](https://origins.citrea.xyz/).

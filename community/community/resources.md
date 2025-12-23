@@ -15,4 +15,4 @@ We deeply value the content quality & speaker knowledge for Citrea Meetups. Ther
 * [Lifecycle of a Citrea Transaction](https://www.blog.citrea.xyz/lifecycle-of-a-citrea-transaction/): From start to finish, how Citrea transactions are processed and where they go.
 * [Unveiling Clementine](https://www.blog.citrea.xyz/unveiling-clementine/): Citrea's BitVM-based trust-minimized two-way peg program, one of its kind.
 * [Deep Dive into Citrea's Batch Proofs](https://www.blog.citrea.xyz/citreas-batch-proofs/): ZK, States, Batches, Blockspace Proving, and more.
-* [Using Bitcoin as a Data Availablity Layer](https://www.blog.citrea.xyz/bitcoin-as-a-data-availability-layer-what-why-how/): Some insights on Citrea's approach to using Bitcoin as a data availability layer.
+* [Using Bitcoin as a Data Availability Layer](https://www.blog.citrea.xyz/bitcoin-as-a-data-availability-layer-what-why-how/): Some insights on Citrea's approach to using Bitcoin as a data availability layer.

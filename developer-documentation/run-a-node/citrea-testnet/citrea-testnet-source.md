@@ -1,6 +1,6 @@
 # Build Citrea from Source
 
-You may want to do some changes, compile, and run the Citrea on your local.
+You may want to do some changes, compile, and run Citrea locally.
 
 ### Step 1: Install Rust
 
@@ -8,7 +8,7 @@ If you don't have it, install it from [here](https://www.rust-lang.org/tools/ins
 
 ### Step 2: Clone the source code
 
-Let's clone the repository and checkout the latest tag:
+Let's clone the repository and check out the latest tag:
 
 ```sh
 git clone https://github.com/chainwayxyz/citrea
@@ -39,13 +39,13 @@ SKIP_GUEST_BUILD=1 cargo build --release
 
 ### Step 4: Run Citrea
 
-Look through the `rollup_config.toml` and apply changes as you wish, if you modified any Bitcoin RPC configs, change corresponding values under `[da]`. Then, you can run the full node by the following:
+Look through the `rollup_config.toml` and apply changes as you wish. If you modified any Bitcoin RPC configs, change corresponding values under `[da]`. Then, you can run the full node with the following:
 
 ```sh
 RISC0_DEV_MODE=1 ./target/release/citrea --network testnet --da-layer bitcoin --rollup-config-path ./resources/configs/testnet/rollup_config.toml --genesis-paths ./resources/genesis/testnet
 ```
 
-If everything is correct, you should see some logs that looks like this:
+If everything is correct, you should see some logs that look like this:
 
 ```sh
 2024-09-20T07:46:40.910416Z  INFO citrea_fullnode::runner: New State Root after soft confirmation #273314 is: RootHash("52b3c30f68667a7f25707534d2dc21d9071e7b776cb19df54166108fb6858c91")

@@ -1,6 +1,6 @@
 # System Contracts
 
-System contracts are a set of pre-deployed smart contracts on Citrea that are responsible for the core functionalities. These contracts are embedded in the genesis state. They contain functions that can be only processed through a system transaction, in addition to regular functions that can be called by any address.
+System contracts are a set of pre-deployed smart contracts on Citrea that are responsible for the core functionalities. These contracts are embedded in the genesis state. They contain functions that can only be processed through a system transaction, in addition to regular functions that can be called by any address.
 
 {% hint style="success" %}
 System contracts are also audited under Citrea and Clementine - you can find the reports at [audits-inquiries](https://docs.citrea.xyz/security/audits-inquiries "mention") section.

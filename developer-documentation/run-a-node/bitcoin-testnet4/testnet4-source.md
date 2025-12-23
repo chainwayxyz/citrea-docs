@@ -12,7 +12,7 @@ git checkout v29.0
 
 ### Step 2: Build Bitcoin Core
 
-Follow the instructions to build the repository for [Linux](https://github.com/bitcoin/bitcoin/blob/v28.0rc1/doc/build-unix.md), [MacOS](https://github.com/bitcoin/bitcoin/blob/v28.0rc1/doc/build-osx.md), or [Windows](https://github.com/bitcoin/bitcoin/blob/v28.0rc1/doc/build-windows.md). You don't need to reclone the repo if you're asked to, since we've already done that.
+Follow the instructions to build the repository for [Linux](https://github.com/bitcoin/bitcoin/blob/v29.0/doc/build-unix.md), [macOS](https://github.com/bitcoin/bitcoin/blob/v29.0/doc/build-osx.md), or [Windows](https://github.com/bitcoin/bitcoin/blob/v29.0/doc/build-windows.md). You don't need to reclone the repo if you're asked to, since we've already done that.
 
 ### Step 3: Run Testnet4 Node
 

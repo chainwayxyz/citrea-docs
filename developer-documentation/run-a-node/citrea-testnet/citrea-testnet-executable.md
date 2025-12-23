@@ -1,6 +1,6 @@
 # Citrea Binary Executable
 
-We've complied an executable for you to run a Citrea Full Node directly in MacOS / Linux. For the following steps, we assume that you have a Bitcoin Testnet4 node running. If not, please visit [here](https://docs.citrea.xyz/developer-documentation/run-a-node/bitcoin-testnet4).
+We've compiled an executable for you to run a Citrea Full Node directly on macOS / Linux. For the following steps, we assume that you have a Bitcoin Testnet4 node running. If not, please visit [here](https://docs.citrea.xyz/developer-documentation/run-a-node/bitcoin-testnet4).
 
 ### Step 0: Make a separate folder and move in
 
@@ -38,7 +38,7 @@ chmod u+x ./citrea-v1.1.0-osx-arm64
 ```
 
 ```sh
-chmod u+x ./citrea-v1.0.0-linux-amd64
+chmod u+x ./citrea-v1.1.0-linux-amd64
 ```
 
 Then, based on your operating system, run one of the following:
@@ -46,13 +46,13 @@ Then, based on your operating system, run one of the following:
 Mac:
 
 ```sh
-./citrea-v1.0.0-osx-arm64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis --network testnet
+./citrea-v1.1.0-osx-arm64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis --network testnet
 ```
 
 Linux:
 
 ```sh
-./citrea-v1.0.0-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis --network testnet
+./citrea-v1.1.0-linux-amd64 --da-layer bitcoin --rollup-config-path ./rollup_config.toml --genesis-paths ./genesis --network testnet
 ```
 
 If the paths are correct, the full node will start to sync. You can check the status with the following command (you may need to arrange the URL at the end based on your setup):

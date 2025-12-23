@@ -33,9 +33,8 @@ Select the default options when prompted. This command will create a new Hardhat
 To configure Hardhat for Citrea, you need to update the `hardhat.config.js` file in your project directory. Open the `hardhat.config.js` file in your code editor and add the following configuration:
 
 ```javascript
-"REST_OF_YOUR_CONFIG_GOES_HERE",
 module.exports = {
-    "REST_OF_YOUR_CONFIG_GOES_HERE",
+    // ...rest of your config
     networks: {
         citrea: {
             url: "https://rpc.testnet.citrea.xyz",
@@ -43,11 +42,11 @@ module.exports = {
             accounts: ["YOUR_PRIVATE_KEY"],
         },
     },
-    "REST_OF_YOUR_CONFIG_GOES_HERE",
+    // ...rest of your config
 };
 ```
 
-Replace `YOUR_PRIVATE_KEY` with your private key. Make sure to keep your private key secure and never share it with anyone. You can obtain a private key from your Citrea Testnet wallet (e.g., Metamask).
+Replace `YOUR_PRIVATE_KEY` with your private key. Make sure to keep your private key secure and never share it with anyone. You can obtain a private key from your Citrea Testnet wallet (e.g., MetaMask).
 
 ### Implement Your Smart Contract and Deploy
 

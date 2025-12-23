@@ -2,7 +2,7 @@
 
 ## RPC Providers
 
-Citrea provides a free RPC endpoints for developers to use: <https://rpc.testnet.citrea.xyz>. For small projects & simple queries, you may use this endpoint safely as it offers generous rate limits.
+Citrea provides a free RPC endpoint for developers to use: <https://rpc.testnet.citrea.xyz>. For small projects & simple queries, you may use this endpoint safely as it offers generous rate limits.
 
 However, for larger projects or production use, we recommend [setting up your own RPC node](https://docs.citrea.xyz/developer-documentation/run-a-node) or a dedicated RPC provider.
 
@@ -18,9 +18,9 @@ However, for larger projects or production use, we recommend [setting up your ow
 
 [Goldsky](https://goldsky.com/) is a Web3-native, real-time data platform that lets you index and query on-chain data without wrangling infrastructure. Built for effortless scale and backed by 24 × 7 support, it frees you to ship features instead of managing servers.
 
-Citrea supports both [Goldsky Subgraphs](https://docs.goldsky.com/subgraphs/introduction) [Goldsky Mirrors](https://docs.goldsky.com/mirror/introduction). Subgraphs provide high-performance, custom-modeled queries with smart tagging for precise filtering for your development, and Mirrors stream live blockchain events straight into your own database and keeps data continuously in sync.
+Citrea supports both [Goldsky Subgraphs](https://docs.goldsky.com/subgraphs/introduction) and [Goldsky Mirrors](https://docs.goldsky.com/mirror/introduction). Subgraphs provide high-performance, custom-modeled queries with smart tagging for precise filtering for your development, and Mirrors stream live blockchain events straight into your own database and keep data continuously in sync.
 
-As a developer building on Citrea, you can utilize Goldsky products with discount. Check out Citrea page on their [documentation](https://docs.goldsky.com/chains/citrea?utm_source=citrea\&utm_medium=docs) for more information and kickstart your development!
+As a developer building on Citrea, you can utilize Goldsky products at a discount. Check out the Citrea page on their [documentation](https://docs.goldsky.com/chains/citrea?utm_source=citrea\&utm_medium=docs) for more information and kickstart your development!
 
 *Note*: The correct Citrea slug for Goldsky is `citrea-testnet-tangerine`.
 

@@ -11,7 +11,7 @@ The following steps are appropriately modified from the [Optimism documentation]
 * [Git](https://git-scm.com/)
 * [Go](https://go.dev)
 
-We recommend to open a separate folder in your filesystem for the rest of this guide.
+We recommend opening a separate folder in your filesystem for the rest of this guide.
 
 {% hint style="success" %}
 Appchains require strong hardware to function properly. For demo purposes, we used a machine with **AMD EPYC 9124 @ 3.71GHz** and **128 GB of RAM**.
@@ -49,7 +49,7 @@ cd op-plasma-celestia
 make da-server
 ```
 
-This will form the `da-server` binary in the `bin` folder.
+This will create the `da-server` binary in the `bin` folder.
 
 {% hint style="info" %}
 If you encounter this [issue](https://github.com/fjl/memsize/issues/4) while building `da-server`, you can continue by reinstalling `go` with version 1.22.0 or lower.
@@ -77,7 +77,7 @@ This will start the DA server.
 
 #### Step 3.1: Clone repositories
 
-Clone `op-geth` and Optimism mono-repository, then checkout to `v1.9.2` for development purposes:
+Clone `op-geth` and Optimism mono-repository, then check out to `v1.9.2` for development purposes:
 
 ```bash
 git clone https://github.com/ethereum-optimism/op-geth.git
@@ -114,7 +114,7 @@ export GS_SEQUENCER_PRIVATE_KEY=[YOUR_CITREA_PRIVATE_KEY]
 #              op-node Configuration             #
 ##################################################
 
-# The kind of RPC provider, used to inform optimal transactions receipts
+# The kind of RPC provider, used to inform optimal transaction receipts
 # fetching. Valid options: alchemy, quicknode, infura, parity, nethermind,
 # debug_geth, erigon, basic, any.
 export L1_RPC_KIND=any
@@ -176,7 +176,7 @@ DEPLOY_CONFIG_PATH=./deploy-config/getting-started.json CONTRACT_ADDRESSES_PATH=
 
 ### Step 4: Generate node configurations
 
-Navigate to the `op-node` and generate the configuration for the L3 node:
+Navigate to the `op-node` directory and generate the configuration for the L3 node:
 
 ```bash
 cd ../../op-node
