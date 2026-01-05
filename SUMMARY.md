@@ -33,6 +33,7 @@
   * [Interop, Bridges & Swaps](developer-documentation/ecosystem-tooling/interop-bridges-swaps.md)
   * [Oracles & VRF](developer-documentation/ecosystem-tooling/oracles-vrf.md)
   * [RPC & Indexers](developer-documentation/ecosystem-tooling/rpc-indexers.md)
+  * [Utility Contracts](developer-documentation/ecosystem-tooling/utility-contracts.md)
   * [Wallets & Account Abstraction](developer-documentation/ecosystem-tooling/wallets-aa.md)
 * [System Contracts](developer-documentation/system-contracts/README.md)
   * [Bitcoin Light Client](developer-documentation/system-contracts/bitcoin-light-client.md)
