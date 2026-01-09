@@ -35,7 +35,7 @@ For wallets, you can either use the information above, click & add using [**Chai
 
 cBTC is used as the native currency to cover gas, which is necessary to deploy smart contracts & use the network.
 
-You can receive testnet funds at <https://citrea.xyz/faucet> to get started.
+You can receive testnet funds at <https://citrea.xyz/faucet> or at [ethfaucet.com](https://ethfaucet.com?utm_source=citrea_docs&utm_medium=docs) to get started.
 
 If you have BTC on Bitcoin Testnet4, you can also use [Garden Finance](https://testnet.garden.finance/?input-chain=bitcoin_testnet\&input-asset=BTC\&output-chain=citrea_testnet\&output-asset=cBTC) or [Atomiq](https://testnet4.atomiq.exchange/) to swap them into cBTC.
 
